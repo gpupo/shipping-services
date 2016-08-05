@@ -44,4 +44,9 @@ final class History extends EntityAbstract implements EntityInterface
             'evento'    => 'object',
         ];
     }
+
+    public function factoryAnalizer()
+    {
+        return new Analizer($this);
+    }
 }

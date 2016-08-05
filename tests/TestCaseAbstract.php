@@ -14,8 +14,8 @@
 
 namespace Gpupo\Tests\ShippingServices;
 
-use Gpupo\ShippingServices\Entity\Ect\Sro\History;
 use Gpupo\ShippingServices\Entity\Ect\Sro\Evento\Destino;
+use Gpupo\ShippingServices\Entity\Ect\Sro\History;
 use Gpupo\ShippingServices\Entity\Ect\Sro\HistoryCollection;
 use Gpupo\Tests\CommonSdk\TestCaseAbstract as CommonSdkTestCaseAbstract;
 
@@ -57,7 +57,7 @@ abstract class TestCaseAbstract extends CommonSdkTestCaseAbstract
     {
         $h = $this->factoryHistory();
 
-        return [[$h, $this->getResourceJson('fixtures/Ect/Sro/history.json')]]  ;
+        return [[$h, $this->getResourceJson('fixtures/Ect/Sro/history.json')]];
     }
 
     /**
@@ -97,14 +97,13 @@ abstract class TestCaseAbstract extends CommonSdkTestCaseAbstract
     public function dataProviderDestino()
     {
         $data = [
-            "local"=> "CDD EMBU",
-            "codigo"=> "06803970",
-            "cidade"=> "Embu Das Artes",
-            "bairro"=> "Centro",
-            "uf"=> "SP",
+            'local'  => 'CDD EMBU',
+            'codigo' => '06803970',
+            'cidade' => 'Embu Das Artes',
+            'bairro' => 'Centro',
+            'uf'     => 'SP',
         ];
 
         return [[new Destino($data), $data]];
     }
-
 }
