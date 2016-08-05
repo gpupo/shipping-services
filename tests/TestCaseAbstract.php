@@ -54,7 +54,9 @@ abstract class TestCaseAbstract extends CommonSdkTestCaseAbstract
      */
     public function dataProviderHistory()
     {
-        return [[$this->factoryHistory()]];
+        $h = $this->factoryHistory();
+
+        return [[$h, $h->toArray()]];
     }
 
     /**

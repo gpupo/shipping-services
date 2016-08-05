@@ -14,9 +14,8 @@
 
 namespace Gpupo\Entity\Ect\Sro;
 
-use Gpupo\ShippingServices\Entity\Ect\Sro\Evento\EventoCollection;
-use Gpupo\ShippingServices\Entity\Ect\Sro\Evento\Item;
 use Gpupo\ShippingServices\Entity\Ect\Sro\History;
+use Gpupo\Tests\CommonSdk\Traits\EntityTrait;
 use Gpupo\Tests\ShippingServices\TestCaseAbstract;
 
 /**
@@ -24,6 +23,7 @@ use Gpupo\Tests\ShippingServices\TestCaseAbstract;
  */
 class HistoryTest extends TestCaseAbstract
 {
+    use EntityTrait;
     /**
      * @testdox ``factoryElement()``
      * @cover ::factoryElement
@@ -33,5 +33,146 @@ class HistoryTest extends TestCaseAbstract
     public function factoryElement(History $history)
     {
         $this->assertSame(5, $history->count());
+    }
+
+    /**
+     * @testdox ``getSchema()``
+     * @cover ::getSchema
+     * @dataProvider dataProviderHistory
+     * @test
+     */
+    public function getSchema(History $history)
+    {
+        $this->assertInternalType('array', $history->getSchema());
+    }
+
+    /**
+     * @testdox Possui método ``getNumero()`` para acessar Numero
+     * @dataProvider dataProviderHistory
+     * @cover ::get
+     * @cover ::getSchema
+     * @small
+     * @test
+     */
+    public function getNumero(History $history, $expected = null)
+    {
+        $this->assertSchemaGetter('numero', 'string', $history, $expected);
+    }
+
+    /**
+     * @testdox Possui método ``setNumero()`` que define Numero
+     * @dataProvider dataProviderHistory
+     * @cover ::set
+     * @cover ::getSchema
+     * @small
+     * @test
+     */
+    public function setNumero(History $history, $expected = null)
+    {
+        $this->assertSchemaSetter('numero', 'string', $history);
+    }
+
+    /**
+     * @testdox Possui método ``getSigla()`` para acessar Sigla
+     * @dataProvider dataProviderHistory
+     * @cover ::get
+     * @cover ::getSchema
+     * @small
+     * @test
+     */
+    public function getSigla(History $history, $expected = null)
+    {
+        $this->assertSchemaGetter('sigla', 'string', $history, $expected);
+    }
+
+    /**
+     * @testdox Possui método ``setSigla()`` que define Sigla
+     * @dataProvider dataProviderHistory
+     * @cover ::set
+     * @cover ::getSchema
+     * @small
+     * @test
+     */
+    public function setSigla(History $history, $expected = null)
+    {
+        $this->assertSchemaSetter('sigla', 'string', $history);
+    }
+
+    /**
+     * @testdox Possui método ``getNome()`` para acessar Nome
+     * @dataProvider dataProviderHistory
+     * @cover ::get
+     * @cover ::getSchema
+     * @small
+     * @test
+     */
+    public function getNome(History $history, $expected = null)
+    {
+        $this->assertSchemaGetter('nome', 'string', $history, $expected);
+    }
+
+    /**
+     * @testdox Possui método ``setNome()`` que define Nome
+     * @dataProvider dataProviderHistory
+     * @cover ::set
+     * @cover ::getSchema
+     * @small
+     * @test
+     */
+    public function setNome(History $history, $expected = null)
+    {
+        $this->assertSchemaSetter('nome', 'string', $history);
+    }
+
+    /**
+     * @testdox Possui método ``getCategoria()`` para acessar Categoria
+     * @dataProvider dataProviderHistory
+     * @cover ::get
+     * @cover ::getSchema
+     * @small
+     * @test
+     */
+    public function getCategoria(History $history, $expected = null)
+    {
+        $this->assertSchemaGetter('categoria', 'string', $history, $expected);
+    }
+
+    /**
+     * @testdox Possui método ``setCategoria()`` que define Categoria
+     * @dataProvider dataProviderHistory
+     * @cover ::set
+     * @cover ::getSchema
+     * @small
+     * @test
+     */
+    public function setCategoria(History $history, $expected = null)
+    {
+        $this->assertSchemaSetter('categoria', 'string', $history);
+    }
+
+    /**
+     * @testdox Possui método ``getEvento()`` para acessar Evento
+     * @dataProvider dataProviderHistory
+     * @cover ::get
+     * @cover ::getSchema
+     * @small
+     * @test
+     */
+    public function getEvento(History $history, $expected = null)
+    {
+        $this->assertSchemaGetter('evento', 'object', $history, $expected);
+    }
+
+    /**
+     * @testdox Possui método ``setEvento()`` que define Evento
+     * @dataProvider dataProviderHistory
+     * @cover ::set
+     * @cover ::getSchema
+     * @small
+     * @test
+     */
+    public function setEvento(History $history, $expected = null)
+    {
+        $this->assertSchemaSetter('evento', 'object', $history);
     }
 }

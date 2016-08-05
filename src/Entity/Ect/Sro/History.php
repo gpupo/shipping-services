@@ -18,6 +18,16 @@ use Gpupo\CommonSdk\Entity\EntityAbstract;
 use Gpupo\CommonSdk\Entity\EntityInterface;
 
 /**
+ * @method string getNumero()    Acesso a numero
+ * @method setNumero(string $numero)    Define numero
+ * @method string getSigla()    Acesso a sigla
+ * @method setSigla(string $sigla)    Define sigla
+ * @method string getNome()    Acesso a nome
+ * @method setNome(string $nome)    Define nome
+ * @method string getCategoria()    Acesso a categoria
+ * @method setCategoria(string $categoria)    Define categoria
+ * @method Gpupo\ShippingServices\Entity\Ect\Sro\Evento\EventoCollection getEvento()    Acesso a evento
+ * @method setEvento(Gpupo\ShippingServices\Entity\Ect\Sro\Evento\EventoCollection $evento)    Define evento
  */
 final class History extends EntityAbstract implements EntityInterface
 {
