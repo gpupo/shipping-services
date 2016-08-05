@@ -18,6 +18,17 @@ use Gpupo\CommonSdk\Entity\EntityAbstract;
 use Gpupo\CommonSdk\Entity\EntityInterface;
 
 /**
+* @method string getLocal()    Acesso a local
+* @method setLocal(string $local)    Define local
+* @method string getCodigo()    Acesso a codigo
+* @method setCodigo(string $codigo)    Define codigo
+* @method string getCidade()    Acesso a cidade
+* @method setCidade(string $cidade)    Define cidade
+* @method string getBairro()    Acesso a bairro
+* @method setBairro(string $bairro)    Define bairro
+* @method string getUf()    Acesso a uf
+* @method setUf(string $uf)    Define uf
+*
  */
 final class Destino extends EntityAbstract implements EntityInterface
 {

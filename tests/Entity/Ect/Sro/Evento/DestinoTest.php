@@ -5,39 +5,21 @@
  * @see <http://www.g1mr.com/common-sdk/>
  */
 
-namespace Entity\Ect\Sro\Evento;
+namespace Gpupo\Tests\ShippingServices\Entity\Ect\Sro\Evento;
 
 use Gpupo\CommonSdk\Entity\EntityInterface;
 use Gpupo\Tests\CommonSdk\Traits\EntityTrait;
-use ;
+use Gpupo\Tests\ShippingServices\TestCaseAbstract;
 use Gpupo\ShippingServices\Entity\Ect\Sro\Evento\Destino;
 
 /**
  * @coversDefaultClass \Gpupo\ShippingServices\Entity\Ect\Sro\Evento\Destino
  *
- * @method string getLocal()    Acesso a local
- * @method setLocal(string $local)    Define local
- * @method string getCodigo()    Acesso a codigo
- * @method setCodigo(string $codigo)    Define codigo
- * @method string getCidade()    Acesso a cidade
- * @method setCidade(string $cidade)    Define cidade
- * @method string getBairro()    Acesso a bairro
- * @method setBairro(string $bairro)    Define bairro
- * @method string getUf()    Acesso a uf
- * @method setUf(string $uf)    Define uf
- *
  */
 class DestinoTest extends TestCaseAbstract
 {
+    use EntityTrait;
 
-    /**
-     * @return \Gpupo\ShippingServices\Entity\Ect\Sro\Evento\Destino
-     */
-    public function dataProviderDestino()
-    {
-        return [[new Destino()]];
-    }
-        
     /**
      * @testdox ``getSchema()``
      * @cover ::getSchema
@@ -46,10 +28,10 @@ class DestinoTest extends TestCaseAbstract
      */
     public function getSchema(Destino $destino)
     {
-        $this->markIncomplete('getSchema() need implementation!');
+        $this->assertInternalType('array', $destino->getSchema());
     }
-    
-    
+
+
     /**
      * @testdox Possui método ``getLocal()`` para acessar Local
      * @dataProvider dataProviderDestino
@@ -75,7 +57,7 @@ class DestinoTest extends TestCaseAbstract
     {
         $this->assertSchemaSetter('local', 'string', $destino);
     }
-    
+
     /**
      * @testdox Possui método ``getCodigo()`` para acessar Codigo
      * @dataProvider dataProviderDestino
@@ -101,7 +83,7 @@ class DestinoTest extends TestCaseAbstract
     {
         $this->assertSchemaSetter('codigo', 'string', $destino);
     }
-    
+
     /**
      * @testdox Possui método ``getCidade()`` para acessar Cidade
      * @dataProvider dataProviderDestino
@@ -127,7 +109,7 @@ class DestinoTest extends TestCaseAbstract
     {
         $this->assertSchemaSetter('cidade', 'string', $destino);
     }
-    
+
     /**
      * @testdox Possui método ``getBairro()`` para acessar Bairro
      * @dataProvider dataProviderDestino
@@ -153,7 +135,7 @@ class DestinoTest extends TestCaseAbstract
     {
         $this->assertSchemaSetter('bairro', 'string', $destino);
     }
-    
+
     /**
      * @testdox Possui método ``getUf()`` para acessar Uf
      * @dataProvider dataProviderDestino
