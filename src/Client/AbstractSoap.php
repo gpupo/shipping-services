@@ -24,7 +24,7 @@ abstract class AbstractSoap extends BoardAbstract
     protected function convertResponseToArray($response)
     {
         $array = json_decode(json_encode($response), true);
-
+        
         if (!is_array($array) || !array_key_exists('response', (array) $array)) {
             return [];
         }

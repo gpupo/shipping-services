@@ -28,7 +28,7 @@ final class Ect extends AbstractSoap
             'senha'     => $this->getOptions()->get('ect.passwod'),
             'tipo'      => 'L',
             'resultado' => 'T',
-            'lingua'    => '101',
+            'lingua'    => '102',
             'objetos'   => $list,
         ];
 
