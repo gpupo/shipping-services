@@ -12,25 +12,9 @@
  * For more information, see <http://www.g1mr.com/>.
  */
 
-namespace Gpupo\ShippingServices\Entity\Ect\Sro\Evento;
+namespace Gpupo\ShippingServices\Client;
 
-use Gpupo\CommonSdk\Entity\CollectionAbstract;
-
-final class EventoCollection extends CollectionAbstract
+class Exception extends \Exception
 {
-    public function factoryElement($data)
-    {
-        return new Item($data);
-    }
 
-    public function toLog()
-    {
-        $data = [];
-
-        foreach ($this->all() as $i) {
-            $data[] = $i->toLog();
-        }
-
-        return $data;
-    }
 }

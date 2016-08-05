@@ -7,10 +7,23 @@ Adicione o pacote ``shipping-services`` ao seu projeto utilizando [composer](htt
     composer require gpupo/shipping-services
 
 
-Acesso ao componente:
 
 ```php
 <?php
 
-use Gpupo\ShippingServices\Factory;
+use Gpupo\ShippingServices\Client\Ect;
+
+
+$client = new Ect([
+	''
+]);
+
+$objetos = [
+	'foo',
+	'bar',
+];
+
+$historyCollection = $client->fetchHistoryCollection($objetos);
+
+
 ```

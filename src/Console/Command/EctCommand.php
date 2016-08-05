@@ -37,9 +37,12 @@ final class EctCommand extends AbstractCommand
                 $data = $app->jsonLoadFromFile($list['file']);
                 $objetos = $data['list'];
                 $client = new Client($list);
-                $response = $client->fetchHistoryCollection($objetos);
+                $historyCollection = $client->fetchHistoryCollection($objetos);
 
-                print_r($response);
+                foreach ($historyCollection as $h) {
+                    $app->displayTableResults($output, [$h->toLog()]);
+                    $app->displayTableResults($output, $h->getEvento()->toLog());
+                }
             });
     }
 }
