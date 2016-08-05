@@ -22,22 +22,10 @@ use Symfony\Component\Console\Output\OutputInterface;
 $app = new Application("shipping-services");
 $app->findConfig(['./', 'bin/'], "shipping-services");
 
-foreach (['Product', 'Sku', 'Detail', 'Templates', 'Order', 'Screenplay'] as $className) {
+foreach (['Ect'] as $className) {
     $n =  __NAMESPACE__.'\\'.$className . 'Command';
     $o = new $n;
     $app = $o->append($app);
 }
-
-$app->appendCommand('credential:test', 'Testa a validade de suas credenciais')
-    ->setCode(function (InputInterface $input, OutputInterface $output) use ($app) {
-        $list = $app->processInputParameters([], $input, $output);
-
-        if ($app->factorySdk($list)->factoryManager('templates')->fetchByRoute('brands')) {
-            $output->writeln('<info>Success!</info>');
-        } else {
-            $output->writeln('<error>Error</error>');
-        }
-    });
-
 
 $app->run();

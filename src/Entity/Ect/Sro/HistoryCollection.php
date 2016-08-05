@@ -12,12 +12,23 @@
  * For more information, see <http://www.g1mr.com/>.
  */
 
-namespace Gpupo\ShippingServices\Entity;
+namespace Gpupo\ShippingServices\Entity\Ect\Sro;
 
-use Gpupo\CommonSdk\Entity\Metadata\MetadataContainerAbstract;
-use Gpupo\CommonSdk\Traits\FinderTrait;
+use Gpupo\Common\Entity\CollectionInterface;
+use Gpupo\ShippingServices\Entity\AbstractMetadata;
 
-abstract class AbstractMetadata extends MetadataContainerAbstract
+final class HistoryCollection extends AbstractMetadata implements CollectionInterface
 {
-    use FinderTrait;
+    /**
+     * @codeCoverageIgnore
+     */
+    protected function getKey()
+    {
+        return 'objeto';
+    }
+
+    protected function factoryEntity(array $data)
+    {
+        return new History($data);
+    }
 }

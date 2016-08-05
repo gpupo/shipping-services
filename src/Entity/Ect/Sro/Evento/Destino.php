@@ -12,12 +12,26 @@
  * For more information, see <http://www.g1mr.com/>.
  */
 
-namespace Gpupo\ShippingServices\Entity;
+namespace Gpupo\ShippingServices\Entity\Ect\Sro\Evento;
 
-use Gpupo\CommonSdk\Entity\Metadata\MetadataContainerAbstract;
-use Gpupo\CommonSdk\Traits\FinderTrait;
+use Gpupo\CommonSdk\Entity\EntityAbstract;
+use Gpupo\CommonSdk\Entity\EntityInterface;
 
-abstract class AbstractMetadata extends MetadataContainerAbstract
+/**
+ */
+final class Destino extends EntityAbstract implements EntityInterface
 {
-    use FinderTrait;
+    /**
+     * @codeCoverageIgnore
+     */
+    public function getSchema()
+    {
+        return  [
+            'local'  => 'string',
+            'codigo' => 'string',
+            'cidade' => 'string',
+            'bairro' => 'string',
+            'uf'     => 'string',
+        ];
+    }
 }

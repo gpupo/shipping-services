@@ -12,12 +12,10 @@
  * For more information, see <http://www.g1mr.com/>.
  */
 
-namespace Gpupo\ShippingServices\Entity;
+namespace Gpupo\ShippingServices\Client;
 
-use Gpupo\CommonSdk\Entity\Metadata\MetadataContainerAbstract;
-use Gpupo\CommonSdk\Traits\FinderTrait;
+use Zend\Soap\Client;
 
-abstract class AbstractMetadata extends MetadataContainerAbstract
+class Transport extends Client
 {
-    use FinderTrait;
 }
