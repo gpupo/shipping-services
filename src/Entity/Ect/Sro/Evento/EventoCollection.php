@@ -12,12 +12,14 @@
  * For more information, see <http://www.g1mr.com/>.
  */
 
-namespace Gpupo\ShippingServices\Entity;
+namespace Gpupo\ShippingServices\Entity\Ect\Sro\Evento;
 
-use Gpupo\CommonSdk\Entity\Metadata\MetadataContainerAbstract;
-use Gpupo\CommonSdk\Traits\FinderTrait;
+use Gpupo\CommonSdk\Entity\CollectionAbstract;
 
-abstract class AbstractMetadata extends MetadataContainerAbstract
+final class EventoCollection extends CollectionAbstract
 {
-    use FinderTrait;
+    public function factoryElement($data)
+    {
+        return new Item($data);
+    }
 }

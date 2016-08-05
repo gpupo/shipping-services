@@ -23,22 +23,6 @@ use Symfony\Component\Console\Tester\CommandTester;
 class ApplicationTest extends TestCaseAbstract
 {
     /**
-     * @test Dá acesso a ``Factory``
-     * @test
-     */
-    public function factorySdk()
-    {
-        $app = new Application();
-
-        $sdk = $app->factorySdk([
-            'client_id'    => 'x882ja',
-            'access_token' => '8998329jejd',
-        ]);
-
-        $this->assertInstanceOf('\Gpupo\ShippingServices\Factory', $sdk);
-    }
-
-    /**
      * @test Recebe novas funções
      * @test
      */

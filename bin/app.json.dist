@@ -1,7 +1,8 @@
 {
-    "client_id": "foo",
-    "access_token": "bar",
+    "ect.user": "ECT",
+    "ect.password": "SRO",
     "env": "sandbox",
     "protocol": "http",
+    "sslVersion": "SecureTransport",
     "registerPath": "var/logs/"
 }

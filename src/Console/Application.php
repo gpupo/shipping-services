@@ -15,9 +15,6 @@
 namespace Gpupo\ShippingServices\Console;
 
 use Gpupo\CommonSdk\Console\AbstractApplication;
-use Gpupo\ShippingServices\Entity\Order\Order;
-use Gpupo\ShippingServices\Entity\Product\Product;
-use Gpupo\ShippingServices\Factory;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
@@ -38,54 +35,8 @@ final class Application extends AbstractApplication
 
     protected $commonParameters = [
         [
-            'key' => 'client_id',
-        ],
-        [
-            'key' => 'access_token',
-        ],
-        [
-            'key'     => 'env',
-            'options' => ['sandbox', 'marketplace'],
-            'default' => 'sandbox',
-            'name'    => 'Version',
-        ],
-        [
-            'key'     => 'sslVersion',
-            'options' => ['SecureTransport', 'TLS'],
-            'default' => 'SecureTransport',
-            'name'    => 'SSL Version',
-        ],
-        [
             'key'     => 'registerPath',
             'default' => false,
         ],
     ];
-
-    public function factorySdk(array $options, $loggerChannel = 'bin', $verbose = false)
-    {
-        return  Factory::getInstance()->setup($options, $this->factoryLogger($loggerChannel, $verbose));
-    }
-
-    public function displayOrder(Order $order, OutputInterface $output)
-    {
-        $output->writeln('Order #<comment>'.$order->getId().'</comment>');
-        $this->displayTableResults($output, [$order->toLog()]);
-        $this->displayTableResults($output, $order->getShipping()->getCustomer()->toLog());
-        $this->displayTableResults($output, [$order->getShipping()->getInvoice()->toArray()]);
-        $this->displayTableResults($output, [$order->getShipping()->getTransport()->toArray()]);
-        $this->displayTableResults($output, $order->getShipping()->getItems()->toLog());
-    }
-
-    public function displayProduct(Product $p, OutputInterface $output)
-    {
-        $this->displayTableResults($output, [[
-            'Id'           => $p->getProductId(),
-            'Brand'        => $p->getBrand(),
-            'Department'   => $p->getDepartment(),
-            'Product Type' => $p->getProductType(),
-        ]]);
-
-        $output->writeln('<fg=yellow>Skus</>');
-        $this->displayTableResults($output, $p->getSkus());
-    }
 }

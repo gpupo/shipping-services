@@ -14,7 +14,7 @@
 
 namespace Gpupo\Tests\ShippingServices;
 
-use Gpupo\ShippingServices\Factory;
+use Gpupo\ShippingServices\Entity\Ect\Sro\HistoryCollection;
 use Gpupo\Tests\CommonSdk\TestCaseAbstract as CommonSdkTestCaseAbstract;
 
 abstract class TestCaseAbstract extends CommonSdkTestCaseAbstract
@@ -26,81 +26,48 @@ abstract class TestCaseAbstract extends CommonSdkTestCaseAbstract
         return dirname(dirname(__FILE__)).'/Resources/';
     }
 
-    public function factoryClient()
+    protected function factoryHistoryCollection()
     {
-        return $this->getFactory()->getClient();
+        $data = $this->getResourceJson('fixtures/Ect/Sro/list.response.json');
+
+        return new HistoryCollection($data);
     }
-
-    protected function getOptions()
+    /**
+     * @return \Gpupo\ShippingServices\Entity\Ect\Sro\HistoryCollection
+     */
+    public function dataProviderHistoryCollection()
     {
-        return [
-            'client_id'    => $this->getConstant('CLIENT_ID'),
-            'access_token' => $this->getConstant('ACCESS_TOKEN'),
-            'verbose'      => $this->getConstant('VERBOSE'),
-            'dryrun'       => $this->getConstant('DRYRUN'),
-            'registerPath' => $this->getConstant('REGISTER_PATH'),
-        ];
-    }
-
-    protected function getFactory()
-    {
-        if (!$this->factory) {
-            $this->factory = Factory::getInstance()->setup($this->getOptions(), $this->getLogger());
-        }
-
-        return $this->factory;
+        return [[$this->factoryHistoryCollection()]];
     }
 
     /**
-     * Requer Implementação mas não será abstrato para não impedir testes que não o usam.
+     * @return \Gpupo\ShippingServices\Entity\Ect\Sro\Evento\EventoCollection
      */
-    protected function getManager($filename = null)
+    public function dataProviderEventoCollection()
     {
-        unset($filename);
-
-        return;
-    }
-
-    protected function hasToken()
-    {
-        return $this->hasConstant('ACCESS_TOKEN');
-    }
-
-    public function providerProducts()
-    {
-        $manager = $this->getFactory()->factoryManager('product');
-        $manager->setDryRun($this->factoryResponseFromFixture('fixture/Product/list.json'));
-
-        return $manager->fetch();
-    }
-
-    public function dataProviderProducts()
-    {
-        $list = [];
-
-        foreach ($this->providerProducts() as $product) {
-            $list[] = [$product];
+        $data = [];
+        foreach ($this->factoryHistoryCollection() as $h) {
+            $data[] = [$h->getEvento()];
         }
 
-        return $list;
+        return $data;
     }
 
-    public function providerOrders()
+    /**
+     * @return \Gpupo\ShippingServices\Entity\Ect\Sro\Evento\Item
+     */
+    public function dataProviderItem()
     {
-        $manager = $this->getFactory()->factoryManager('order');
-        $manager->setDryRun($this->factoryResponseFromFixture('fixture/Order/list.json'));
-
-        return $manager->fetch();
-    }
-
-    public function dataProviderOrders()
-    {
-        $list = [];
-
-        foreach ($this->providerOrders() as $order) {
-            $list[] = [$order];
+        $data = [];
+        foreach ($this->factoryHistoryCollection() as $h) {
+            foreach ($h->getEvento() as $i) {
+                $data[] = [$i, $i->toArray()];
+            }
+            if (11 > count($data)) {
+                break;
+            }
         }
 
-        return $list;
+        return $data;
     }
 }

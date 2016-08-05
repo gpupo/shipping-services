@@ -12,12 +12,25 @@
  * For more information, see <http://www.g1mr.com/>.
  */
 
-namespace Gpupo\ShippingServices\Entity;
+namespace Gpupo\ShippingServices\Client;
 
-use Gpupo\CommonSdk\Entity\Metadata\MetadataContainerAbstract;
-use Gpupo\CommonSdk\Traits\FinderTrait;
+use Gpupo\CommonSdk\Client\BoardAbstract;
 
-abstract class AbstractMetadata extends MetadataContainerAbstract
+abstract class AbstractSoap extends BoardAbstract
 {
-    use FinderTrait;
+    /**
+     * @return arrray
+     */
+    protected function convertResponseToArray($response)
+    {
+        $array = json_decode(json_encode($response), true);
+
+        if (!is_array($array) || !array_key_exists('response', (array) $array)) {
+            return [];
+        }
+
+        return (array) $array['response'];
+    }
+
+    abstract protected function factoryTransport();
 }
