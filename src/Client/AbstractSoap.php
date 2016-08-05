@@ -25,11 +25,11 @@ abstract class AbstractSoap extends BoardAbstract
     {
         $array = json_decode(json_encode($response), true);
 
-        if (!is_array($array) || !array_key_exists('response', (array) $array)) {
-            return [];
+        if (!is_array($array) || !array_key_exists('return', (array) $array)) {
+            throw new Exception("Response incomplete");
         }
 
-        return (array) $array['response'];
+        return (array) $array['return'];
     }
 
     abstract protected function factoryTransport();

@@ -45,6 +45,19 @@ final class History extends EntityAbstract implements EntityInterface
         ];
     }
 
+    public function toLog()
+    {
+        $array = $this->partitionByArrayKey([
+            'numero',
+            'sigla',
+            'nome',
+            'catedoria',
+        ]);
+        $array['delivered'] = (true === $this->factoryAnalizer()->isDelivered()) ? 'yes' : 'no';
+
+        return $array;
+    }
+
     public function factoryAnalizer()
     {
         return new Analizer($this);

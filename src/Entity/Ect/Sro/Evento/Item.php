@@ -66,4 +66,17 @@ final class Item extends EntityAbstract implements EntityInterface
             'destino'    => 'object',
         ];
     }
+
+    public function toLog()
+    {
+        return $this->partitionByArrayKey([
+            'tipo',
+            'status',
+            'descricao',
+            'local',
+            'codigo',
+            'cidade',
+            'uf',
+        ]);
+    }
 }
