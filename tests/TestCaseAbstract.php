@@ -14,6 +14,7 @@
 
 namespace Gpupo\Tests\ShippingServices;
 
+use Gpupo\ShippingServices\Entity\Ect\Sro\History;
 use Gpupo\ShippingServices\Entity\Ect\Sro\HistoryCollection;
 use Gpupo\Tests\CommonSdk\TestCaseAbstract as CommonSdkTestCaseAbstract;
 
@@ -32,12 +33,28 @@ abstract class TestCaseAbstract extends CommonSdkTestCaseAbstract
 
         return new HistoryCollection($data);
     }
+
+    protected function factoryHistory()
+    {
+        $data = $this->getResourceJson('fixtures/Ect/Sro/history.json');
+
+        return new History($data);
+    }
+
     /**
      * @return \Gpupo\ShippingServices\Entity\Ect\Sro\HistoryCollection
      */
     public function dataProviderHistoryCollection()
     {
         return [[$this->factoryHistoryCollection()]];
+    }
+
+    /**
+     * @return \Gpupo\ShippingServices\Entity\Ect\Sro\History
+     */
+    public function dataProviderHistory()
+    {
+        return [[$this->factoryHistory()]];
     }
 
     /**
