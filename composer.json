@@ -1,0 +1,37 @@
+{
+    "name": "gpupo/shipping-services",
+    "description": "Acesso a informações de pacotes remetidos no Brasil",
+    "homepage": "http://www.g1mr.com/shipping-services/",
+    "authors": [
+        {
+            "name": "Gilmar Pupo",
+            "email": "g@g1mr.com"
+        }
+    ],
+    "keywords": ["correios", "sdk", "api"],
+    "license": "MIT",
+    "require": {
+        "php": "^5.6 || ^7.0",
+        "ext-curl" : "*",
+        "gpupo/common-sdk": "^2.2.4",
+        "gpupo/common-schema": "^1.1.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "Gpupo\\ShippingServices\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Gpupo\\Tests\\ShippingServices\\": "tests"
+        }
+    },
+    "bin": ["bin/shipping-services"],
+    "scripts": {
+    },
+    "config": {
+        "preferred-install": "dist"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
