@@ -1,0 +1,7 @@
+{
+    "client_id": "foo",
+    "access_token": "bar",
+    "env": "sandbox",
+    "protocol": "http",
+    "registerPath": "var/logs/"
+}
