@@ -1,0 +1,98 @@
+{
+  "numero": "DU264805409BR",
+  "sigla": "DU",
+  "nome": "ENCOMENDA E-SEDEX",
+  "categoria": "E-SEDEX",
+  "evento": [
+      {
+          "tipo": "BDE",
+          "status": "01",
+          "data": "05\/08\/2016",
+          "hora": "12:48",
+          "descricao": "Objeto entregue ao destinat\u00e1rio",
+          "recebedor": "?",
+          "documento": "?",
+          "comentario": "?",
+          "local": "CDD EMBU",
+          "codigo": "06803970",
+          "cidade": "Embu Das Artes",
+          "uf": "SP"
+      },
+      {
+          "tipo": "OEC",
+          "status": "01",
+          "data": "05\/08\/2016",
+          "hora": "09:50",
+          "descricao": "Objeto saiu para entrega ao destinat\u00e1rio",
+          "local": "CDD EMBU",
+          "codigo": "06803970",
+          "cidade": "Embu Das Artes",
+          "uf": "SP"
+      },
+      {
+          "tipo": "DO",
+          "status": "01",
+          "data": "05\/08\/2016",
+          "hora": "06:43",
+          "descricao": "Objeto encaminhado ",
+          "local": "CTE JAGUARE",
+          "codigo": "05314979",
+          "cidade": "Sao Paulo",
+          "uf": "SP",
+          "destino": {
+              "local": "CDD EMBU",
+              "codigo": "06803970",
+              "cidade": "Embu Das Artes",
+              "bairro": "Centro",
+              "uf": "SP"
+          }
+      },
+      {
+          "tipo": "DO",
+          "status": "01",
+          "data": "04\/08\/2016",
+          "hora": "21:39",
+          "descricao": "Objeto encaminhado ",
+          "local": "CTE CURITIBA",
+          "codigo": "80237970",
+          "cidade": "Curitiba",
+          "uf": "PR",
+          "destino": {
+              "local": "CTE JAGUARE",
+              "codigo": "05314979",
+              "cidade": "Sao Paulo",
+              "bairro": "Vila Leopoldina",
+              "uf": "SP"
+          }
+      },
+      {
+          "tipo": "DO",
+          "status": "01",
+          "data": "04\/08\/2016",
+          "hora": "18:51",
+          "descricao": "Objeto encaminhado ",
+          "local": "AGF ANGELO",
+          "codigo": "80420982",
+          "cidade": "Curitiba",
+          "uf": "PR",
+          "destino": {
+              "local": "CTE CURITIBA",
+              "codigo": "80237970",
+              "cidade": "Curitiba",
+              "bairro": "Centro",
+              "uf": "PR"
+          }
+      },
+      {
+          "tipo": "PO",
+          "status": "01",
+          "data": "04\/08\/2016",
+          "hora": "17:34",
+          "descricao": "Objeto postado",
+          "local": "AGF ANGELO",
+          "codigo": "80420982",
+          "cidade": "Curitiba",
+          "uf": "PR"
+      }
+  ]
+}
