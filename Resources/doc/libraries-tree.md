@@ -1,9 +1,6 @@
 ## Árvore de dependências (libraries)
 ```
-gpupo/common-schema 1.1.8 Common schema
-`--gpupo/common ^1.7
-   `--php ^5.6 || ^7.0
-gpupo/common-sdk 2.2.10 Componente de uso comum entre SDKs para integração a partir de aplicações PHP com Restful webservices
+gpupo/common-sdk 2.2.11 Componente de uso comum entre SDKs para integração a partir de aplicações PHP com Restful webservices
 |--codeclimate/php-test-reporter @dev
 |  |--ext-curl *
 |  |--php >=5.3
@@ -146,6 +143,27 @@ gpupo/common-sdk 2.2.10 Componente de uso comum entre SDKs para integração a p
 |     `--php >=5.3.3
 `--twig/twig *
    `--php >=5.2.7
+zendframework/zend-soap 2.6.0 
+|--php ^5.5 || ^7.0
+|--zendframework/zend-server ^2.6.1
+|  |--php ^5.6 || ^7.0
+|  |--zendframework/zend-code ^2.5 || ^3.0
+|  |  |--php ^5.5 || 7.0.0 - 7.0.4 || ^7.0.6
+|  |  `--zendframework/zend-eventmanager ^2.6 || ^3.0
+|  |     `--php ^5.5 || ^7.0
+|  `--zendframework/zend-stdlib ^2.5 || ^3.0
+|     `--php ^5.5 || ^7.0
+|--zendframework/zend-stdlib ^2.7 || ^3.0
+|  `--php ^5.5 || ^7.0
+`--zendframework/zend-uri ^2.5.2
+   |--php ^5.5 || ^7.0
+   |--zendframework/zend-escaper ^2.5
+   |  `--php >=5.5
+   `--zendframework/zend-validator ^2.5
+      |--container-interop/container-interop ^1.1
+      |--php ^5.5 || ^7.0
+      `--zendframework/zend-stdlib ^2.7 || ^3.0
+         `--php ^5.5 || ^7.0
 
 ```
 ---

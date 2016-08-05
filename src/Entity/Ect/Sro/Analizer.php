@@ -12,25 +12,32 @@
  * For more information, see <http://www.g1mr.com/>.
  */
 
-namespace Gpupo\ShippingServices\Client;
+namespace Gpupo\ShippingServices\Entity\Ect\Sro;
 
-use Gpupo\CommonSdk\Client\BoardAbstract;
-
-abstract class AbstractSoap extends BoardAbstract
+/**
+ */
+final class Analizer
 {
-    /**
-     * @return arrray
-     */
-    protected function convertResponseToArray($response)
+    private $container;
+
+    public function __construct(History $history)
     {
-        $array = json_decode(json_encode($response), true);
-
-        if (!is_array($array) || !array_key_exists('response', (array) $array)) {
-            return [];
-        }
-
-        return (array) $array['response'];
+        $this->container = $history;
     }
 
-    abstract protected function factoryTransport();
+    public function getLastEvent()
+    {
+        return $this->container->getEvento()->first();
+    }
+
+    public function isDelivered()
+    {
+        $le = $this->getLastEvent();
+
+        if (in_array($le->getTipo(), ['BDE', 'BDI', 'BDR'], true)) {
+            return true;
+        }
+
+        return false;
+    }
 }
