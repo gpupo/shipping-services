@@ -33,7 +33,7 @@ class HistoryCollectionTest extends TestCaseAbstract
      */
     public function factoryElement(HistoryCollection $historyCollection)
     {
-        $this->assertSame(11, $historyCollection->count());
+        $this->assertSame(25, $historyCollection->count());
         foreach ($historyCollection as $h) {
             $this->assertInstanceof(History::class, $h);
             $this->assertInstanceof(EventoCollection::class, $h->getEvento());

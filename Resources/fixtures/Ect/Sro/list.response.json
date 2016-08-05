@@ -1,6 +1,6 @@
 {
         "versao": "2.0",
-        "qtd": "11",
+        "qtd": "25",
         "objeto": [
             {
                 "numero": "DU264805409BR",
@@ -13,7 +13,7 @@
                         "status": "01",
                         "data": "05\/08\/2016",
                         "hora": "12:48",
-                        "descricao": "Objeto entregue ao destinat\u00e1rio",
+                        "descricao": "Delivered",
                         "recebedor": "?",
                         "documento": "?",
                         "comentario": "?",
@@ -27,7 +27,7 @@
                         "status": "01",
                         "data": "05\/08\/2016",
                         "hora": "09:50",
-                        "descricao": "Objeto saiu para entrega ao destinat\u00e1rio",
+                        "descricao": "Depart for delivery to addressee",
                         "local": "CDD EMBU",
                         "codigo": "06803970",
                         "cidade": "Embu Das Artes",
@@ -38,7 +38,7 @@
                         "status": "01",
                         "data": "05\/08\/2016",
                         "hora": "06:43",
-                        "descricao": "Objeto encaminhado ",
+                        "descricao": "Forwarded ",
                         "local": "CTE JAGUARE",
                         "codigo": "05314979",
                         "cidade": "Sao Paulo",
@@ -56,7 +56,7 @@
                         "status": "01",
                         "data": "04\/08\/2016",
                         "hora": "21:39",
-                        "descricao": "Objeto encaminhado ",
+                        "descricao": "Forwarded ",
                         "local": "CTE CURITIBA",
                         "codigo": "80237970",
                         "cidade": "Curitiba",
@@ -74,7 +74,7 @@
                         "status": "01",
                         "data": "04\/08\/2016",
                         "hora": "18:51",
-                        "descricao": "Objeto encaminhado ",
+                        "descricao": "Forwarded ",
                         "local": "AGF ANGELO",
                         "codigo": "80420982",
                         "cidade": "Curitiba",
@@ -92,7 +92,7 @@
                         "status": "01",
                         "data": "04\/08\/2016",
                         "hora": "17:34",
-                        "descricao": "Objeto postado",
+                        "descricao": "Posted",
                         "local": "AGF ANGELO",
                         "codigo": "80420982",
                         "cidade": "Curitiba",
@@ -111,7 +111,7 @@
                         "status": "01",
                         "data": "04\/08\/2016",
                         "hora": "21:23",
-                        "descricao": "Objeto encaminhado ",
+                        "descricao": "Forwarded ",
                         "local": "CTE CURITIBA",
                         "codigo": "80237970",
                         "cidade": "Curitiba",
@@ -129,7 +129,7 @@
                         "status": "01",
                         "data": "04\/08\/2016",
                         "hora": "18:51",
-                        "descricao": "Objeto encaminhado ",
+                        "descricao": "Forwarded ",
                         "local": "AGF ANGELO",
                         "codigo": "80420982",
                         "cidade": "Curitiba",
@@ -147,7 +147,7 @@
                         "status": "01",
                         "data": "04\/08\/2016",
                         "hora": "17:34",
-                        "descricao": "Objeto postado",
+                        "descricao": "Posted",
                         "local": "AGF ANGELO",
                         "codigo": "80420982",
                         "cidade": "Curitiba",
@@ -166,7 +166,7 @@
                         "status": "01",
                         "data": "04\/08\/2016",
                         "hora": "21:37",
-                        "descricao": "Objeto encaminhado ",
+                        "descricao": "Forwarded ",
                         "local": "CTE CURITIBA",
                         "codigo": "80237970",
                         "cidade": "Curitiba",
@@ -184,7 +184,7 @@
                         "status": "01",
                         "data": "04\/08\/2016",
                         "hora": "18:51",
-                        "descricao": "Objeto encaminhado ",
+                        "descricao": "Forwarded ",
                         "local": "AGF ANGELO",
                         "codigo": "80420982",
                         "cidade": "Curitiba",
@@ -202,7 +202,7 @@
                         "status": "01",
                         "data": "04\/08\/2016",
                         "hora": "17:34",
-                        "descricao": "Objeto postado",
+                        "descricao": "Posted",
                         "local": "AGF ANGELO",
                         "codigo": "80420982",
                         "cidade": "Curitiba",
@@ -221,7 +221,7 @@
                         "status": "01",
                         "data": "04\/08\/2016",
                         "hora": "21:31",
-                        "descricao": "Objeto encaminhado ",
+                        "descricao": "Forwarded ",
                         "local": "CTE CURITIBA",
                         "codigo": "80237970",
                         "cidade": "Curitiba",
@@ -239,7 +239,7 @@
                         "status": "01",
                         "data": "04\/08\/2016",
                         "hora": "18:51",
-                        "descricao": "Objeto encaminhado ",
+                        "descricao": "Forwarded ",
                         "local": "AGF ANGELO",
                         "codigo": "80420982",
                         "cidade": "Curitiba",
@@ -257,7 +257,7 @@
                         "status": "01",
                         "data": "04\/08\/2016",
                         "hora": "17:34",
-                        "descricao": "Objeto postado",
+                        "descricao": "Posted",
                         "local": "AGF ANGELO",
                         "codigo": "80420982",
                         "cidade": "Curitiba",
@@ -276,7 +276,7 @@
                         "status": "01",
                         "data": "04\/08\/2016",
                         "hora": "21:35",
-                        "descricao": "Objeto encaminhado ",
+                        "descricao": "Forwarded ",
                         "local": "CTE CURITIBA",
                         "codigo": "80237970",
                         "cidade": "Curitiba",
@@ -294,7 +294,7 @@
                         "status": "01",
                         "data": "04\/08\/2016",
                         "hora": "18:51",
-                        "descricao": "Objeto encaminhado ",
+                        "descricao": "Forwarded ",
                         "local": "AGF ANGELO",
                         "codigo": "80420982",
                         "cidade": "Curitiba",
@@ -312,7 +312,7 @@
                         "status": "01",
                         "data": "04\/08\/2016",
                         "hora": "17:34",
-                        "descricao": "Objeto postado",
+                        "descricao": "Posted",
                         "local": "AGF ANGELO",
                         "codigo": "80420982",
                         "cidade": "Curitiba",
@@ -331,7 +331,7 @@
                         "status": "01",
                         "data": "05\/08\/2016",
                         "hora": "11:07",
-                        "descricao": "Objeto saiu para entrega ao destinat\u00e1rio",
+                        "descricao": "Depart for delivery to addressee",
                         "local": "CEE CURITIBA NORTE",
                         "codigo": "82560970",
                         "cidade": "Curitiba",
@@ -342,7 +342,7 @@
                         "status": "01",
                         "data": "05\/08\/2016",
                         "hora": "08:31",
-                        "descricao": "Objeto encaminhado ",
+                        "descricao": "Forwarded ",
                         "local": "CTE CURITIBA",
                         "codigo": "80237970",
                         "cidade": "Curitiba",
@@ -360,7 +360,7 @@
                         "status": "01",
                         "data": "04\/08\/2016",
                         "hora": "18:51",
-                        "descricao": "Objeto encaminhado ",
+                        "descricao": "Forwarded ",
                         "local": "AGF ANGELO",
                         "codigo": "80420982",
                         "cidade": "Curitiba",
@@ -378,7 +378,7 @@
                         "status": "01",
                         "data": "04\/08\/2016",
                         "hora": "17:34",
-                        "descricao": "Objeto postado",
+                        "descricao": "Posted",
                         "local": "AGF ANGELO",
                         "codigo": "80420982",
                         "cidade": "Curitiba",
@@ -397,7 +397,7 @@
                         "status": "01",
                         "data": "04\/08\/2016",
                         "hora": "21:30",
-                        "descricao": "Objeto encaminhado ",
+                        "descricao": "Forwarded ",
                         "local": "CTE CURITIBA",
                         "codigo": "80237970",
                         "cidade": "Curitiba",
@@ -415,7 +415,7 @@
                         "status": "01",
                         "data": "04\/08\/2016",
                         "hora": "18:51",
-                        "descricao": "Objeto encaminhado ",
+                        "descricao": "Forwarded ",
                         "local": "AGF ANGELO",
                         "codigo": "80420982",
                         "cidade": "Curitiba",
@@ -433,7 +433,7 @@
                         "status": "01",
                         "data": "04\/08\/2016",
                         "hora": "17:34",
-                        "descricao": "Objeto postado",
+                        "descricao": "Posted",
                         "local": "AGF ANGELO",
                         "codigo": "80420982",
                         "cidade": "Curitiba",
@@ -452,7 +452,7 @@
                         "status": "01",
                         "data": "05\/08\/2016",
                         "hora": "10:44",
-                        "descricao": "Objeto saiu para entrega ao destinat\u00e1rio",
+                        "descricao": "Depart for delivery to addressee",
                         "local": "CDD ASSIS",
                         "codigo": "19800971",
                         "cidade": "Assis",
@@ -463,7 +463,7 @@
                         "status": "01",
                         "data": "05\/08\/2016",
                         "hora": "06:00",
-                        "descricao": "Objeto encaminhado ",
+                        "descricao": "Forwarded ",
                         "local": "CTCE BAURU",
                         "codigo": "17034970",
                         "cidade": "Bauru",
@@ -481,7 +481,7 @@
                         "status": "01",
                         "data": "04\/08\/2016",
                         "hora": "21:36",
-                        "descricao": "Objeto encaminhado ",
+                        "descricao": "Forwarded ",
                         "local": "CTE CURITIBA",
                         "codigo": "80237970",
                         "cidade": "Curitiba",
@@ -499,7 +499,7 @@
                         "status": "01",
                         "data": "04\/08\/2016",
                         "hora": "18:51",
-                        "descricao": "Objeto encaminhado ",
+                        "descricao": "Forwarded ",
                         "local": "AGF ANGELO",
                         "codigo": "80420982",
                         "cidade": "Curitiba",
@@ -517,7 +517,7 @@
                         "status": "01",
                         "data": "04\/08\/2016",
                         "hora": "17:34",
-                        "descricao": "Objeto postado",
+                        "descricao": "Posted",
                         "local": "AGF ANGELO",
                         "codigo": "80420982",
                         "cidade": "Curitiba",
@@ -536,7 +536,7 @@
                         "status": "01",
                         "data": "05\/08\/2016",
                         "hora": "10:32",
-                        "descricao": "Objeto entregue ao destinat\u00e1rio",
+                        "descricao": "Delivered",
                         "recebedor": "?",
                         "documento": "?",
                         "comentario": "?",
@@ -550,7 +550,7 @@
                         "status": "01",
                         "data": "05\/08\/2016",
                         "hora": "08:42",
-                        "descricao": "Objeto saiu para entrega ao destinat\u00e1rio",
+                        "descricao": "Depart for delivery to addressee",
                         "local": "CEE MARINGA",
                         "codigo": "87038970",
                         "cidade": "Maringa",
@@ -561,7 +561,7 @@
                         "status": "01",
                         "data": "04\/08\/2016",
                         "hora": "21:32",
-                        "descricao": "Objeto encaminhado ",
+                        "descricao": "Forwarded ",
                         "local": "CTE CURITIBA",
                         "codigo": "80237970",
                         "cidade": "Curitiba",
@@ -579,7 +579,7 @@
                         "status": "01",
                         "data": "04\/08\/2016",
                         "hora": "18:51",
-                        "descricao": "Objeto encaminhado ",
+                        "descricao": "Forwarded ",
                         "local": "AGF ANGELO",
                         "codigo": "80420982",
                         "cidade": "Curitiba",
@@ -597,7 +597,7 @@
                         "status": "01",
                         "data": "04\/08\/2016",
                         "hora": "17:34",
-                        "descricao": "Objeto postado",
+                        "descricao": "Posted",
                         "local": "AGF ANGELO",
                         "codigo": "80420982",
                         "cidade": "Curitiba",
@@ -612,11 +612,25 @@
                 "categoria": "E-SEDEX",
                 "evento": [
                     {
+                        "tipo": "BDE",
+                        "status": "01",
+                        "data": "05\/08\/2016",
+                        "hora": "14:30",
+                        "descricao": "Delivered",
+                        "recebedor": "?",
+                        "documento": "?",
+                        "comentario": "?",
+                        "local": "CEE VILA SANTA CATARINA",
+                        "codigo": "04368970",
+                        "cidade": "Sao Paulo",
+                        "uf": "SP"
+                    },
+                    {
                         "tipo": "OEC",
                         "status": "01",
                         "data": "05\/08\/2016",
                         "hora": "08:56",
-                        "descricao": "Objeto saiu para entrega ao destinat\u00e1rio",
+                        "descricao": "Depart for delivery to addressee",
                         "local": "CEE VILA SANTA CATARINA",
                         "codigo": "04368970",
                         "cidade": "Sao Paulo",
@@ -627,7 +641,7 @@
                         "status": "01",
                         "data": "05\/08\/2016",
                         "hora": "06:53",
-                        "descricao": "Objeto encaminhado ",
+                        "descricao": "Forwarded ",
                         "local": "CTE SAUDE",
                         "codigo": "04293970",
                         "cidade": "Sao Paulo",
@@ -645,7 +659,7 @@
                         "status": "01",
                         "data": "04\/08\/2016",
                         "hora": "21:35",
-                        "descricao": "Objeto encaminhado ",
+                        "descricao": "Forwarded ",
                         "local": "CTE CURITIBA",
                         "codigo": "80237970",
                         "cidade": "Curitiba",
@@ -663,7 +677,7 @@
                         "status": "01",
                         "data": "04\/08\/2016",
                         "hora": "18:51",
-                        "descricao": "Objeto encaminhado ",
+                        "descricao": "Forwarded ",
                         "local": "AGF ANGELO",
                         "codigo": "80420982",
                         "cidade": "Curitiba",
@@ -681,7 +695,7 @@
                         "status": "01",
                         "data": "04\/08\/2016",
                         "hora": "17:34",
-                        "descricao": "Objeto postado",
+                        "descricao": "Posted",
                         "local": "AGF ANGELO",
                         "codigo": "80420982",
                         "cidade": "Curitiba",
@@ -700,7 +714,7 @@
                         "status": "01",
                         "data": "05\/08\/2016",
                         "hora": "11:02",
-                        "descricao": "Objeto encaminhado ",
+                        "descricao": "Forwarded ",
                         "local": "CTE CAMPINAS",
                         "codigo": "13050971",
                         "cidade": "Valinhos",
@@ -718,7 +732,7 @@
                         "status": "01",
                         "data": "04\/08\/2016",
                         "hora": "21:21",
-                        "descricao": "Objeto encaminhado ",
+                        "descricao": "Forwarded ",
                         "local": "CTE CURITIBA",
                         "codigo": "80237970",
                         "cidade": "Curitiba",
@@ -736,7 +750,7 @@
                         "status": "01",
                         "data": "04\/08\/2016",
                         "hora": "18:51",
-                        "descricao": "Objeto encaminhado ",
+                        "descricao": "Forwarded ",
                         "local": "AGF ANGELO",
                         "codigo": "80420982",
                         "cidade": "Curitiba",
@@ -754,7 +768,1401 @@
                         "status": "01",
                         "data": "04\/08\/2016",
                         "hora": "17:34",
-                        "descricao": "Objeto postado",
+                        "descricao": "Posted",
+                        "local": "AGF ANGELO",
+                        "codigo": "80420982",
+                        "cidade": "Curitiba",
+                        "uf": "PR"
+                    }
+                ]
+            },
+            {
+                "numero": "DU264797849BR",
+                "sigla": "DU",
+                "nome": "ENCOMENDA E-SEDEX",
+                "categoria": "E-SEDEX",
+                "evento": [
+                    {
+                        "tipo": "BDE",
+                        "status": "01",
+                        "data": "01\/08\/2016",
+                        "hora": "19:10",
+                        "descricao": "Delivered",
+                        "recebedor": "                                                                        ",
+                        "documento": "                         ",
+                        "comentario": "                         ",
+                        "local": "CEE JACAREPAGUA",
+                        "codigo": "21041978",
+                        "cidade": "Rio De Janeiro",
+                        "uf": "RJ"
+                    },
+                    {
+                        "tipo": "OEC",
+                        "status": "01",
+                        "data": "01\/08\/2016",
+                        "hora": "12:08",
+                        "descricao": "Depart for delivery to addressee",
+                        "local": "CEE JACAREPAGUA",
+                        "codigo": "21041978",
+                        "cidade": "Rio De Janeiro",
+                        "uf": "RJ"
+                    },
+                    {
+                        "tipo": "DO",
+                        "status": "01",
+                        "data": "30\/07\/2016",
+                        "hora": "06:54",
+                        "descricao": "Forwarded ",
+                        "local": "CTE BENFICA",
+                        "codigo": "21041973",
+                        "cidade": "Rio De Janeiro",
+                        "uf": "RJ",
+                        "destino": {
+                            "local": "CEE JACAREPAGUA",
+                            "codigo": "21041978",
+                            "cidade": "Rio De Janeiro",
+                            "bairro": "Jacarepagua",
+                            "uf": "RJ"
+                        }
+                    },
+                    {
+                        "tipo": "DO",
+                        "status": "01",
+                        "data": "29\/07\/2016",
+                        "hora": "21:24",
+                        "descricao": "Forwarded ",
+                        "local": "CTE CURITIBA",
+                        "codigo": "80237970",
+                        "cidade": "Curitiba",
+                        "uf": "PR",
+                        "destino": {
+                            "local": "CTE BENFICA",
+                            "codigo": "21041973",
+                            "cidade": "Rio De Janeiro",
+                            "bairro": "Benfica",
+                            "uf": "RJ"
+                        }
+                    },
+                    {
+                        "tipo": "DO",
+                        "status": "01",
+                        "data": "29\/07\/2016",
+                        "hora": "18:48",
+                        "descricao": "Forwarded ",
+                        "local": "AGF ANGELO",
+                        "codigo": "80420982",
+                        "cidade": "Curitiba",
+                        "uf": "PR",
+                        "destino": {
+                            "local": "CTE CURITIBA",
+                            "codigo": "80237970",
+                            "cidade": "Curitiba",
+                            "bairro": "Centro",
+                            "uf": "PR"
+                        }
+                    },
+                    {
+                        "tipo": "PO",
+                        "status": "01",
+                        "data": "29\/07\/2016",
+                        "hora": "17:53",
+                        "descricao": "Posted",
+                        "local": "AGF ANGELO",
+                        "codigo": "80420982",
+                        "cidade": "Curitiba",
+                        "uf": "PR"
+                    }
+                ]
+            },
+            {
+                "numero": "DU264797835BR",
+                "sigla": "DU",
+                "nome": "ENCOMENDA E-SEDEX",
+                "categoria": "E-SEDEX",
+                "evento": [
+                    {
+                        "tipo": "BDE",
+                        "status": "01",
+                        "data": "30\/07\/2016",
+                        "hora": "12:54",
+                        "descricao": "Delivered",
+                        "recebedor": "                                                                        ",
+                        "documento": "                         ",
+                        "comentario": "                         ",
+                        "local": "CDD ILHA DO GOVERNADOR",
+                        "codigo": "21931970",
+                        "cidade": "Rio De Janeiro",
+                        "uf": "RJ"
+                    },
+                    {
+                        "tipo": "OEC",
+                        "status": "01",
+                        "data": "30\/07\/2016",
+                        "hora": "09:57",
+                        "descricao": "Depart for delivery to addressee",
+                        "local": "CDD ILHA DO GOVERNADOR",
+                        "codigo": "21931970",
+                        "cidade": "Rio De Janeiro",
+                        "uf": "RJ"
+                    },
+                    {
+                        "tipo": "DO",
+                        "status": "01",
+                        "data": "30\/07\/2016",
+                        "hora": "06:52",
+                        "descricao": "Forwarded ",
+                        "local": "CTE BENFICA",
+                        "codigo": "21041973",
+                        "cidade": "Rio De Janeiro",
+                        "uf": "RJ",
+                        "destino": {
+                            "local": "CDD ILHA DO GOVERNADOR",
+                            "codigo": "21931970",
+                            "cidade": "Rio De Janeiro",
+                            "bairro": "Cacuia",
+                            "uf": "RJ"
+                        }
+                    },
+                    {
+                        "tipo": "DO",
+                        "status": "01",
+                        "data": "29\/07\/2016",
+                        "hora": "21:24",
+                        "descricao": "Forwarded ",
+                        "local": "CTE CURITIBA",
+                        "codigo": "80237970",
+                        "cidade": "Curitiba",
+                        "uf": "PR",
+                        "destino": {
+                            "local": "CTE BENFICA",
+                            "codigo": "21041973",
+                            "cidade": "Rio De Janeiro",
+                            "bairro": "Benfica",
+                            "uf": "RJ"
+                        }
+                    },
+                    {
+                        "tipo": "DO",
+                        "status": "01",
+                        "data": "29\/07\/2016",
+                        "hora": "18:48",
+                        "descricao": "Forwarded ",
+                        "local": "AGF ANGELO",
+                        "codigo": "80420982",
+                        "cidade": "Curitiba",
+                        "uf": "PR",
+                        "destino": {
+                            "local": "CTE CURITIBA",
+                            "codigo": "80237970",
+                            "cidade": "Curitiba",
+                            "bairro": "Centro",
+                            "uf": "PR"
+                        }
+                    },
+                    {
+                        "tipo": "PO",
+                        "status": "01",
+                        "data": "29\/07\/2016",
+                        "hora": "17:53",
+                        "descricao": "Posted",
+                        "local": "AGF ANGELO",
+                        "codigo": "80420982",
+                        "cidade": "Curitiba",
+                        "uf": "PR"
+                    }
+                ]
+            },
+            {
+                "numero": "DU264797821BR",
+                "sigla": "DU",
+                "nome": "ENCOMENDA E-SEDEX",
+                "categoria": "E-SEDEX",
+                "evento": [
+                    {
+                        "tipo": "BDE",
+                        "status": "01",
+                        "data": "01\/08\/2016",
+                        "hora": "19:15",
+                        "descricao": "Delivered",
+                        "recebedor": "                                                                        ",
+                        "documento": "                         ",
+                        "comentario": "                         ",
+                        "local": "CDD GAMA",
+                        "codigo": "72457970",
+                        "cidade": "BRASILIA",
+                        "uf": "DF"
+                    },
+                    {
+                        "tipo": "OEC",
+                        "status": "01",
+                        "data": "01\/08\/2016",
+                        "hora": "12:38",
+                        "descricao": "Depart for delivery to addressee",
+                        "local": "CDD GAMA",
+                        "codigo": "72457970",
+                        "cidade": "BRASILIA",
+                        "uf": "DF"
+                    },
+                    {
+                        "tipo": "RO",
+                        "status": "01",
+                        "data": "01\/08\/2016",
+                        "hora": "09:35",
+                        "descricao": "Forwarded ",
+                        "local": "CTE BRASILIA",
+                        "codigo": "71206970",
+                        "cidade": "BRASILIA",
+                        "uf": "DF",
+                        "destino": {
+                            "local": "CDD GAMA",
+                            "codigo": "72457970",
+                            "cidade": "BRASILIA",
+                            "bairro": "Setor Industrial (Gama)",
+                            "uf": "DF"
+                        }
+                    },
+                    {
+                        "tipo": "DO",
+                        "status": "01",
+                        "data": "29\/07\/2016",
+                        "hora": "21:17",
+                        "descricao": "Forwarded ",
+                        "local": "CTE CURITIBA",
+                        "codigo": "80237970",
+                        "cidade": "Curitiba",
+                        "uf": "PR",
+                        "destino": {
+                            "local": "CTE BRASILIA",
+                            "codigo": "71206970",
+                            "cidade": "BRASILIA",
+                            "bairro": "Zona Industrial (Guar\u00e1)",
+                            "uf": "DF"
+                        }
+                    },
+                    {
+                        "tipo": "DO",
+                        "status": "01",
+                        "data": "29\/07\/2016",
+                        "hora": "18:48",
+                        "descricao": "Forwarded ",
+                        "local": "AGF ANGELO",
+                        "codigo": "80420982",
+                        "cidade": "Curitiba",
+                        "uf": "PR",
+                        "destino": {
+                            "local": "CTE CURITIBA",
+                            "codigo": "80237970",
+                            "cidade": "Curitiba",
+                            "bairro": "Centro",
+                            "uf": "PR"
+                        }
+                    },
+                    {
+                        "tipo": "PO",
+                        "status": "01",
+                        "data": "29\/07\/2016",
+                        "hora": "17:53",
+                        "descricao": "Posted",
+                        "local": "AGF ANGELO",
+                        "codigo": "80420982",
+                        "cidade": "Curitiba",
+                        "uf": "PR"
+                    }
+                ]
+            },
+            {
+                "numero": "DU264797818BR",
+                "sigla": "DU",
+                "nome": "ENCOMENDA E-SEDEX",
+                "categoria": "E-SEDEX",
+                "evento": [
+                    {
+                        "tipo": "BDE",
+                        "status": "01",
+                        "data": "02\/08\/2016",
+                        "hora": "14:37",
+                        "descricao": "Delivered",
+                        "recebedor": "                                                                        ",
+                        "documento": "                         ",
+                        "comentario": "                         ",
+                        "local": "CEE CAMPOS DOS GOYTACAZES",
+                        "codigo": "28051970",
+                        "cidade": "Campos Dos Goytacazes",
+                        "uf": "RJ"
+                    },
+                    {
+                        "tipo": "OEC",
+                        "status": "01",
+                        "data": "02\/08\/2016",
+                        "hora": "09:54",
+                        "descricao": "Depart for delivery to addressee",
+                        "local": "CEE CAMPOS DOS GOYTACAZES",
+                        "codigo": "28051970",
+                        "cidade": "Campos Dos Goytacazes",
+                        "uf": "RJ"
+                    },
+                    {
+                        "tipo": "RO",
+                        "status": "01",
+                        "data": "01\/08\/2016",
+                        "hora": "21:18",
+                        "descricao": "Forwarded ",
+                        "local": "CTE SAO GONCALO",
+                        "codigo": "24744972",
+                        "cidade": "Sao Goncalo",
+                        "uf": "RJ",
+                        "destino": {
+                            "local": "CEE CAMPOS DOS GOYTACAZES",
+                            "codigo": "28051970",
+                            "cidade": "Campos Dos Goytacazes",
+                            "bairro": "Caju",
+                            "uf": "RJ"
+                        }
+                    },
+                    {
+                        "tipo": "DO",
+                        "status": "01",
+                        "data": "29\/07\/2016",
+                        "hora": "21:17",
+                        "descricao": "Forwarded ",
+                        "local": "CTE CURITIBA",
+                        "codigo": "80237970",
+                        "cidade": "Curitiba",
+                        "uf": "PR",
+                        "destino": {
+                            "local": "CTE SAO GONCALO",
+                            "codigo": "24744972",
+                            "cidade": "Sao Goncalo",
+                            "bairro": "Colubande",
+                            "uf": "RJ"
+                        }
+                    },
+                    {
+                        "tipo": "DO",
+                        "status": "01",
+                        "data": "29\/07\/2016",
+                        "hora": "18:48",
+                        "descricao": "Forwarded ",
+                        "local": "AGF ANGELO",
+                        "codigo": "80420982",
+                        "cidade": "Curitiba",
+                        "uf": "PR",
+                        "destino": {
+                            "local": "CTE CURITIBA",
+                            "codigo": "80237970",
+                            "cidade": "Curitiba",
+                            "bairro": "Centro",
+                            "uf": "PR"
+                        }
+                    },
+                    {
+                        "tipo": "PO",
+                        "status": "01",
+                        "data": "29\/07\/2016",
+                        "hora": "17:53",
+                        "descricao": "Posted",
+                        "local": "AGF ANGELO",
+                        "codigo": "80420982",
+                        "cidade": "Curitiba",
+                        "uf": "PR"
+                    }
+                ]
+            },
+            {
+                "numero": "DU264797804BR",
+                "sigla": "DU",
+                "nome": "ENCOMENDA E-SEDEX",
+                "categoria": "E-SEDEX",
+                "evento": [
+                    {
+                        "tipo": "BDE",
+                        "status": "01",
+                        "data": "03\/08\/2016",
+                        "hora": "15:53",
+                        "descricao": "Delivered",
+                        "recebedor": "                                                                        ",
+                        "documento": "                         ",
+                        "comentario": "                         ",
+                        "local": "CEE RECIFE NOROESTE",
+                        "codigo": "50000903",
+                        "cidade": "RECIFE",
+                        "uf": "PE"
+                    },
+                    {
+                        "tipo": "OEC",
+                        "status": "01",
+                        "data": "03\/08\/2016",
+                        "hora": "10:15",
+                        "descricao": "Depart for delivery to addressee",
+                        "local": "CEE RECIFE NOROESTE",
+                        "codigo": "50000903",
+                        "cidade": "RECIFE",
+                        "uf": "PE"
+                    },
+                    {
+                        "tipo": "BDR",
+                        "status": "47",
+                        "data": "02\/08\/2016",
+                        "hora": "14:20",
+                        "descricao": "Depart for delivery cancelled",
+                        "detalhe": "New depart for delivery will be made",
+                        "recebedor": "                                                                        ",
+                        "documento": "                         ",
+                        "comentario": "                         ",
+                        "local": "CEE RECIFE NOROESTE",
+                        "codigo": "50000903",
+                        "cidade": "RECIFE",
+                        "uf": "PE"
+                    },
+                    {
+                        "tipo": "OEC",
+                        "status": "01",
+                        "data": "02\/08\/2016",
+                        "hora": "10:22",
+                        "descricao": "Depart for delivery to addressee",
+                        "local": "CEE RECIFE NOROESTE",
+                        "codigo": "50000903",
+                        "cidade": "RECIFE",
+                        "uf": "PE"
+                    },
+                    {
+                        "tipo": "DO",
+                        "status": "01",
+                        "data": "30\/07\/2016",
+                        "hora": "12:29",
+                        "descricao": "Forwarded ",
+                        "local": "CTE RECIFE",
+                        "codigo": "50630979",
+                        "cidade": "RECIFE",
+                        "uf": "PE",
+                        "destino": {
+                            "local": "CEE RECIFE NOROESTE",
+                            "codigo": "50000903",
+                            "cidade": "RECIFE",
+                            "bairro": "Iputinga",
+                            "uf": "PE"
+                        }
+                    },
+                    {
+                        "tipo": "DO",
+                        "status": "01",
+                        "data": "29\/07\/2016",
+                        "hora": "21:16",
+                        "descricao": "Forwarded ",
+                        "local": "CTE CURITIBA",
+                        "codigo": "80237970",
+                        "cidade": "Curitiba",
+                        "uf": "PR",
+                        "destino": {
+                            "local": "CTE RECIFE",
+                            "codigo": "50630979",
+                            "cidade": "RECIFE",
+                            "bairro": "Prado",
+                            "uf": "PE"
+                        }
+                    },
+                    {
+                        "tipo": "DO",
+                        "status": "01",
+                        "data": "29\/07\/2016",
+                        "hora": "18:48",
+                        "descricao": "Forwarded ",
+                        "local": "AGF ANGELO",
+                        "codigo": "80420982",
+                        "cidade": "Curitiba",
+                        "uf": "PR",
+                        "destino": {
+                            "local": "CTE CURITIBA",
+                            "codigo": "80237970",
+                            "cidade": "Curitiba",
+                            "bairro": "Centro",
+                            "uf": "PR"
+                        }
+                    },
+                    {
+                        "tipo": "PO",
+                        "status": "01",
+                        "data": "29\/07\/2016",
+                        "hora": "17:53",
+                        "descricao": "Posted",
+                        "local": "AGF ANGELO",
+                        "codigo": "80420982",
+                        "cidade": "Curitiba",
+                        "uf": "PR"
+                    }
+                ]
+            },
+            {
+                "numero": "DU264797795BR",
+                "sigla": "DU",
+                "nome": "ENCOMENDA E-SEDEX",
+                "categoria": "E-SEDEX",
+                "evento": [
+                    {
+                        "tipo": "BDE",
+                        "status": "01",
+                        "data": "01\/08\/2016",
+                        "hora": "19:06",
+                        "descricao": "Delivered",
+                        "recebedor": "                                                                        ",
+                        "documento": "                         ",
+                        "comentario": "                         ",
+                        "local": "CEE SANTO AMARO",
+                        "codigo": "04754970",
+                        "cidade": "Sao Paulo",
+                        "uf": "SP"
+                    },
+                    {
+                        "tipo": "BDE",
+                        "status": "01",
+                        "data": "01\/08\/2016",
+                        "hora": "15:25",
+                        "descricao": "Delivered",
+                        "recebedor": "?",
+                        "documento": "?",
+                        "comentario": "?",
+                        "local": "CEE SANTO AMARO",
+                        "codigo": "04754970",
+                        "cidade": "Sao Paulo",
+                        "uf": "SP"
+                    },
+                    {
+                        "tipo": "OEC",
+                        "status": "01",
+                        "data": "01\/08\/2016",
+                        "hora": "09:23",
+                        "descricao": "Depart for delivery to addressee",
+                        "local": "CEE SANTO AMARO",
+                        "codigo": "04754970",
+                        "cidade": "Sao Paulo",
+                        "uf": "SP"
+                    },
+                    {
+                        "tipo": "DO",
+                        "status": "01",
+                        "data": "30\/07\/2016",
+                        "hora": "06:36",
+                        "descricao": "Forwarded ",
+                        "local": "CTE SAUDE",
+                        "codigo": "04293970",
+                        "cidade": "Sao Paulo",
+                        "uf": "SP",
+                        "destino": {
+                            "local": "CEE SANTO AMARO",
+                            "codigo": "04754970",
+                            "cidade": "Sao Paulo",
+                            "bairro": "Santo Amaro",
+                            "uf": "SP"
+                        }
+                    },
+                    {
+                        "tipo": "DO",
+                        "status": "01",
+                        "data": "29\/07\/2016",
+                        "hora": "21:26",
+                        "descricao": "Forwarded ",
+                        "local": "CTE CURITIBA",
+                        "codigo": "80237970",
+                        "cidade": "Curitiba",
+                        "uf": "PR",
+                        "destino": {
+                            "local": "CTE SAUDE",
+                            "codigo": "04293970",
+                            "cidade": "Sao Paulo",
+                            "bairro": "Jardim Da Saude",
+                            "uf": "SP"
+                        }
+                    },
+                    {
+                        "tipo": "DO",
+                        "status": "01",
+                        "data": "29\/07\/2016",
+                        "hora": "18:48",
+                        "descricao": "Forwarded ",
+                        "local": "AGF ANGELO",
+                        "codigo": "80420982",
+                        "cidade": "Curitiba",
+                        "uf": "PR",
+                        "destino": {
+                            "local": "CTE CURITIBA",
+                            "codigo": "80237970",
+                            "cidade": "Curitiba",
+                            "bairro": "Centro",
+                            "uf": "PR"
+                        }
+                    },
+                    {
+                        "tipo": "PO",
+                        "status": "01",
+                        "data": "29\/07\/2016",
+                        "hora": "17:53",
+                        "descricao": "Posted",
+                        "local": "AGF ANGELO",
+                        "codigo": "80420982",
+                        "cidade": "Curitiba",
+                        "uf": "PR"
+                    }
+                ]
+            },
+            {
+                "numero": "DU264797781BR",
+                "sigla": "DU",
+                "nome": "ENCOMENDA E-SEDEX",
+                "categoria": "E-SEDEX",
+                "evento": [
+                    {
+                        "tipo": "BDE",
+                        "status": "01",
+                        "data": "01\/08\/2016",
+                        "hora": "18:28",
+                        "descricao": "Delivered",
+                        "recebedor": "                                                                        ",
+                        "documento": "                         ",
+                        "comentario": "                         ",
+                        "local": "CEE ARACATUBA",
+                        "codigo": "16050970",
+                        "cidade": "Aracatuba",
+                        "uf": "SP"
+                    },
+                    {
+                        "tipo": "OEC",
+                        "status": "01",
+                        "data": "01\/08\/2016",
+                        "hora": "09:24",
+                        "descricao": "Depart for delivery to addressee",
+                        "local": "CEE ARACATUBA",
+                        "codigo": "16050970",
+                        "cidade": "Aracatuba",
+                        "uf": "SP"
+                    },
+                    {
+                        "tipo": "RO",
+                        "status": "01",
+                        "data": "30\/07\/2016",
+                        "hora": "06:34",
+                        "descricao": "Forwarded ",
+                        "local": "CTCE BAURU",
+                        "codigo": "17034970",
+                        "cidade": "Bauru",
+                        "uf": "SP",
+                        "destino": {
+                            "local": "CEE ARACATUBA",
+                            "codigo": "16050970",
+                            "cidade": "Aracatuba",
+                            "bairro": "Sao Joaquim",
+                            "uf": "SP"
+                        }
+                    },
+                    {
+                        "tipo": "DO",
+                        "status": "01",
+                        "data": "29\/07\/2016",
+                        "hora": "21:21",
+                        "descricao": "Forwarded ",
+                        "local": "CTE CURITIBA",
+                        "codigo": "80237970",
+                        "cidade": "Curitiba",
+                        "uf": "PR",
+                        "destino": {
+                            "local": "CTCE BAURU",
+                            "codigo": "17034970",
+                            "cidade": "Bauru",
+                            "bairro": "Distrito  Industrial",
+                            "uf": "SP"
+                        }
+                    },
+                    {
+                        "tipo": "DO",
+                        "status": "01",
+                        "data": "29\/07\/2016",
+                        "hora": "18:48",
+                        "descricao": "Forwarded ",
+                        "local": "AGF ANGELO",
+                        "codigo": "80420982",
+                        "cidade": "Curitiba",
+                        "uf": "PR",
+                        "destino": {
+                            "local": "CTE CURITIBA",
+                            "codigo": "80237970",
+                            "cidade": "Curitiba",
+                            "bairro": "Centro",
+                            "uf": "PR"
+                        }
+                    },
+                    {
+                        "tipo": "PO",
+                        "status": "01",
+                        "data": "29\/07\/2016",
+                        "hora": "17:53",
+                        "descricao": "Posted",
+                        "local": "AGF ANGELO",
+                        "codigo": "80420982",
+                        "cidade": "Curitiba",
+                        "uf": "PR"
+                    }
+                ]
+            },
+            {
+                "numero": "DU264797778BR",
+                "sigla": "DU",
+                "nome": "ENCOMENDA E-SEDEX",
+                "categoria": "E-SEDEX",
+                "evento": [
+                    {
+                        "tipo": "BDE",
+                        "status": "01",
+                        "data": "01\/08\/2016",
+                        "hora": "16:35",
+                        "descricao": "Delivered",
+                        "recebedor": "                                                                        ",
+                        "documento": "                         ",
+                        "comentario": "                         ",
+                        "local": "CDD SAO BENEDITO",
+                        "codigo": "33120971",
+                        "cidade": "Santa Luzia",
+                        "uf": "MG"
+                    },
+                    {
+                        "tipo": "OEC",
+                        "status": "01",
+                        "data": "01\/08\/2016",
+                        "hora": "13:09",
+                        "descricao": "Depart for delivery to addressee",
+                        "local": "CDD SAO BENEDITO",
+                        "codigo": "33120971",
+                        "cidade": "Santa Luzia",
+                        "uf": "MG"
+                    },
+                    {
+                        "tipo": "DO",
+                        "status": "01",
+                        "data": "01\/08\/2016",
+                        "hora": "07:57",
+                        "descricao": "Forwarded ",
+                        "local": "CTE BELO HORIZONTE",
+                        "codigo": "31276970",
+                        "cidade": "BELO HORIZONTE",
+                        "uf": "MG",
+                        "destino": {
+                            "local": "CDD SAO BENEDITO",
+                            "codigo": "33120971",
+                            "cidade": "Santa Luzia",
+                            "bairro": "Sao Benedito",
+                            "uf": "MG"
+                        }
+                    },
+                    {
+                        "tipo": "DO",
+                        "status": "01",
+                        "data": "29\/07\/2016",
+                        "hora": "21:24",
+                        "descricao": "Forwarded ",
+                        "local": "CTE CURITIBA",
+                        "codigo": "80237970",
+                        "cidade": "Curitiba",
+                        "uf": "PR",
+                        "destino": {
+                            "local": "CTE BELO HORIZONTE",
+                            "codigo": "31276970",
+                            "cidade": "BELO HORIZONTE",
+                            "bairro": "Universitario",
+                            "uf": "MG"
+                        }
+                    },
+                    {
+                        "tipo": "DO",
+                        "status": "01",
+                        "data": "29\/07\/2016",
+                        "hora": "18:48",
+                        "descricao": "Forwarded ",
+                        "local": "AGF ANGELO",
+                        "codigo": "80420982",
+                        "cidade": "Curitiba",
+                        "uf": "PR",
+                        "destino": {
+                            "local": "CTE CURITIBA",
+                            "codigo": "80237970",
+                            "cidade": "Curitiba",
+                            "bairro": "Centro",
+                            "uf": "PR"
+                        }
+                    },
+                    {
+                        "tipo": "PO",
+                        "status": "01",
+                        "data": "29\/07\/2016",
+                        "hora": "17:53",
+                        "descricao": "Posted",
+                        "local": "AGF ANGELO",
+                        "codigo": "80420982",
+                        "cidade": "Curitiba",
+                        "uf": "PR"
+                    }
+                ]
+            },
+            {
+                "numero": "DU264797764BR",
+                "sigla": "DU",
+                "nome": "ENCOMENDA E-SEDEX",
+                "categoria": "E-SEDEX",
+                "evento": [
+                    {
+                        "tipo": "BDE",
+                        "status": "01",
+                        "data": "30\/07\/2016",
+                        "hora": "12:33",
+                        "descricao": "Delivered",
+                        "recebedor": "                                                                        ",
+                        "documento": "                         ",
+                        "comentario": "                         ",
+                        "local": "CEE SUL",
+                        "codigo": "91910972",
+                        "cidade": "PORTO ALEGRE",
+                        "uf": "RS"
+                    },
+                    {
+                        "tipo": "OEC",
+                        "status": "01",
+                        "data": "30\/07\/2016",
+                        "hora": "09:39",
+                        "descricao": "Depart for delivery to addressee",
+                        "local": "CEE SUL",
+                        "codigo": "91910972",
+                        "cidade": "PORTO ALEGRE",
+                        "uf": "RS"
+                    },
+                    {
+                        "tipo": "RO",
+                        "status": "01",
+                        "data": "30\/07\/2016",
+                        "hora": "07:46",
+                        "descricao": "Forwarded ",
+                        "local": "CTE PORTO ALEGRE",
+                        "codigo": "90240971",
+                        "cidade": "Porto Alegre",
+                        "uf": "RS",
+                        "destino": {
+                            "local": "CEE SUL",
+                            "codigo": "91910972",
+                            "cidade": "PORTO ALEGRE",
+                            "bairro": "Camaqua",
+                            "uf": "RS"
+                        }
+                    },
+                    {
+                        "tipo": "DO",
+                        "status": "01",
+                        "data": "29\/07\/2016",
+                        "hora": "21:24",
+                        "descricao": "Forwarded ",
+                        "local": "CTE CURITIBA",
+                        "codigo": "80237970",
+                        "cidade": "Curitiba",
+                        "uf": "PR",
+                        "destino": {
+                            "local": "CTE PORTO ALEGRE",
+                            "codigo": "90240971",
+                            "cidade": "Porto Alegre",
+                            "bairro": "Jardim Sao Pedro",
+                            "uf": "RS"
+                        }
+                    },
+                    {
+                        "tipo": "DO",
+                        "status": "01",
+                        "data": "29\/07\/2016",
+                        "hora": "18:48",
+                        "descricao": "Forwarded ",
+                        "local": "AGF ANGELO",
+                        "codigo": "80420982",
+                        "cidade": "Curitiba",
+                        "uf": "PR",
+                        "destino": {
+                            "local": "CTE CURITIBA",
+                            "codigo": "80237970",
+                            "cidade": "Curitiba",
+                            "bairro": "Centro",
+                            "uf": "PR"
+                        }
+                    },
+                    {
+                        "tipo": "PO",
+                        "status": "01",
+                        "data": "29\/07\/2016",
+                        "hora": "17:53",
+                        "descricao": "Posted",
+                        "local": "AGF ANGELO",
+                        "codigo": "80420982",
+                        "cidade": "Curitiba",
+                        "uf": "PR"
+                    }
+                ]
+            },
+            {
+                "numero": "DU264797755BR",
+                "sigla": "DU",
+                "nome": "ENCOMENDA E-SEDEX",
+                "categoria": "E-SEDEX",
+                "evento": [
+                    {
+                        "tipo": "BDE",
+                        "status": "01",
+                        "data": "01\/08\/2016",
+                        "hora": "17:42",
+                        "descricao": "Delivered",
+                        "recebedor": "                                                                        ",
+                        "documento": "                         ",
+                        "comentario": "                         ",
+                        "local": "CEE VARGINHA",
+                        "codigo": "37062971",
+                        "cidade": "Varginha",
+                        "uf": "MG"
+                    },
+                    {
+                        "tipo": "OEC",
+                        "status": "01",
+                        "data": "01\/08\/2016",
+                        "hora": "11:13",
+                        "descricao": "Depart for delivery to addressee",
+                        "local": "CEE VARGINHA",
+                        "codigo": "37062971",
+                        "cidade": "Varginha",
+                        "uf": "MG"
+                    },
+                    {
+                        "tipo": "RO",
+                        "status": "01",
+                        "data": "01\/08\/2016",
+                        "hora": "04:43",
+                        "descricao": "Forwarded ",
+                        "local": "CTCE VARGINHA",
+                        "codigo": "37062970",
+                        "cidade": "VARGINHA",
+                        "uf": "MG",
+                        "destino": {
+                            "local": "CEE VARGINHA",
+                            "codigo": "37062971",
+                            "cidade": "Varginha",
+                            "bairro": "Industrial Jk",
+                            "uf": "MG"
+                        }
+                    },
+                    {
+                        "tipo": "DO",
+                        "status": "01",
+                        "data": "29\/07\/2016",
+                        "hora": "21:26",
+                        "descricao": "Forwarded ",
+                        "local": "CTE CURITIBA",
+                        "codigo": "80237970",
+                        "cidade": "Curitiba",
+                        "uf": "PR",
+                        "destino": {
+                            "local": "CTCE VARGINHA",
+                            "codigo": "37062970",
+                            "cidade": "VARGINHA",
+                            "bairro": "JK",
+                            "uf": "MG"
+                        }
+                    },
+                    {
+                        "tipo": "DO",
+                        "status": "01",
+                        "data": "29\/07\/2016",
+                        "hora": "18:48",
+                        "descricao": "Forwarded ",
+                        "local": "AGF ANGELO",
+                        "codigo": "80420982",
+                        "cidade": "Curitiba",
+                        "uf": "PR",
+                        "destino": {
+                            "local": "CTE CURITIBA",
+                            "codigo": "80237970",
+                            "cidade": "Curitiba",
+                            "bairro": "Centro",
+                            "uf": "PR"
+                        }
+                    },
+                    {
+                        "tipo": "PO",
+                        "status": "01",
+                        "data": "29\/07\/2016",
+                        "hora": "17:53",
+                        "descricao": "Posted",
+                        "local": "AGF ANGELO",
+                        "codigo": "80420982",
+                        "cidade": "Curitiba",
+                        "uf": "PR"
+                    }
+                ]
+            },
+            {
+                "numero": "DU264797747BR",
+                "sigla": "DU",
+                "nome": "ENCOMENDA E-SEDEX",
+                "categoria": "E-SEDEX",
+                "evento": [
+                    {
+                        "tipo": "BDE",
+                        "status": "01",
+                        "data": "01\/08\/2016",
+                        "hora": "17:22",
+                        "descricao": "Delivered",
+                        "recebedor": "                                                                        ",
+                        "documento": "                         ",
+                        "comentario": "                         ",
+                        "local": "CEE VALE DO ACO",
+                        "codigo": "35164972",
+                        "cidade": "Santana Do Paraiso",
+                        "uf": "MG"
+                    },
+                    {
+                        "tipo": "OEC",
+                        "status": "01",
+                        "data": "01\/08\/2016",
+                        "hora": "09:36",
+                        "descricao": "Depart for delivery to addressee",
+                        "local": "CEE VALE DO ACO",
+                        "codigo": "35164972",
+                        "cidade": "Santana Do Paraiso",
+                        "uf": "MG"
+                    },
+                    {
+                        "tipo": "DO",
+                        "status": "01",
+                        "data": "30\/07\/2016",
+                        "hora": "16:05",
+                        "descricao": "Forwarded ",
+                        "local": "CTE BELO HORIZONTE",
+                        "codigo": "31276970",
+                        "cidade": "BELO HORIZONTE",
+                        "uf": "MG",
+                        "destino": {
+                            "local": "CEE VALE DO ACO",
+                            "codigo": "35164972",
+                            "cidade": "Santana Do Paraiso",
+                            "bairro": "Distrito Industrial",
+                            "uf": "MG"
+                        }
+                    },
+                    {
+                        "tipo": "DO",
+                        "status": "01",
+                        "data": "29\/07\/2016",
+                        "hora": "21:21",
+                        "descricao": "Forwarded ",
+                        "local": "CTE CURITIBA",
+                        "codigo": "80237970",
+                        "cidade": "Curitiba",
+                        "uf": "PR",
+                        "destino": {
+                            "local": "CTE BELO HORIZONTE",
+                            "codigo": "31276970",
+                            "cidade": "BELO HORIZONTE",
+                            "bairro": "Universitario",
+                            "uf": "MG"
+                        }
+                    },
+                    {
+                        "tipo": "DO",
+                        "status": "01",
+                        "data": "29\/07\/2016",
+                        "hora": "18:48",
+                        "descricao": "Forwarded ",
+                        "local": "AGF ANGELO",
+                        "codigo": "80420982",
+                        "cidade": "Curitiba",
+                        "uf": "PR",
+                        "destino": {
+                            "local": "CTE CURITIBA",
+                            "codigo": "80237970",
+                            "cidade": "Curitiba",
+                            "bairro": "Centro",
+                            "uf": "PR"
+                        }
+                    },
+                    {
+                        "tipo": "PO",
+                        "status": "01",
+                        "data": "29\/07\/2016",
+                        "hora": "17:53",
+                        "descricao": "Posted",
+                        "local": "AGF ANGELO",
+                        "codigo": "80420982",
+                        "cidade": "Curitiba",
+                        "uf": "PR"
+                    }
+                ]
+            },
+            {
+                "numero": "DU264797733BR",
+                "sigla": "DU",
+                "nome": "ENCOMENDA E-SEDEX",
+                "categoria": "E-SEDEX",
+                "evento": [
+                    {
+                        "tipo": "BDE",
+                        "status": "01",
+                        "data": "01\/08\/2016",
+                        "hora": "15:43",
+                        "descricao": "Delivered",
+                        "recebedor": "                                                                        ",
+                        "documento": "                         ",
+                        "comentario": "                         ",
+                        "local": "CEE CAXIAS DO SUL",
+                        "codigo": "95028970",
+                        "cidade": "Caxias Do Sul",
+                        "uf": "RS"
+                    },
+                    {
+                        "tipo": "OEC",
+                        "status": "01",
+                        "data": "01\/08\/2016",
+                        "hora": "06:38",
+                        "descricao": "Depart for delivery to addressee",
+                        "local": "CEE CAXIAS DO SUL",
+                        "codigo": "95028970",
+                        "cidade": "Caxias Do Sul",
+                        "uf": "RS"
+                    },
+                    {
+                        "tipo": "DO",
+                        "status": "01",
+                        "data": "30\/07\/2016",
+                        "hora": "13:05",
+                        "descricao": "Forwarded ",
+                        "local": "CTE PORTO ALEGRE",
+                        "codigo": "90240971",
+                        "cidade": "Porto Alegre",
+                        "uf": "RS",
+                        "destino": {
+                            "local": "CEE CAXIAS DO SUL",
+                            "codigo": "95028970",
+                            "cidade": "Caxias Do Sul",
+                            "bairro": "Industrial",
+                            "uf": "RS"
+                        }
+                    },
+                    {
+                        "tipo": "DO",
+                        "status": "01",
+                        "data": "29\/07\/2016",
+                        "hora": "21:26",
+                        "descricao": "Forwarded ",
+                        "local": "CTE CURITIBA",
+                        "codigo": "80237970",
+                        "cidade": "Curitiba",
+                        "uf": "PR",
+                        "destino": {
+                            "local": "CTE PORTO ALEGRE",
+                            "codigo": "90240971",
+                            "cidade": "Porto Alegre",
+                            "bairro": "Jardim Sao Pedro",
+                            "uf": "RS"
+                        }
+                    },
+                    {
+                        "tipo": "DO",
+                        "status": "01",
+                        "data": "29\/07\/2016",
+                        "hora": "18:48",
+                        "descricao": "Forwarded ",
+                        "local": "AGF ANGELO",
+                        "codigo": "80420982",
+                        "cidade": "Curitiba",
+                        "uf": "PR",
+                        "destino": {
+                            "local": "CTE CURITIBA",
+                            "codigo": "80237970",
+                            "cidade": "Curitiba",
+                            "bairro": "Centro",
+                            "uf": "PR"
+                        }
+                    },
+                    {
+                        "tipo": "PO",
+                        "status": "01",
+                        "data": "29\/07\/2016",
+                        "hora": "17:53",
+                        "descricao": "Posted",
+                        "local": "AGF ANGELO",
+                        "codigo": "80420982",
+                        "cidade": "Curitiba",
+                        "uf": "PR"
+                    }
+                ]
+            },
+            {
+                "numero": "DU264797720BR",
+                "sigla": "DU",
+                "nome": "ENCOMENDA E-SEDEX",
+                "categoria": "E-SEDEX",
+                "evento": [
+                    {
+                        "tipo": "BDE",
+                        "status": "01",
+                        "data": "01\/08\/2016",
+                        "hora": "17:23",
+                        "descricao": "Delivered",
+                        "recebedor": "                                                                        ",
+                        "documento": "                         ",
+                        "comentario": "                         ",
+                        "local": "CEE TERESINA",
+                        "codigo": "64019976",
+                        "cidade": "Teresina",
+                        "uf": "PI"
+                    },
+                    {
+                        "tipo": "OEC",
+                        "status": "01",
+                        "data": "01\/08\/2016",
+                        "hora": "08:59",
+                        "descricao": "Depart for delivery to addressee",
+                        "local": "CEE TERESINA",
+                        "codigo": "64019976",
+                        "cidade": "Teresina",
+                        "uf": "PI"
+                    },
+                    {
+                        "tipo": "DO",
+                        "status": "01",
+                        "data": "29\/07\/2016",
+                        "hora": "21:21",
+                        "descricao": "Forwarded ",
+                        "local": "CTE CURITIBA",
+                        "codigo": "80237970",
+                        "cidade": "Curitiba",
+                        "uf": "PR",
+                        "destino": {
+                            "local": "CEE TERESINA",
+                            "codigo": "64019976",
+                            "cidade": "Teresina",
+                            "bairro": "Monte Castelo",
+                            "uf": "PI"
+                        }
+                    },
+                    {
+                        "tipo": "DO",
+                        "status": "01",
+                        "data": "29\/07\/2016",
+                        "hora": "18:48",
+                        "descricao": "Forwarded ",
+                        "local": "AGF ANGELO",
+                        "codigo": "80420982",
+                        "cidade": "Curitiba",
+                        "uf": "PR",
+                        "destino": {
+                            "local": "CTE CURITIBA",
+                            "codigo": "80237970",
+                            "cidade": "Curitiba",
+                            "bairro": "Centro",
+                            "uf": "PR"
+                        }
+                    },
+                    {
+                        "tipo": "PO",
+                        "status": "01",
+                        "data": "29\/07\/2016",
+                        "hora": "17:53",
+                        "descricao": "Posted",
+                        "local": "AGF ANGELO",
+                        "codigo": "80420982",
+                        "cidade": "Curitiba",
+                        "uf": "PR"
+                    }
+                ]
+            },
+            {
+                "numero": "DU264797716BR",
+                "sigla": "DU",
+                "nome": "ENCOMENDA E-SEDEX",
+                "categoria": "E-SEDEX",
+                "evento": [
+                    {
+                        "tipo": "BDE",
+                        "status": "01",
+                        "data": "01\/08\/2016",
+                        "hora": "18:53",
+                        "descricao": "Delivered",
+                        "recebedor": "                                                                        ",
+                        "documento": "                         ",
+                        "comentario": "                         ",
+                        "local": "CEE GOVERNADOR VALADARES",
+                        "codigo": "35017971",
+                        "cidade": "Governador Valadares",
+                        "uf": "MG"
+                    },
+                    {
+                        "tipo": "OEC",
+                        "status": "01",
+                        "data": "01\/08\/2016",
+                        "hora": "10:29",
+                        "descricao": "Depart for delivery to addressee",
+                        "local": "CEE GOVERNADOR VALADARES",
+                        "codigo": "35017971",
+                        "cidade": "Governador Valadares",
+                        "uf": "MG"
+                    },
+                    {
+                        "tipo": "DO",
+                        "status": "01",
+                        "data": "30\/07\/2016",
+                        "hora": "16:03",
+                        "descricao": "Forwarded ",
+                        "local": "CTE BELO HORIZONTE",
+                        "codigo": "31276970",
+                        "cidade": "BELO HORIZONTE",
+                        "uf": "MG",
+                        "destino": {
+                            "local": "CEE GOVERNADOR VALADARES",
+                            "codigo": "35017971",
+                            "cidade": "Governador Valadares",
+                            "bairro": "Castanheiras",
+                            "uf": "MG"
+                        }
+                    },
+                    {
+                        "tipo": "DO",
+                        "status": "01",
+                        "data": "29\/07\/2016",
+                        "hora": "21:21",
+                        "descricao": "Forwarded ",
+                        "local": "CTE CURITIBA",
+                        "codigo": "80237970",
+                        "cidade": "Curitiba",
+                        "uf": "PR",
+                        "destino": {
+                            "local": "CTE BELO HORIZONTE",
+                            "codigo": "31276970",
+                            "cidade": "BELO HORIZONTE",
+                            "bairro": "Universitario",
+                            "uf": "MG"
+                        }
+                    },
+                    {
+                        "tipo": "DO",
+                        "status": "01",
+                        "data": "29\/07\/2016",
+                        "hora": "18:48",
+                        "descricao": "Forwarded ",
+                        "local": "AGF ANGELO",
+                        "codigo": "80420982",
+                        "cidade": "Curitiba",
+                        "uf": "PR",
+                        "destino": {
+                            "local": "CTE CURITIBA",
+                            "codigo": "80237970",
+                            "cidade": "Curitiba",
+                            "bairro": "Centro",
+                            "uf": "PR"
+                        }
+                    },
+                    {
+                        "tipo": "PO",
+                        "status": "01",
+                        "data": "29\/07\/2016",
+                        "hora": "17:53",
+                        "descricao": "Posted",
                         "local": "AGF ANGELO",
                         "codigo": "80420982",
                         "cidade": "Curitiba",
@@ -763,4 +2171,4 @@
                 ]
             }
         ]
-}
+    }

@@ -38,6 +38,8 @@ final class EctCommand extends AbstractCommand
                 $objetos = $data['list'];
                 $client = new Client($list);
                 $response = $client->fetchHistoryCollection($objetos);
+
+
                 print_r($response);
             });
     }
