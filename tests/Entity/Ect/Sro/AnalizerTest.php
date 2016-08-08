@@ -25,9 +25,12 @@ class AnalizerTest extends TestCaseAbstract
     public function dataProviderAnalizer()
     {
         $data = [];
-        $oTrue = new History($this->getResourceJson('fixtures/Ect/Sro/history.delivered.json'));
-        $data[] = [$oTrue, [
+
+        //Entregue
+        $data[] = [new History($this->getResourceJson('fixtures/Ect/Sro/history.delivered.json')), [
             'delivered' => true,
+            'customerAction' => false,
+            'lost' => false,
             'lastEvent' => [
                 'tipo'      => 'BDE',
                 'status'    => '01',
@@ -41,9 +44,11 @@ class AnalizerTest extends TestCaseAbstract
             ],
         ]];
 
-        $oFalse = new History($this->getResourceJson('fixtures/Ect/Sro/history.incomplete.json'));
-        $data[] = [$oFalse, [
+        //Andamento
+        $data[] = [new History($this->getResourceJson('fixtures/Ect/Sro/history.incomplete.json')), [
             'delivered' => false,
+            'customerAction' => false,
+            'lost' => false,
             'lastEvent' => [
                 'tipo'      => 'DO',
                 'status'    => '01',
@@ -64,6 +69,41 @@ class AnalizerTest extends TestCaseAbstract
             ],
         ]];
 
+        //Aguardando retirada
+        $data[] = [new History($this->getResourceJson('fixtures/Ect/Sro/history.customerAction.json')), [
+            'delivered' => false,
+            'customerAction' => true,
+            'lost' => false,
+            'lastEvent' => [
+                'tipo'      => 'LDI',
+                'status'    => '01',
+                'data'      => '15/06/2016',
+                'hora'      => '12:13',
+                'descricao' => 'Objeto aguardando retirada no endereço indicado',
+                'local'     => 'CDD PARTENON',
+                'codigo'    => '90620971',
+                'cidade'    => 'PORTO ALEGRE',
+                'uf'        => 'RS',
+            ],
+        ]];
+
+        //Objeto Roubado
+        $data[] = [new History($this->getResourceJson('fixtures/Ect/Sro/history.lost.json')), [
+            'delivered' => false,
+            'customerAction' => false,
+            'lost' => true,
+            'lastEvent' => [
+                'tipo'      => 'BDE',
+                'status'    => '50',
+                'data'      => '04/08/2016',
+                'hora'      => '17:34',
+                'descricao' => 'Objeto Roubado',
+                'local'     => 'AGF ANGELO',
+                'codigo'    => '80420982',
+                'cidade'    => 'Curitiba',
+                'uf'        => 'PR',
+            ],
+        ]];
         return $data;
     }
 
@@ -97,5 +137,27 @@ class AnalizerTest extends TestCaseAbstract
     public function isDelivered(History $history, $expected)
     {
         $this->assertSame($expected['delivered'], $history->factoryAnalizer()->isDelivered());
+    }
+
+    /**
+     * @testdox ``requireCustomerAction()``
+     * @cover ::requireCustomerAction
+     * @dataProvider dataProviderAnalizer
+     * @test
+     */
+    public function requireCustomerAction(History $history, $expected)
+    {
+        $this->assertSame($expected['customerAction'], $history->factoryAnalizer()->requireCustomerAction());
+    }
+
+    /**
+     * @testdox ``isLost()``
+     * @cover ::isLost
+     * @dataProvider dataProviderAnalizer
+     * @test
+     */
+    public function isLost(History $history, $expected)
+    {
+        $this->assertSame($expected['lost'], $history->factoryAnalizer()->isLost());
     }
 }
