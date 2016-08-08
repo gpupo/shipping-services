@@ -14,7 +14,7 @@
 
 namespace Gpupo\ShippingServices\Console\Command;
 
-use Gpupo\ShippingServices\Client\Ect as Client;
+use Gpupo\ShippingServices\Client\Ect;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
@@ -36,7 +36,7 @@ final class EctCommand extends AbstractCommand
                 $list = $app->processInputParameters($opts, $input, $output);
                 $data = $app->jsonLoadFromFile($list['file']);
                 $objetos = $data['list'];
-                $client = new Client($list);
+                $client = new Ect($list);
                 $historyCollection = $client->fetchHistoryCollection($objetos);
 
                 foreach ($historyCollection as $h) {
