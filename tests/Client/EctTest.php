@@ -49,7 +49,7 @@ class EctTest extends TestCaseAbstract
      */
     public function factoryTransport(Ect $ect)
     {
-        $url = 'Resources/fixtures/ECT/Sro/Soap/Rastro.wsdl';
+        $url = 'Resources/fixtures/Ect/Sro/Soap/Rastro.wsdl';
         $soapClientMock = $this->getMockFromWsdl($url, 'Foo', 'Client');
         $soapClientMock
         ->method('buscaeventoslista')
