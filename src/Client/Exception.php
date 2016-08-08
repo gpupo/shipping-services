@@ -16,5 +16,4 @@ namespace Gpupo\ShippingServices\Client;
 
 class Exception extends \Exception
 {
-
 }

@@ -26,7 +26,7 @@ abstract class AbstractSoap extends BoardAbstract
         $array = json_decode(json_encode($response), true);
 
         if (!is_array($array) || !array_key_exists('return', (array) $array)) {
-            throw new Exception("Response incomplete");
+            throw new Exception('Response incomplete');
         }
 
         return (array) $array['return'];
