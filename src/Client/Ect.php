@@ -23,12 +23,14 @@ final class Ect extends AbstractSoap
      */
     public function fetchHistoryCollection(array $list)
     {
+        $language = $this->getOptions()->get('ect.language', 'pt_BR');
+
         $params = [
             'usuario'   => $this->getOptions()->get('ect.user'),
             'senha'     => $this->getOptions()->get('ect.passwod'),
             'tipo'      => 'L',
             'resultado' => 'T',
-            'lingua'    => '102',
+            'lingua'    => ('EN' === $language) ? 102 : 101,
             'objetos'   => $list,
         ];
 
