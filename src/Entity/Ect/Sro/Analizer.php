@@ -14,6 +14,8 @@
 
 namespace Gpupo\ShippingServices\Entity\Ect\Sro;
 
+use Gpupo\ShippingServices\Entity\Ect\Sro\Evento\Item;
+
 /**
  */
 final class Analizer
@@ -27,17 +29,49 @@ final class Analizer
 
     public function getLastEvent()
     {
-        return $this->container->getEvento()->first();
+        $e =  $this->container->getEvento()->first();
+
+        if (!$e instanceof Item) {
+            return new Item();
+        }
+
+        return $e;
     }
 
-    public function isDelivered()
+    protected function isOf(array $array)
     {
-        $le = $this->getLastEvent();
-
-        if (in_array($le->getTipo(), ['BDE', 'BDI', 'BDR'], true)) {
+        if (in_array($this->getLastEvent()->getTipo(), $array, true)) {
             return true;
         }
 
         return false;
+    }
+
+    protected function is(array $tipo, array $status)
+    {
+        if (true !== $this->isOf($tipo)) {
+            return false;
+        }
+
+        if (!in_array((int) $this->getLastEvent()->getStatus(), $status, true)) {
+            return false;
+        }
+
+        return true;
+    }
+
+    public function isDelivered()
+    {
+        return $this->is(['BDE', 'BDI', 'BDR'], [1]);
+    }
+
+    public function requireCustomerAction()
+    {
+        return $this->isOf(['LDI']);
+    }
+
+    public function isLost()
+    {
+        return $this->is(['BDE', 'BDI', 'BDR'], [50, 52, 52]);
     }
 }
