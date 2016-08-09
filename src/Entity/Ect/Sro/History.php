@@ -53,7 +53,15 @@ final class History extends EntityAbstract implements EntityInterface
             'nome',
             'catedoria',
         ]);
-        $array['delivered'] = (true === $this->factoryAnalizer()->isDelivered()) ? 'yes' : 'no';
+        $analizer = $this->factoryAnalizer();
+
+        $f = function ($method) use ($analizer) {
+            return (true === $analizer->$method()) ? 'yes' : 'no';
+        };
+
+        $array['delivered'] = $f('isDelivered');
+        $array['require_customer_action'] = $f('requireCustomerAction');
+        $array['lost'] = $f('isLost');
 
         return $array;
     }
