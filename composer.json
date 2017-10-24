@@ -1,11 +1,11 @@
 {
     "name": "gpupo/shipping-services",
     "description": "Acesso a informações de pacotes remetidos no Brasil",
-    "homepage": "http://www.g1mr.com/shipping-services/",
+    "homepage": "https://opensource.gpupo.com/shipping-services/",
     "authors": [
         {
             "name": "Gilmar Pupo",
-            "email": "g@g1mr.com"
+            "email": "contact@gpupo.com"
         }
     ],
     "keywords": ["correios", "sdk", "api"],
