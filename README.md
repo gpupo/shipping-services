@@ -4,6 +4,7 @@ Acesso a informações de pacotes remetidos no Brasil
 
 [![Paypal Donations](https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=EK6F2WRKG7GNN&item_name=shipping-services)
 
+[![Build Status](https://secure.travis-ci.org/gpupo/shipping-services.png?branch=master)](http://travis-ci.org/gpupo/shipping-services)
 
 
 ## Requisitos para uso
@@ -51,20 +52,6 @@ Proibido:
 - Responsabilidade Assegurada
 
 
-
----
-
-## Indicadores de qualidade
-
-[![Build Status](https://secure.travis-ci.org/gpupo/shipping-services.png?branch=master)](http://travis-ci.org/gpupo/shipping-services)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/gpupo/shipping-services/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/gpupo/shipping-services/?branch=master)
-[![Code Climate](https://codeclimate.com/github/gpupo/shipping-services/badges/gpa.svg)](https://codeclimate.com/github/gpupo/shipping-services)
-[![Test Coverage](https://codeclimate.com/github/gpupo/shipping-services/badges/coverage.svg)](https://codeclimate.com/github/gpupo/shipping-services/coverage)
-
-
-
----
-
 ## Agradecimentos
 
 * A todos os que [contribuiram com patchs](https://github.com/gpupo/shipping-services/contributors);
@@ -72,7 +59,6 @@ Proibido:
 * Aos desenvolvedores que criaram as [bibliotecas utilizadas neste componente](https://github.com/gpupo/shipping-services/blob/master/Resources/doc/libraries-list.md).
 
  _- [Gilmar Pupo](https://opensource.gpupo.com/)_
-
 
 
 ---
