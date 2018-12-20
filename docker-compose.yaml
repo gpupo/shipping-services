@@ -1,0 +1,7 @@
+version: '2'
+services:
+    php-fpm:
+        container_name: php-dev
+        image: gpupo/container-orchestration:php-dev-v1.5.1
+        volumes:
+            - ./:/var/www/app
