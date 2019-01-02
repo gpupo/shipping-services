@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * This file is part of gpupo/shipping-services
  * Created by Gilmar Pupo <contact@gpupo.com>
@@ -10,6 +12,7 @@
  * Para obtener la información de los derechos de autor y la licencia debe leer
  * el archivo LICENSE que se distribuye con el código fuente.
  * For more information, see <https://opensource.gpupo.com/>.
+ *
  */
 
 namespace Gpupo\Entity\Ect\Sro;
@@ -32,15 +35,15 @@ class AnalizerTest extends TestCaseAbstract
             'customerAction' => false,
             'lost' => false,
             'lastEvent' => [
-                'tipo'      => 'BDE',
-                'status'    => '01',
-                'data'      => '05/08/2016',
-                'hora'      => '12:48',
+                'tipo' => 'BDE',
+                'status' => '01',
+                'data' => '05/08/2016',
+                'hora' => '12:48',
                 'descricao' => 'Delivered',
-                'local'     => 'CDD EMBU',
-                'codigo'    => '06803970',
-                'cidade'    => 'Embu Das Artes',
-                'uf'        => 'SP',
+                'local' => 'CDD EMBU',
+                'codigo' => '06803970',
+                'cidade' => 'Embu Das Artes',
+                'uf' => 'SP',
             ],
         ]];
 
@@ -50,21 +53,21 @@ class AnalizerTest extends TestCaseAbstract
             'customerAction' => false,
             'lost' => false,
             'lastEvent' => [
-                'tipo'      => 'DO',
-                'status'    => '01',
-                'data'      => '04/08/2016',
-                'hora'      => '21:39',
+                'tipo' => 'DO',
+                'status' => '01',
+                'data' => '04/08/2016',
+                'hora' => '21:39',
                 'descricao' => 'Forwarded ',
-                'local'     => 'CTE CURITIBA',
-                'codigo'    => '80237970',
-                'cidade'    => 'Curitiba',
-                'uf'        => 'PR',
-                'destino'   => [
-                    'local'  => 'CTE JAGUARE',
+                'local' => 'CTE CURITIBA',
+                'codigo' => '80237970',
+                'cidade' => 'Curitiba',
+                'uf' => 'PR',
+                'destino' => [
+                    'local' => 'CTE JAGUARE',
                     'codigo' => '05314979',
                     'cidade' => 'Sao Paulo',
                     'bairro' => 'Vila Leopoldina',
-                    'uf'     => 'SP',
+                    'uf' => 'SP',
                 ],
             ],
         ]];
@@ -75,15 +78,15 @@ class AnalizerTest extends TestCaseAbstract
             'customerAction' => true,
             'lost' => false,
             'lastEvent' => [
-                'tipo'      => 'LDI',
-                'status'    => '01',
-                'data'      => '15/06/2016',
-                'hora'      => '12:13',
+                'tipo' => 'LDI',
+                'status' => '01',
+                'data' => '15/06/2016',
+                'hora' => '12:13',
                 'descricao' => 'Objeto aguardando retirada no endereço indicado',
-                'local'     => 'CDD PARTENON',
-                'codigo'    => '90620971',
-                'cidade'    => 'PORTO ALEGRE',
-                'uf'        => 'RS',
+                'local' => 'CDD PARTENON',
+                'codigo' => '90620971',
+                'cidade' => 'PORTO ALEGRE',
+                'uf' => 'RS',
             ],
         ]];
 
@@ -93,17 +96,18 @@ class AnalizerTest extends TestCaseAbstract
             'customerAction' => false,
             'lost' => true,
             'lastEvent' => [
-                'tipo'      => 'BDE',
-                'status'    => '50',
-                'data'      => '04/08/2016',
-                'hora'      => '17:34',
+                'tipo' => 'BDE',
+                'status' => '50',
+                'data' => '04/08/2016',
+                'hora' => '17:34',
                 'descricao' => 'Objeto Roubado',
-                'local'     => 'AGF ANGELO',
-                'codigo'    => '80420982',
-                'cidade'    => 'Curitiba',
-                'uf'        => 'PR',
+                'local' => 'AGF ANGELO',
+                'codigo' => '80420982',
+                'cidade' => 'Curitiba',
+                'uf' => 'PR',
             ],
         ]];
+
         return $data;
     }
 
@@ -111,9 +115,10 @@ class AnalizerTest extends TestCaseAbstract
      * @testdox ``getLastEvent()``
      * @cover ::getLastEvent
      * @dataProvider dataProviderAnalizer
-     * @test
+     *
+     * @param mixed $expected
      */
-    public function getLastEvent(History $history, $expected)
+    public function testGetLastEvent(History $history, $expected)
     {
         $ex = $expected['lastEvent'];
         $le = $history->factoryAnalizer()->getLastEvent();
@@ -132,9 +137,10 @@ class AnalizerTest extends TestCaseAbstract
      * @testdox ``isDelivered()``
      * @cover ::isDelivered
      * @dataProvider dataProviderAnalizer
-     * @test
+     *
+     * @param mixed $expected
      */
-    public function isDelivered(History $history, $expected)
+    public function testIsDelivered(History $history, $expected)
     {
         $this->assertSame($expected['delivered'], $history->factoryAnalizer()->isDelivered());
     }
@@ -143,9 +149,10 @@ class AnalizerTest extends TestCaseAbstract
      * @testdox ``requireCustomerAction()``
      * @cover ::requireCustomerAction
      * @dataProvider dataProviderAnalizer
-     * @test
+     *
+     * @param mixed $expected
      */
-    public function requireCustomerAction(History $history, $expected)
+    public function testRequireCustomerAction(History $history, $expected)
     {
         $this->assertSame($expected['customerAction'], $history->factoryAnalizer()->requireCustomerAction());
     }
@@ -154,9 +161,10 @@ class AnalizerTest extends TestCaseAbstract
      * @testdox ``isLost()``
      * @cover ::isLost
      * @dataProvider dataProviderAnalizer
-     * @test
+     *
+     * @param mixed $expected
      */
-    public function isLost(History $history, $expected)
+    public function testIsLost(History $history, $expected)
     {
         $this->assertSame($expected['lost'], $history->factoryAnalizer()->isLost());
     }

@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * This file is part of gpupo/shipping-services
  * Created by Gilmar Pupo <contact@gpupo.com>
@@ -10,14 +12,13 @@
  * Para obtener la información de los derechos de autor y la licencia debe leer
  * el archivo LICENSE que se distribuye con el código fuente.
  * For more information, see <https://opensource.gpupo.com/>.
+ *
  */
 
 namespace Gpupo\ShippingServices\Entity\Ect\Sro;
 
 use Gpupo\ShippingServices\Entity\Ect\Sro\Evento\Item;
 
-/**
- */
 final class Analizer
 {
     private $container;
@@ -29,35 +30,13 @@ final class Analizer
 
     public function getLastEvent()
     {
-        $e =  $this->container->getEvento()->first();
+        $e = $this->container->getEvento()->first();
 
         if (!$e instanceof Item) {
             return new Item();
         }
 
         return $e;
-    }
-
-    protected function isOf(array $array)
-    {
-        if (in_array($this->getLastEvent()->getTipo(), $array, true)) {
-            return true;
-        }
-
-        return false;
-    }
-
-    protected function is(array $tipo, array $status)
-    {
-        if (true !== $this->isOf($tipo)) {
-            return false;
-        }
-
-        if (!in_array((int) $this->getLastEvent()->getStatus(), $status, true)) {
-            return false;
-        }
-
-        return true;
     }
 
     public function isDelivered()
@@ -73,5 +52,27 @@ final class Analizer
     public function isLost()
     {
         return $this->is(['BDE', 'BDI', 'BDR'], [50, 52, 52]);
+    }
+
+    private function isOf(array $array)
+    {
+        if (\in_array($this->getLastEvent()->getTipo(), $array, true)) {
+            return true;
+        }
+
+        return false;
+    }
+
+    private function is(array $tipo, array $status)
+    {
+        if (true !== $this->isOf($tipo)) {
+            return false;
+        }
+
+        if (!\in_array((int) $this->getLastEvent()->getStatus(), $status, true)) {
+            return false;
+        }
+
+        return true;
     }
 }

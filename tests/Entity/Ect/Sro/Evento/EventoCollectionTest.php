@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * This file is part of gpupo/shipping-services
  * Created by Gilmar Pupo <contact@gpupo.com>
@@ -10,6 +12,7 @@
  * Para obtener la información de los derechos de autor y la licencia debe leer
  * el archivo LICENSE que se distribuye con el código fuente.
  * For more information, see <https://opensource.gpupo.com/>.
+ *
  */
 
 namespace Gpupo\Tests\ShippingServices\Entity\Ect\Sro\Evento;
@@ -28,9 +31,8 @@ class EventoCollectionTest extends TestCaseAbstract
      * @testdox ``factoryElement()``
      * @cover ::factoryElement
      * @dataProvider dataProviderEventoCollection
-     * @test
      */
-    public function factoryElement(EventoCollection $eventoCollection)
+    public function testFactoryElement(EventoCollection $eventoCollection)
     {
         $this->assertInstanceof(Item::class, $eventoCollection->first());
     }
@@ -38,9 +40,8 @@ class EventoCollectionTest extends TestCaseAbstract
     /**
      * @testdox ``getDestino()``
      * @dataProvider dataProviderEventoCollection
-     * @test
      */
-    public function getDestino(EventoCollection $eventoCollection)
+    public function testGetDestino(EventoCollection $eventoCollection)
     {
         $this->assertInstanceof(Destino::class, $eventoCollection->first()->getDestino());
     }

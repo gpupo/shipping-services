@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * This file is part of gpupo/shipping-services
  * Created by Gilmar Pupo <contact@gpupo.com>
@@ -10,6 +12,7 @@
  * Para obtener la información de los derechos de autor y la licencia debe leer
  * el archivo LICENSE que se distribuye con el código fuente.
  * For more information, see <https://opensource.gpupo.com/>.
+ *
  */
 
 namespace Gpupo\Tests\ShippingServices\Entity\Ect\Sro\Evento;
@@ -29,9 +32,8 @@ class ItemTest extends TestCaseAbstract
      * @testdox ``getSchema()``
      * @cover ::getSchema
      * @dataProvider dataProviderItem
-     * @test
      */
-    public function getSchema(Item $item)
+    public function testGetSchema(Item $item)
     {
         $this->assertInternalType('array', $item->getSchema());
     }
@@ -42,9 +44,10 @@ class ItemTest extends TestCaseAbstract
      * @cover ::get
      * @cover ::getSchema
      * @small
-     * @test
+     *
+     * @param null|mixed $expected
      */
-    public function getTipo(Item $item, $expected = null)
+    public function testGetTipo(Item $item, $expected = null)
     {
         $this->assertSchemaGetter('tipo', 'string', $item, $expected);
     }
@@ -55,9 +58,10 @@ class ItemTest extends TestCaseAbstract
      * @cover ::set
      * @cover ::getSchema
      * @small
-     * @test
+     *
+     * @param null|mixed $expected
      */
-    public function setTipo(Item $item, $expected = null)
+    public function testSetTipo(Item $item, $expected = null)
     {
         $this->assertSchemaSetter('tipo', 'string', $item);
     }
@@ -68,9 +72,10 @@ class ItemTest extends TestCaseAbstract
      * @cover ::get
      * @cover ::getSchema
      * @small
-     * @test
+     *
+     * @param null|mixed $expected
      */
-    public function getterStatus(Item $item, $expected = null)
+    public function testGetterStatus(Item $item, $expected = null)
     {
         $this->assertSchemaGetter('status', 'string', $item, $expected);
     }
@@ -81,9 +86,10 @@ class ItemTest extends TestCaseAbstract
      * @cover ::set
      * @cover ::getSchema
      * @small
-     * @test
+     *
+     * @param null|mixed $expected
      */
-    public function setterStatus(Item $item, $expected = null)
+    public function testSetterStatus(Item $item, $expected = null)
     {
         $this->assertSchemaSetter('status', 'string', $item);
     }
@@ -94,9 +100,10 @@ class ItemTest extends TestCaseAbstract
      * @cover ::get
      * @cover ::getSchema
      * @small
-     * @test
+     *
+     * @param null|mixed $expected
      */
-    public function getData(Item $item, $expected = null)
+    public function testGetData(Item $item, $expected = null)
     {
         $this->assertSchemaGetter('data', 'string', $item, $expected);
     }
@@ -107,9 +114,10 @@ class ItemTest extends TestCaseAbstract
      * @cover ::set
      * @cover ::getSchema
      * @small
-     * @test
+     *
+     * @param null|mixed $expected
      */
-    public function setData(Item $item, $expected = null)
+    public function testSetData(Item $item, $expected = null)
     {
         $this->assertSchemaSetter('data', 'string', $item);
     }
@@ -120,9 +128,10 @@ class ItemTest extends TestCaseAbstract
      * @cover ::get
      * @cover ::getSchema
      * @small
-     * @test
+     *
+     * @param null|mixed $expected
      */
-    public function getHora(Item $item, $expected = null)
+    public function testGetHora(Item $item, $expected = null)
     {
         $this->assertSchemaGetter('hora', 'string', $item, $expected);
     }
@@ -133,9 +142,10 @@ class ItemTest extends TestCaseAbstract
      * @cover ::set
      * @cover ::getSchema
      * @small
-     * @test
+     *
+     * @param null|mixed $expected
      */
-    public function setHora(Item $item, $expected = null)
+    public function testSetHora(Item $item, $expected = null)
     {
         $this->assertSchemaSetter('hora', 'string', $item);
     }
@@ -146,9 +156,10 @@ class ItemTest extends TestCaseAbstract
      * @cover ::get
      * @cover ::getSchema
      * @small
-     * @test
+     *
+     * @param null|mixed $expected
      */
-    public function getDescricao(Item $item, $expected = null)
+    public function testGetDescricao(Item $item, $expected = null)
     {
         $this->assertSchemaGetter('descricao', 'string', $item, $expected);
     }
@@ -159,9 +170,10 @@ class ItemTest extends TestCaseAbstract
      * @cover ::set
      * @cover ::getSchema
      * @small
-     * @test
+     *
+     * @param null|mixed $expected
      */
-    public function setDescricao(Item $item, $expected = null)
+    public function testSetDescricao(Item $item, $expected = null)
     {
         $this->assertSchemaSetter('descricao', 'string', $item);
     }
@@ -172,9 +184,10 @@ class ItemTest extends TestCaseAbstract
      * @cover ::get
      * @cover ::getSchema
      * @small
-     * @test
+     *
+     * @param null|mixed $expected
      */
-    public function getRecebedor(Item $item, $expected = null)
+    public function testGetRecebedor(Item $item, $expected = null)
     {
         $this->assertSchemaGetter('recebedor', 'string', $item, $expected);
     }
@@ -185,9 +198,10 @@ class ItemTest extends TestCaseAbstract
      * @cover ::set
      * @cover ::getSchema
      * @small
-     * @test
+     *
+     * @param null|mixed $expected
      */
-    public function setRecebedor(Item $item, $expected = null)
+    public function testSetRecebedor(Item $item, $expected = null)
     {
         $this->assertSchemaSetter('recebedor', 'string', $item);
     }
@@ -198,9 +212,10 @@ class ItemTest extends TestCaseAbstract
      * @cover ::get
      * @cover ::getSchema
      * @small
-     * @test
+     *
+     * @param null|mixed $expected
      */
-    public function getDocumento(Item $item, $expected = null)
+    public function testGetDocumento(Item $item, $expected = null)
     {
         $this->assertSchemaGetter('documento', 'string', $item, $expected);
     }
@@ -211,9 +226,10 @@ class ItemTest extends TestCaseAbstract
      * @cover ::set
      * @cover ::getSchema
      * @small
-     * @test
+     *
+     * @param null|mixed $expected
      */
-    public function setDocumento(Item $item, $expected = null)
+    public function testSetDocumento(Item $item, $expected = null)
     {
         $this->assertSchemaSetter('documento', 'string', $item);
     }
@@ -224,9 +240,10 @@ class ItemTest extends TestCaseAbstract
      * @cover ::get
      * @cover ::getSchema
      * @small
-     * @test
+     *
+     * @param null|mixed $expected
      */
-    public function getComentario(Item $item, $expected = null)
+    public function testGetComentario(Item $item, $expected = null)
     {
         $this->assertSchemaGetter('comentario', 'string', $item, $expected);
     }
@@ -237,9 +254,10 @@ class ItemTest extends TestCaseAbstract
      * @cover ::set
      * @cover ::getSchema
      * @small
-     * @test
+     *
+     * @param null|mixed $expected
      */
-    public function setComentario(Item $item, $expected = null)
+    public function testSetComentario(Item $item, $expected = null)
     {
         $this->assertSchemaSetter('comentario', 'string', $item);
     }
@@ -250,9 +268,10 @@ class ItemTest extends TestCaseAbstract
      * @cover ::get
      * @cover ::getSchema
      * @small
-     * @test
+     *
+     * @param null|mixed $expected
      */
-    public function getLocal(Item $item, $expected = null)
+    public function testGetLocal(Item $item, $expected = null)
     {
         $this->assertSchemaGetter('local', 'string', $item, $expected);
     }
@@ -263,9 +282,10 @@ class ItemTest extends TestCaseAbstract
      * @cover ::set
      * @cover ::getSchema
      * @small
-     * @test
+     *
+     * @param null|mixed $expected
      */
-    public function setLocal(Item $item, $expected = null)
+    public function testSetLocal(Item $item, $expected = null)
     {
         $this->assertSchemaSetter('local', 'string', $item);
     }
@@ -276,9 +296,10 @@ class ItemTest extends TestCaseAbstract
      * @cover ::get
      * @cover ::getSchema
      * @small
-     * @test
+     *
+     * @param null|mixed $expected
      */
-    public function getCodigo(Item $item, $expected = null)
+    public function testGetCodigo(Item $item, $expected = null)
     {
         $this->assertSchemaGetter('codigo', 'string', $item, $expected);
     }
@@ -289,9 +310,10 @@ class ItemTest extends TestCaseAbstract
      * @cover ::set
      * @cover ::getSchema
      * @small
-     * @test
+     *
+     * @param null|mixed $expected
      */
-    public function setCodigo(Item $item, $expected = null)
+    public function testSetCodigo(Item $item, $expected = null)
     {
         $this->assertSchemaSetter('codigo', 'string', $item);
     }
@@ -302,9 +324,10 @@ class ItemTest extends TestCaseAbstract
      * @cover ::get
      * @cover ::getSchema
      * @small
-     * @test
+     *
+     * @param null|mixed $expected
      */
-    public function getCidade(Item $item, $expected = null)
+    public function testGetCidade(Item $item, $expected = null)
     {
         $this->assertSchemaGetter('cidade', 'string', $item, $expected);
     }
@@ -315,9 +338,10 @@ class ItemTest extends TestCaseAbstract
      * @cover ::set
      * @cover ::getSchema
      * @small
-     * @test
+     *
+     * @param null|mixed $expected
      */
-    public function setCidade(Item $item, $expected = null)
+    public function testSetCidade(Item $item, $expected = null)
     {
         $this->assertSchemaSetter('cidade', 'string', $item);
     }
@@ -328,9 +352,10 @@ class ItemTest extends TestCaseAbstract
      * @cover ::get
      * @cover ::getSchema
      * @small
-     * @test
+     *
+     * @param null|mixed $expected
      */
-    public function getUf(Item $item, $expected = null)
+    public function testGetUf(Item $item, $expected = null)
     {
         $this->assertSchemaGetter('uf', 'string', $item, $expected);
     }
@@ -341,9 +366,10 @@ class ItemTest extends TestCaseAbstract
      * @cover ::set
      * @cover ::getSchema
      * @small
-     * @test
+     *
+     * @param null|mixed $expected
      */
-    public function setUf(Item $item, $expected = null)
+    public function testSetUf(Item $item, $expected = null)
     {
         $this->assertSchemaSetter('uf', 'string', $item);
     }

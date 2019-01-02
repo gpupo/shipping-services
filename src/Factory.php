@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * This file is part of gpupo/shipping-services
  * Created by Gilmar Pupo <contact@gpupo.com>
@@ -10,6 +12,7 @@
  * Para obtener la información de los derechos de autor y la licencia debe leer
  * el archivo LICENSE que se distribuye con el código fuente.
  * For more information, see <https://opensource.gpupo.com/>.
+ *
  */
 
 namespace Gpupo\ShippingServices;
@@ -36,15 +39,15 @@ class Factory extends FactoryAbstract
     {
         return [
             'product' => [
-                'class'   => $namespace.'Product\Product',
+                'class' => $namespace.'Product\Product',
                 'manager' => $namespace.'Product\Manager',
             ],
             'sku' => [
-                'class'   => $namespace.'Product\Sku\Item',
+                'class' => $namespace.'Product\Sku\Item',
                 'manager' => $namespace.'Product\Sku\Manager',
             ],
             'order' => [
-                'class'   => $namespace.'Order\Order',
+                'class' => $namespace.'Order\Order',
                 'manager' => $namespace.'Order\Manager',
             ],
             'invoice' => [
@@ -54,7 +57,7 @@ class Factory extends FactoryAbstract
                 'class' => $namespace.'Order\Shippings\Transport',
             ],
             'templates' => [
-                'class'   => $namespace.'Templates\Templates',
+                'class' => $namespace.'Templates\Templates',
                 'manager' => $namespace.'Templates\Manager',
             ],
         ];

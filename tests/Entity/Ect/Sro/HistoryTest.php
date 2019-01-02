@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * This file is part of gpupo/shipping-services
  * Created by Gilmar Pupo <contact@gpupo.com>
@@ -10,6 +12,7 @@
  * Para obtener la información de los derechos de autor y la licencia debe leer
  * el archivo LICENSE que se distribuye con el código fuente.
  * For more information, see <https://opensource.gpupo.com/>.
+ *
  */
 
 namespace Gpupo\Entity\Ect\Sro;
@@ -24,13 +27,13 @@ use Gpupo\Tests\ShippingServices\TestCaseAbstract;
 class HistoryTest extends TestCaseAbstract
 {
     use EntityTrait;
+
     /**
      * @testdox ``factoryElement()``
      * @cover ::factoryElement
      * @dataProvider dataProviderHistory
-     * @test
      */
-    public function factoryElement(History $history)
+    public function testFactoryElement(History $history)
     {
         $this->assertSame(5, $history->count());
     }
@@ -39,9 +42,8 @@ class HistoryTest extends TestCaseAbstract
      * @testdox ``getSchema()``
      * @cover ::getSchema
      * @dataProvider dataProviderHistory
-     * @test
      */
-    public function getSchema(History $history)
+    public function testGetSchema(History $history)
     {
         $this->assertInternalType('array', $history->getSchema());
     }
@@ -52,9 +54,10 @@ class HistoryTest extends TestCaseAbstract
      * @cover ::get
      * @cover ::getSchema
      * @small
-     * @test
+     *
+     * @param null|mixed $expected
      */
-    public function getNumero(History $history, $expected = null)
+    public function testGetNumero(History $history, $expected = null)
     {
         $this->assertSchemaGetter('numero', 'string', $history, $expected);
     }
@@ -65,9 +68,10 @@ class HistoryTest extends TestCaseAbstract
      * @cover ::set
      * @cover ::getSchema
      * @small
-     * @test
+     *
+     * @param null|mixed $expected
      */
-    public function setNumero(History $history, $expected = null)
+    public function testSetNumero(History $history, $expected = null)
     {
         $this->assertSchemaSetter('numero', 'string', $history);
     }
@@ -78,9 +82,10 @@ class HistoryTest extends TestCaseAbstract
      * @cover ::get
      * @cover ::getSchema
      * @small
-     * @test
+     *
+     * @param null|mixed $expected
      */
-    public function getSigla(History $history, $expected = null)
+    public function testGetSigla(History $history, $expected = null)
     {
         $this->assertSchemaGetter('sigla', 'string', $history, $expected);
     }
@@ -91,9 +96,10 @@ class HistoryTest extends TestCaseAbstract
      * @cover ::set
      * @cover ::getSchema
      * @small
-     * @test
+     *
+     * @param null|mixed $expected
      */
-    public function setSigla(History $history, $expected = null)
+    public function testSetSigla(History $history, $expected = null)
     {
         $this->assertSchemaSetter('sigla', 'string', $history);
     }
@@ -104,9 +110,10 @@ class HistoryTest extends TestCaseAbstract
      * @cover ::get
      * @cover ::getSchema
      * @small
-     * @test
+     *
+     * @param null|mixed $expected
      */
-    public function getNome(History $history, $expected = null)
+    public function testGetNome(History $history, $expected = null)
     {
         $this->assertSchemaGetter('nome', 'string', $history, $expected);
     }
@@ -117,9 +124,10 @@ class HistoryTest extends TestCaseAbstract
      * @cover ::set
      * @cover ::getSchema
      * @small
-     * @test
+     *
+     * @param null|mixed $expected
      */
-    public function setNome(History $history, $expected = null)
+    public function testSetNome(History $history, $expected = null)
     {
         $this->assertSchemaSetter('nome', 'string', $history);
     }
@@ -130,9 +138,10 @@ class HistoryTest extends TestCaseAbstract
      * @cover ::get
      * @cover ::getSchema
      * @small
-     * @test
+     *
+     * @param null|mixed $expected
      */
-    public function getCategoria(History $history, $expected = null)
+    public function testGetCategoria(History $history, $expected = null)
     {
         $this->assertSchemaGetter('categoria', 'string', $history, $expected);
     }
@@ -143,9 +152,10 @@ class HistoryTest extends TestCaseAbstract
      * @cover ::set
      * @cover ::getSchema
      * @small
-     * @test
+     *
+     * @param null|mixed $expected
      */
-    public function setCategoria(History $history, $expected = null)
+    public function testSetCategoria(History $history, $expected = null)
     {
         $this->assertSchemaSetter('categoria', 'string', $history);
     }
@@ -156,9 +166,10 @@ class HistoryTest extends TestCaseAbstract
      * @cover ::get
      * @cover ::getSchema
      * @small
-     * @test
+     *
+     * @param null|mixed $expected
      */
-    public function getEvento(History $history, $expected = null)
+    public function testGetEvento(History $history, $expected = null)
     {
         $this->assertSchemaGetter('evento', 'object', $history, $expected);
     }
@@ -169,9 +180,10 @@ class HistoryTest extends TestCaseAbstract
      * @cover ::set
      * @cover ::getSchema
      * @small
-     * @test
+     *
+     * @param null|mixed $expected
      */
-    public function setEvento(History $history, $expected = null)
+    public function testSetEvento(History $history, $expected = null)
     {
         $this->assertSchemaSetter('evento', 'object', $history);
     }

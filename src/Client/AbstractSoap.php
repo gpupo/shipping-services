@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * This file is part of gpupo/shipping-services
  * Created by Gilmar Pupo <contact@gpupo.com>
@@ -10,6 +12,7 @@
  * Para obtener la información de los derechos de autor y la licencia debe leer
  * el archivo LICENSE que se distribuye con el código fuente.
  * For more information, see <https://opensource.gpupo.com/>.
+ *
  */
 
 namespace Gpupo\ShippingServices\Client;
@@ -19,13 +22,15 @@ use Gpupo\CommonSdk\Client\BoardAbstract;
 abstract class AbstractSoap extends BoardAbstract
 {
     /**
+     * @param mixed $response
+     *
      * @return arrray
      */
     protected function convertResponseToArray($response)
     {
         $array = json_decode(json_encode($response), true);
 
-        if (!is_array($array) || !array_key_exists('return', (array) $array)) {
+        if (!\is_array($array) || !array_key_exists('return', (array) $array)) {
             throw new Exception('Response incomplete');
         }
 

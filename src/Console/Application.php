@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * This file is part of gpupo/shipping-services
  * Created by Gilmar Pupo <contact@gpupo.com>
@@ -10,6 +12,7 @@
  * Para obtener la información de los derechos de autor y la licencia debe leer
  * el archivo LICENSE que se distribuye con el código fuente.
  * For more information, see <https://opensource.gpupo.com/>.
+ *
  */
 
 namespace Gpupo\ShippingServices\Console;
@@ -23,6 +26,13 @@ use Symfony\Component\Console\Output\OutputInterface;
  */
 final class Application extends AbstractApplication
 {
+    protected $commonParameters = [
+        [
+            'key' => 'registerPath',
+            'default' => false,
+        ],
+    ];
+
     public function doRun(InputInterface $input, OutputInterface $output)
     {
         $output->writeln('<bg=green;options=bold>gpupo/shipping-services</>');
@@ -32,11 +42,4 @@ final class Application extends AbstractApplication
 
         return parent::doRun($input, $output);
     }
-
-    protected $commonParameters = [
-        [
-            'key'     => 'registerPath',
-            'default' => false,
-        ],
-    ];
 }

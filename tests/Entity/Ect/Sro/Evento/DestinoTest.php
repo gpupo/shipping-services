@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * This file is part of gpupo/shipping-services
  * Created by Gilmar Pupo <contact@gpupo.com>
@@ -10,6 +12,7 @@
  * Para obtener la información de los derechos de autor y la licencia debe leer
  * el archivo LICENSE que se distribuye con el código fuente.
  * For more information, see <https://opensource.gpupo.com/>.
+ *
  */
 
 namespace Gpupo\Tests\ShippingServices\Entity\Ect\Sro\Evento;
@@ -29,9 +32,8 @@ class DestinoTest extends TestCaseAbstract
      * @testdox ``getSchema()``
      * @cover ::getSchema
      * @dataProvider dataProviderDestino
-     * @test
      */
-    public function getSchema(Destino $destino)
+    public function testGetSchema(Destino $destino)
     {
         $this->assertInternalType('array', $destino->getSchema());
     }
@@ -42,9 +44,10 @@ class DestinoTest extends TestCaseAbstract
      * @cover ::get
      * @cover ::getSchema
      * @small
-     * @test
+     *
+     * @param null|mixed $expected
      */
-    public function getLocal(Destino $destino, $expected = null)
+    public function testGetLocal(Destino $destino, $expected = null)
     {
         $this->assertSchemaGetter('local', 'string', $destino, $expected);
     }
@@ -55,9 +58,10 @@ class DestinoTest extends TestCaseAbstract
      * @cover ::set
      * @cover ::getSchema
      * @small
-     * @test
+     *
+     * @param null|mixed $expected
      */
-    public function setLocal(Destino $destino, $expected = null)
+    public function testSetLocal(Destino $destino, $expected = null)
     {
         $this->assertSchemaSetter('local', 'string', $destino);
     }
@@ -68,9 +72,10 @@ class DestinoTest extends TestCaseAbstract
      * @cover ::get
      * @cover ::getSchema
      * @small
-     * @test
+     *
+     * @param null|mixed $expected
      */
-    public function getCodigo(Destino $destino, $expected = null)
+    public function testGetCodigo(Destino $destino, $expected = null)
     {
         $this->assertSchemaGetter('codigo', 'string', $destino, $expected);
     }
@@ -81,9 +86,10 @@ class DestinoTest extends TestCaseAbstract
      * @cover ::set
      * @cover ::getSchema
      * @small
-     * @test
+     *
+     * @param null|mixed $expected
      */
-    public function setCodigo(Destino $destino, $expected = null)
+    public function testSetCodigo(Destino $destino, $expected = null)
     {
         $this->assertSchemaSetter('codigo', 'string', $destino);
     }
@@ -94,9 +100,10 @@ class DestinoTest extends TestCaseAbstract
      * @cover ::get
      * @cover ::getSchema
      * @small
-     * @test
+     *
+     * @param null|mixed $expected
      */
-    public function getCidade(Destino $destino, $expected = null)
+    public function testGetCidade(Destino $destino, $expected = null)
     {
         $this->assertSchemaGetter('cidade', 'string', $destino, $expected);
     }
@@ -107,9 +114,10 @@ class DestinoTest extends TestCaseAbstract
      * @cover ::set
      * @cover ::getSchema
      * @small
-     * @test
+     *
+     * @param null|mixed $expected
      */
-    public function setCidade(Destino $destino, $expected = null)
+    public function testSetCidade(Destino $destino, $expected = null)
     {
         $this->assertSchemaSetter('cidade', 'string', $destino);
     }
@@ -120,9 +128,10 @@ class DestinoTest extends TestCaseAbstract
      * @cover ::get
      * @cover ::getSchema
      * @small
-     * @test
+     *
+     * @param null|mixed $expected
      */
-    public function getBairro(Destino $destino, $expected = null)
+    public function testGetBairro(Destino $destino, $expected = null)
     {
         $this->assertSchemaGetter('bairro', 'string', $destino, $expected);
     }
@@ -133,9 +142,10 @@ class DestinoTest extends TestCaseAbstract
      * @cover ::set
      * @cover ::getSchema
      * @small
-     * @test
+     *
+     * @param null|mixed $expected
      */
-    public function setBairro(Destino $destino, $expected = null)
+    public function testSetBairro(Destino $destino, $expected = null)
     {
         $this->assertSchemaSetter('bairro', 'string', $destino);
     }
@@ -146,9 +156,10 @@ class DestinoTest extends TestCaseAbstract
      * @cover ::get
      * @cover ::getSchema
      * @small
-     * @test
+     *
+     * @param null|mixed $expected
      */
-    public function getUf(Destino $destino, $expected = null)
+    public function testGetUf(Destino $destino, $expected = null)
     {
         $this->assertSchemaGetter('uf', 'string', $destino, $expected);
     }
@@ -159,9 +170,10 @@ class DestinoTest extends TestCaseAbstract
      * @cover ::set
      * @cover ::getSchema
      * @small
-     * @test
+     *
+     * @param null|mixed $expected
      */
-    public function setUf(Destino $destino, $expected = null)
+    public function testSetUf(Destino $destino, $expected = null)
     {
         $this->assertSchemaSetter('uf', 'string', $destino);
     }

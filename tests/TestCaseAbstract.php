@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * This file is part of gpupo/shipping-services
  * Created by Gilmar Pupo <contact@gpupo.com>
@@ -10,6 +12,7 @@
  * Para obtener la información de los derechos de autor y la licencia debe leer
  * el archivo LICENSE que se distribuye con el código fuente.
  * For more information, see <https://opensource.gpupo.com/>.
+ *
  */
 
 namespace Gpupo\Tests\ShippingServices;
@@ -25,21 +28,7 @@ abstract class TestCaseAbstract extends CommonSdkTestCaseAbstract
 
     public static function getResourcesPath()
     {
-        return dirname(dirname(__FILE__)).'/Resources/';
-    }
-
-    protected function factoryHistoryCollection()
-    {
-        $data = $this->getResourceJson('fixtures/Ect/Sro/list.response.json');
-
-        return new HistoryCollection($data);
-    }
-
-    protected function factoryHistory()
-    {
-        $data = $this->getResourceJson('fixtures/Ect/Sro/history.json');
-
-        return new History($data);
+        return \dirname(__DIR__).'/Resources/';
     }
 
     /**
@@ -83,7 +72,7 @@ abstract class TestCaseAbstract extends CommonSdkTestCaseAbstract
             foreach ($h->getEvento() as $i) {
                 $data[] = [$i, $i->toArray()];
             }
-            if (11 > count($data)) {
+            if (11 > \count($data)) {
                 break;
             }
         }
@@ -97,13 +86,27 @@ abstract class TestCaseAbstract extends CommonSdkTestCaseAbstract
     public function dataProviderDestino()
     {
         $data = [
-            'local'  => 'CDD EMBU',
+            'local' => 'CDD EMBU',
             'codigo' => '06803970',
             'cidade' => 'Embu Das Artes',
             'bairro' => 'Centro',
-            'uf'     => 'SP',
+            'uf' => 'SP',
         ];
 
         return [[new Destino($data), $data]];
+    }
+
+    protected function factoryHistoryCollection()
+    {
+        $data = $this->getResourceJson('fixtures/Ect/Sro/list.response.json');
+
+        return new HistoryCollection($data);
+    }
+
+    protected function factoryHistory()
+    {
+        $data = $this->getResourceJson('fixtures/Ect/Sro/history.json');
+
+        return new History($data);
     }
 }

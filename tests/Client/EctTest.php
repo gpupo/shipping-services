@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * This file is part of gpupo/shipping-services
  * Created by Gilmar Pupo <contact@gpupo.com>
@@ -10,6 +12,7 @@
  * Para obtener la información de los derechos de autor y la licencia debe leer
  * el archivo LICENSE que se distribuye con el código fuente.
  * For more information, see <https://opensource.gpupo.com/>.
+ *
  */
 
 namespace Client;
@@ -34,9 +37,8 @@ class EctTest extends TestCaseAbstract
      * @testdox ``fetchHistoryCollection()``
      * @cover ::fetchHistoryCollection
      * @dataProvider dataProviderEct
-     * @test
      */
-    public function fetchHistoryCollection(Ect $ect)
+    public function testFetchHistoryCollection(Ect $ect)
     {
         $this->markIncomplete('fetchHistoryCollection() need implementation!');
     }
@@ -45,15 +47,14 @@ class EctTest extends TestCaseAbstract
      * @testdox ``factoryTransport()``
      * @cover ::factoryTransport
      * @dataProvider dataProviderEct
-     * @test
      */
-    public function factoryTransport(Ect $ect)
+    public function testFactoryTransport(Ect $ect)
     {
         $url = 'Resources/fixtures/Ect/Sro/Soap/Rastro.wsdl';
         $soapClientMock = $this->getMockFromWsdl($url, 'Foo', 'Client');
         $soapClientMock
-        ->method('buscaeventoslista')
-        ->willReturn(true);
+            ->method('buscaeventoslista')
+            ->willReturn(true);
 
         $this->markIncomplete('factoryTransport() need implementation!');
     }
