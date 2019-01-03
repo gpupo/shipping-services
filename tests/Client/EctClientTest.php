@@ -17,7 +17,7 @@ declare(strict_types=1);
 
 namespace Gpupo\Tests\ShippingServices\Client;
 
-use Gpupo\ShippingServices\Client\Ect;
+use Gpupo\ShippingServices\Client\EctClient;
 use Gpupo\ShippingServices\Client\Transport;
 use Gpupo\ShippingServices\Client\TransportInterface;
 use Gpupo\ShippingServices\Entity\Ect\Sro\HistoryCollection;
@@ -26,22 +26,22 @@ use Gpupo\Tests\ShippingServices\TestCaseAbstract;
 /**
  * @coversDefaultClass \Gpupo\ShippingServices\Client\Ect
  */
-class EctTest extends TestCaseAbstract
+class EctClientTest extends TestCaseAbstract
 {
     /**
      * @return \Gpupo\ShippingServices\Client\Ect
      */
-    public function dataProviderEct()
+    public function dataProviderEctClient()
     {
-        return [[new Ect()]];
+        return [[new EctClient()]];
     }
 
     /**
      * @testdox ``fetchHistoryCollection()``
      * @cover ::fetchHistoryCollection
-     * @dataProvider dataProviderEct
+     * @dataProvider dataProviderEctClient
      */
-    public function testFetchHistoryCollection(Ect $object)
+    public function testFetchHistoryCollection(EctClient $object)
     {
         $ect = $this->proxy($object);
         $transport = new TransportMockup();
@@ -53,9 +53,9 @@ class EctTest extends TestCaseAbstract
     /**
      * @testdox ``factoryTransport()``
      * @cover ::factoryTransport
-     * @dataProvider dataProviderEct
+     * @dataProvider dataProviderEctClient
      */
-    public function testFactoryTransport(Ect $object)
+    public function testFactoryTransport(EctClient $object)
     {
         $ect = $this->proxy($object);
         $transport = $ect->factoryTransport();

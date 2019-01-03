@@ -18,7 +18,7 @@ declare(strict_types=1);
 namespace Gpupo\ShippingServices;
 
 use Gpupo\CommonSdk\FactoryAbstract;
-use Gpupo\ShippingServices\Client\Ect;
+use Gpupo\ShippingServices\Client\EctClient;
 
 /**
  * Construtor principal, extendido pelo Factory de MarkethubBundle.
@@ -27,7 +27,7 @@ class Factory extends FactoryAbstract
 {
     public function setClient(array $clientOptions = [])
     {
-        $this->client = new Ect($clientOptions, $this->logger);
+        $this->client = new EctClient($clientOptions, $this->logger);
     }
 
     public function getNamespace()

@@ -78,7 +78,10 @@ Acesso ao componente:
 use Gpupo\ShippingServices\Factory;
 
 $service = Factory::getInstance()->getClient();
-
+$collection = $service->fetchHistoryCollection([
+	"DU264805409BR",
+	"DU264805390BR",
+]);
 
 
 

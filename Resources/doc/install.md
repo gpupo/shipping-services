@@ -11,7 +11,7 @@ Adicione o pacote ``shipping-services`` ao seu projeto utilizando [composer](htt
 ```php
 <?php
 
-use Gpupo\ShippingServices\Client\Ect;
+use Gpupo\ShippingServices\Client\EctClient;
 
 
 $client = new Ect([
