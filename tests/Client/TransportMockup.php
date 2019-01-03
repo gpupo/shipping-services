@@ -15,10 +15,19 @@ declare(strict_types=1);
  *
  */
 
-namespace Gpupo\ShippingServices\Client;
+namespace Gpupo\Tests\ShippingServices\Client;
 
-use Zend\Soap\Client;
+use Gpupo\ShippingServices\Client\Transport;
+use Gpupo\ShippingServices\Client\TransportInterface;
 
-class Transport extends Client implements TransportInterface
+class TransportMockup extends Transport implements TransportInterface
 {
+    public $response;
+
+    public function __call($name, $arguments)
+    {
+        $this->soapInputHeaders = [];
+
+        return $this->_preProcessResult(['return' => $this->response]);
+    }
 }

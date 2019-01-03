@@ -21,6 +21,22 @@ use Gpupo\CommonSdk\Client\BoardAbstract;
 
 abstract class AbstractSoap extends BoardAbstract
 {
+    protected $transport;
+
+    protected function getTransport(): TransportInterface
+    {
+        if (empty($this->transport)) {
+            $this->setTransport($this->factoryTransport());
+        }
+
+        return $this->transport;
+    }
+
+    public function setTransport(TransportInterface $transport): void
+    {
+        $this->transport = $transport;
+    }
+
     /**
      * @param mixed $response
      *

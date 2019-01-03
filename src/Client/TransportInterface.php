@@ -17,8 +17,6 @@ declare(strict_types=1);
 
 namespace Gpupo\ShippingServices\Client;
 
-use Zend\Soap\Client;
-
-class Transport extends Client implements TransportInterface
+interface TransportInterface
 {
 }

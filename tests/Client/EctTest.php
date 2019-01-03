@@ -15,10 +15,13 @@ declare(strict_types=1);
  *
  */
 
-namespace Client;
+namespace Gpupo\Tests\ShippingServices\Client;
 
 use Gpupo\ShippingServices\Client\Ect;
+use Gpupo\ShippingServices\Client\Transport;
+use Gpupo\ShippingServices\Client\TransportInterface;
 use Gpupo\Tests\ShippingServices\TestCaseAbstract;
+use Gpupo\ShippingServices\Entity\Ect\Sro\HistoryCollection;
 
 /**
  * @coversDefaultClass \Gpupo\ShippingServices\Client\Ect
@@ -38,24 +41,24 @@ class EctTest extends TestCaseAbstract
      * @cover ::fetchHistoryCollection
      * @dataProvider dataProviderEct
      */
-    public function testFetchHistoryCollection(Ect $ect)
+    public function testFetchHistoryCollection(Ect $object)
     {
-        $this->markIncomplete('fetchHistoryCollection() need implementation!');
+        $ect = $this->proxy($object);
+        $transport = new TransportMockup();
+        $transport->response = $this->getResourceJson('fixtures/Ect/Sro/list.response.json');
+        $ect->setTransport($transport);
+        $this->assertInstanceOf(HistoryCollection::class, $ect->fetchHistoryCollection([]));
     }
-
     /**
      * @testdox ``factoryTransport()``
      * @cover ::factoryTransport
      * @dataProvider dataProviderEct
      */
-    public function testFactoryTransport(Ect $ect)
+    public function testFactoryTransport(Ect $object)
     {
-        $url = 'Resources/fixtures/Ect/Sro/Soap/Rastro.wsdl';
-        $soapClientMock = $this->getMockFromWsdl($url, 'Foo', 'Client');
-        $soapClientMock
-            ->method('buscaeventoslista')
-            ->willReturn(true);
-
-        $this->markIncomplete('factoryTransport() need implementation!');
+        $ect = $this->proxy($object);
+        $transport = $ect->factoryTransport();
+        $this->assertInstanceOf(Transport::class, $transport);
+        $this->assertInstanceOf(TransportInterface::class, $transport);
     }
 }

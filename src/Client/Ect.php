@@ -24,7 +24,7 @@ final class Ect extends AbstractSoap
     /**
      * @return HistoryCollection
      */
-    public function fetchHistoryCollection(array $list)
+    public function fetchHistoryCollection(array $list): HistoryCollection
     {
         $language = $this->getOptions()->get('ect.language', 'pt_BR');
 
@@ -37,12 +37,12 @@ final class Ect extends AbstractSoap
             'objetos' => $list,
         ];
 
-        $response = $this->factoryTransport()->buscaeventoslista($params);
+        $response = $this->getTransport()->buscaeventoslista($params);
 
         return new HistoryCollection($this->convertResponseToArray($response));
     }
 
-    protected function factoryTransport()
+    protected function factoryTransport(): TransportInterface
     {
         $transport = new Transport();
         $transport->setOptions([
