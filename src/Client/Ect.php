@@ -19,7 +19,7 @@ namespace Gpupo\ShippingServices\Client;
 
 use Gpupo\ShippingServices\Entity\Ect\Sro\HistoryCollection;
 
-final class Ect extends AbstractSoap
+final class Ect extends AbstractSoap implements ClientInterface
 {
     /**
      * @return HistoryCollection

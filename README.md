@@ -12,7 +12,8 @@ Acesso a informações de pacotes remetidos no Brasil
 
 - PHP >= *7.2*
 - [Composer Dependency Manager](http://getcomposer.org)
-- [curl extension](http://php.net/manual/en/intro.curl.php)
+- [PHP Curl extension](http://php.net/manual/en/intro.curl.php)
+- PHP Soap extension
 
 
 Este componente **não é uma aplicação Stand Alone** e seu objetivo é ser utilizado como biblioteca.
@@ -73,7 +74,19 @@ Adicione o pacote ``shipping-services`` ao seu projeto utilizando [composer](htt
 Acesso ao componente:
 
 ```php
-<?php
 
 use Gpupo\ShippingServices\Factory;
+
+$service = Factory::getInstance()->getClient();
+
+
+
+
 ```
+
+
+## CLI
+
+Você pode exibir um histórico de objetos a partir da linha de comando:
+
+	bin/shipping-services ect:sro:history --ect.user ECT.USER --ect.password ECT.PASSWORD --file Resources/fixtures/Ect/Sro/objetos.json
