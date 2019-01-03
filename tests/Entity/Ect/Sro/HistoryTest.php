@@ -15,7 +15,7 @@ declare(strict_types=1);
  *
  */
 
-namespace Gpupo\Entity\Ect\Sro;
+namespace Gpupo\Tests\ShippingServices\Entity\Ect\Sro;
 
 use Gpupo\ShippingServices\Entity\Ect\Sro\History;
 use Gpupo\Tests\CommonSdk\Traits\EntityTrait;
@@ -174,17 +174,4 @@ class HistoryTest extends TestCaseAbstract
         $this->assertSchemaGetter('evento', 'object', $history, $expected);
     }
 
-    /**
-     * @testdox Possui método ``setEvento()`` que define Evento
-     * @dataProvider dataProviderHistory
-     * @cover ::set
-     * @cover ::getSchema
-     * @small
-     *
-     * @param null|mixed $expected
-     */
-    public function testSetEvento(History $history, $expected = null)
-    {
-        $this->assertSchemaSetter('evento', 'object', $history);
-    }
 }

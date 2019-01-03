@@ -20,8 +20,8 @@ namespace Gpupo\Tests\ShippingServices\Client;
 use Gpupo\ShippingServices\Client\Ect;
 use Gpupo\ShippingServices\Client\Transport;
 use Gpupo\ShippingServices\Client\TransportInterface;
-use Gpupo\Tests\ShippingServices\TestCaseAbstract;
 use Gpupo\ShippingServices\Entity\Ect\Sro\HistoryCollection;
+use Gpupo\Tests\ShippingServices\TestCaseAbstract;
 
 /**
  * @coversDefaultClass \Gpupo\ShippingServices\Client\Ect
@@ -49,6 +49,7 @@ class EctTest extends TestCaseAbstract
         $ect->setTransport($transport);
         $this->assertInstanceOf(HistoryCollection::class, $ect->fetchHistoryCollection([]));
     }
+
     /**
      * @testdox ``factoryTransport()``
      * @cover ::factoryTransport

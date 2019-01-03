@@ -15,7 +15,7 @@ declare(strict_types=1);
  *
  */
 
-namespace Gpupo\Entity\Ect\Sro;
+namespace Gpupo\Tests\ShippingServices\Entity\Ect\Sro;
 
 use Gpupo\ShippingServices\Entity\Ect\Sro\History;
 use Gpupo\Tests\ShippingServices\TestCaseAbstract;

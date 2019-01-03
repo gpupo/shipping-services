@@ -23,6 +23,11 @@ abstract class AbstractSoap extends BoardAbstract
 {
     protected $transport;
 
+    public function setTransport(TransportInterface $transport): void
+    {
+        $this->transport = $transport;
+    }
+
     protected function getTransport(): TransportInterface
     {
         if (empty($this->transport)) {
@@ -30,11 +35,6 @@ abstract class AbstractSoap extends BoardAbstract
         }
 
         return $this->transport;
-    }
-
-    public function setTransport(TransportInterface $transport): void
-    {
-        $this->transport = $transport;
     }
 
     /**
