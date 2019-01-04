@@ -25,6 +25,8 @@ use Gpupo\ShippingServices\Client\EctClient;
  */
 class Factory extends FactoryAbstract
 {
+    protected $name = 'shipping-services';
+
     public function setClient(array $clientOptions = [])
     {
         $this->client = new EctClient($clientOptions, $this->logger);
