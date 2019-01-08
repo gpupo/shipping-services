@@ -39,7 +39,7 @@ final class EctCommand extends AbstractCommand
                 $list = $app->processInputParameters($opts, $input, $output);
                 $data = $app->jsonLoadFromFile($list['file']);
                 $objetos = $data['list'];
-                $client = new Ect($list);
+                $client = new EctClient($list);
                 $historyCollection = $client->fetchHistoryCollection($objetos);
 
                 foreach ($historyCollection as $h) {
