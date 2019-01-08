@@ -30,7 +30,7 @@ class EctClient extends AbstractSoap implements ClientInterface
 
         $params = [
             'usuario' => $this->getOptions()->get('ect.user'),
-            'senha' => $this->getOptions()->get('ect.passwod'),
+            'senha' => $this->getOptions()->get('ect.password'),
             'tipo' => 'L',
             'resultado' => 'T',
             'lingua' => ('EN' === $language) ? 102 : 101,
