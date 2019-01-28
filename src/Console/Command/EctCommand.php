@@ -17,13 +17,13 @@ declare(strict_types=1);
 
 namespace Gpupo\ShippingServices\Console\Command;
 
+use Gpupo\Common\Traits\TableTrait;
+use Gpupo\CommonSdk\Console\Command\AbstractCommand;
+use Gpupo\CommonSdk\Traits\ResourcesTrait;
 use Gpupo\ShippingServices\Client\EctClient;
+use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
-use Gpupo\CommonSdk\Console\Command\AbstractCommand;
-use Symfony\Component\Console\Input\InputArgument;
-use Gpupo\CommonSdk\Traits\ResourcesTrait;
-use Gpupo\Common\Traits\TableTrait;
 
 final class EctCommand extends AbstractCommand
 {
@@ -36,7 +36,6 @@ final class EctCommand extends AbstractCommand
             ->setName('ect:sro:history')
             ->setDescription('Historico de um ou mais objetos')
             ->addArgument('filename', InputArgument::REQUIRED, 'A file with a SRO list');
-            ;
     }
 
     protected function execute(InputInterface $input, OutputInterface $output)
@@ -53,10 +52,4 @@ final class EctCommand extends AbstractCommand
             $this->displayTableResults($output, $h->getEvento()->toLog());
         }
     }
-
-
-
-
-
-
 }

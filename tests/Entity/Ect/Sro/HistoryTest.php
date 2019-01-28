@@ -173,5 +173,4 @@ class HistoryTest extends TestCaseAbstract
     {
         $this->assertSchemaGetter('evento', 'object', $history, $expected);
     }
-
 }

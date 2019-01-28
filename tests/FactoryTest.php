@@ -17,7 +17,6 @@ declare(strict_types=1);
 
 namespace Gpupo\Tests\ShippingServices;
 
-use Gpupo\ShippingServices\Client\EctClient;
 use Gpupo\ShippingServices\Client\ClientInterface;
 use Gpupo\ShippingServices\Factory;
 use Gpupo\Tests\CommonSdk\FactoryTestAbstract;
@@ -59,6 +58,5 @@ class FactoryTest extends FactoryTestAbstract
 
     public function dataProviderObjetos()
     {
-        return;
     }
 }
