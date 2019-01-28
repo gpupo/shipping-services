@@ -37,7 +37,7 @@ class Factory extends FactoryAbstract
         return  '\\'.__NAMESPACE__.'\Entity\\';
     }
 
-    protected function getSchema($namespace = null)
+    protected function getSchema(): array
     {
         return [
         ];

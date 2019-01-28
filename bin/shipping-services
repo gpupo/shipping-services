@@ -9,23 +9,9 @@
  * For more information, see <https://opensource.gpupo.com/>.
  */
 
-namespace Gpupo\ShippingServices\Console\Command;
+namespace Gpupo\ShippingServices\Console;
 
-require 'vendor/autoload.php';
-
-use Gpupo\ShippingServices\Console\Application;
-use Symfony\Component\Console\Input\InputInterface;
-use Symfony\Component\Console\Input\InputOption;
-use Symfony\Component\Console\Input\InputArgument;
-use Symfony\Component\Console\Output\OutputInterface;
+require './config/bootstrap.php';
 
 $app = new Application("shipping-services");
-$app->findConfig(['./', 'bin/'], "shipping-services");
-
-foreach (['Ect'] as $className) {
-    $n =  __NAMESPACE__.'\\'.$className . 'Command';
-    $o = new $n;
-    $app = $o->append($app);
-}
-
-$app->run();
+$app->init(__NAMESPACE__, dirname(__DIR__));

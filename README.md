@@ -10,7 +10,7 @@ Acesso a informações de pacotes remetidos no Brasil
 ## Requisitos para uso
 
 
-- PHP >= *7.2*
+- PHP >= *7.3*
 - [Composer Dependency Manager](http://getcomposer.org)
 - [PHP Curl extension](http://php.net/manual/en/intro.curl.php)
 - PHP Soap extension
@@ -87,9 +87,11 @@ $collection = $service->fetchHistoryCollection([
 
 ```
 
-
 ## CLI
+
+Para configuração de seu ambiente, crie o arquivo ``.env.local``. Ele Seguie a sintaxe do já existente arquivo ``.env`` e é utilizado para sobrepor valores default. O nome de usuário e a senha precisam ser configurados de acordo com suas credenciais.
+
 
 Você pode exibir um histórico de objetos a partir da linha de comando:
 
-	bin/shipping-services ect:sro:history --ect.user ECT.USER --ect.password ECT.PASSWORD --file Resources/fixtures/Ect/Sro/objetos.json
+	bin/shipping-services ect:sro:history Resources/fixtures/Ect/Sro/objetos.json

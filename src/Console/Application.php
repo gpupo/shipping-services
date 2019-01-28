@@ -32,14 +32,4 @@ final class Application extends AbstractApplication
             'default' => false,
         ],
     ];
-
-    public function doRun(InputInterface $input, OutputInterface $output)
-    {
-        $output->writeln('<bg=green;options=bold>gpupo/shipping-services</>');
-        $output->writeln('<options=bold>Atenção! Esta aplicação é apenas uma '
-        .'ferramenta de apoio ao desenvolvedor e não deve ser usada no ambiente de produção!'
-        .'</>');
-
-        return parent::doRun($input, $output);
-    }
 }

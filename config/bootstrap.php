@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 /*
- * This file is part of gpupo/shipping-services
+ * This file is part of gpupo/common-schema
  * Created by Gilmar Pupo <contact@gpupo.com>
  * For the information of copyright and license you should read the file
  * LICENSE which is distributed with this source code.
@@ -15,32 +15,14 @@ declare(strict_types=1);
  *
  */
 
-namespace Gpupo\ShippingServices\Console\Command;
+use Symfony\Component\Dotenv\Dotenv;
 
-use Gpupo\ShippingServices\Console\Application;
-
-/**
- * @codeCoverageIgnore
- */
-abstract class AbstractCommand
-{
-    protected $list = ['main'];
-
-    protected $app;
-
-    public function append(Application $app)
-    {
-        $this->app = $app;
-
-        foreach ($this->list as $i) {
-            $this->{$i}($this->getApp());
-        }
-
-        return $this->getApp();
-    }
-
-    protected function getApp()
-    {
-        return $this->app;
-    }
+if (!class_exists('\Gpupo\Common\Console\Application')) {
+    require __DIR__.'/../vendor/autoload.php';
 }
+
+if (!class_exists(Dotenv::class)) {
+    throw new RuntimeException('Please run "composer require symfony/dotenv" to load the ".env" files configuring the application.');
+}
+    // load all the .env files
+    (new Dotenv())->loadEnv(dirname(__DIR__).'/.env');

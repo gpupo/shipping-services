@@ -1,8 +1,0 @@
-{
-    "ect.user": "ECT",
-    "ect.password": "SRO",
-    "env": "sandbox",
-    "protocol": "http",
-    "sslVersion": "SecureTransport",
-    "registerPath": "var/logs/"
-}
