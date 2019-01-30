@@ -17,6 +17,8 @@ declare(strict_types=1);
 
 namespace Gpupo\ShippingServices\Client;
 
-interface ClientInterface
+use Gpupo\CommonSdk\Client\ClientInterface as Core;
+
+interface ClientInterface extends Core
 {
 }

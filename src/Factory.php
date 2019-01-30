@@ -19,6 +19,7 @@ namespace Gpupo\ShippingServices;
 
 use Gpupo\CommonSdk\FactoryAbstract;
 use Gpupo\ShippingServices\Client\EctClient;
+use Gpupo\CommonSdk\Entity\GenericManager;
 
 /**
  * Construtor principal, extendido pelo Factory de MarkethubBundle.
@@ -40,6 +41,9 @@ class Factory extends FactoryAbstract
     protected function getSchema(): array
     {
         return [
+            'generic' => [
+                'manager' => GenericManager::class,
+            ],
         ];
     }
 }
