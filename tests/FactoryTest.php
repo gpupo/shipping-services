@@ -19,7 +19,7 @@ namespace Gpupo\Tests\ShippingServices;
 
 use Gpupo\ShippingServices\Client\ClientInterface;
 use Gpupo\ShippingServices\Factory;
-use Gpupo\Tests\CommonSdk\FactoryTestAbstract;
+use Gpupo\CommonSdk\Tests\FactoryTestAbstract;
 
 /**
  * @coversNothing

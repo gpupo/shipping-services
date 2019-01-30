@@ -26,7 +26,7 @@ final class EventoCollection extends CollectionAbstract
         return new Item($data);
     }
 
-    public function toLog()
+    public function toLog():array
     {
         $data = [];
 

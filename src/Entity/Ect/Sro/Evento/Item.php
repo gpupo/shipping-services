@@ -51,7 +51,7 @@ final class Item extends EntityAbstract implements EntityInterface
     /**
      * @codeCoverageIgnore
      */
-    public function getSchema()
+    public function getSchema():array
     {
         return  [
             'tipo' => 'string',
@@ -70,7 +70,7 @@ final class Item extends EntityAbstract implements EntityInterface
         ];
     }
 
-    public function toLog()
+    public function toLog():array
     {
         return $this->partitionByArrayKey([
             'tipo',

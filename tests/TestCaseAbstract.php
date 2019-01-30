@@ -20,7 +20,7 @@ namespace Gpupo\Tests\ShippingServices;
 use Gpupo\ShippingServices\Entity\Ect\Sro\Evento\Destino;
 use Gpupo\ShippingServices\Entity\Ect\Sro\History;
 use Gpupo\ShippingServices\Entity\Ect\Sro\HistoryCollection;
-use Gpupo\Tests\CommonSdk\TestCaseAbstract as CommonSdkTestCaseAbstract;
+use Gpupo\CommonSdk\Tests\TestCaseAbstract as CommonSdkTestCaseAbstract;
 
 abstract class TestCaseAbstract extends CommonSdkTestCaseAbstract
 {

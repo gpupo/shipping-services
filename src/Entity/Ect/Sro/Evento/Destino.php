@@ -37,7 +37,7 @@ final class Destino extends EntityAbstract implements EntityInterface
     /**
      * @codeCoverageIgnore
      */
-    public function getSchema()
+    public function getSchema():array
     {
         return  [
             'local' => 'string',
