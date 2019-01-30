@@ -17,9 +17,9 @@ declare(strict_types=1);
 
 namespace Gpupo\ShippingServices;
 
+use Gpupo\CommonSdk\Entity\GenericManager;
 use Gpupo\CommonSdk\FactoryAbstract;
 use Gpupo\ShippingServices\Client\EctClient;
-use Gpupo\CommonSdk\Entity\GenericManager;
 
 /**
  * Construtor principal, extendido pelo Factory de MarkethubBundle.
@@ -28,9 +28,9 @@ class Factory extends FactoryAbstract
 {
     protected $name = 'shipping-services';
 
-    public function setClient(array $clientOptions = [])
+    public function setClient(?array $clientOptions = [])
     {
-        $this->client = new EctClient($clientOptions, $this->logger);
+        $this->client = new EctClient($clientOptions, $this->getLogger(), $this->getSimpleCache());
     }
 
     public function getNamespace()

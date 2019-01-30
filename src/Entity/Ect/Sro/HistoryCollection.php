@@ -34,4 +34,19 @@ final class HistoryCollection extends AbstractMetadata implements CollectionInte
     {
         return new History($data);
     }
+
+    public function __construct($data = null)
+    {
+        $this->raw = $data;
+        $this->factoryMetadata($data);
+        $list = $this->dataPiece($this->getKey(), $data);
+
+        if (2 > $data['qtd']) {
+            $this->add($this->factoryEntity($list));
+        } elseif (!empty($list)) {
+            foreach ($list as $entityData) {
+                $this->add($this->factoryEntity($entityData));
+            }
+        }
+    }
 }

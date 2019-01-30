@@ -21,34 +21,43 @@ use Gpupo\ShippingServices\Entity\Ect\Sro\HistoryCollection;
 
 class EctClient extends AbstractSoap implements ClientInterface
 {
-    /**
-     * @return HistoryCollection
-     */
+    const ENDPOINT = 'https://webservice.correios.com.br/service/rastro/Rastro.wsdl';
+
+    private function getTransportOptions(): array
+    {
+        return [
+            'wsdl' => $this::ENDPOINT,
+            'soap_version' => SOAP_1_1,
+        ];
+    }
+
     public function fetchHistoryCollection(array $list): HistoryCollection
     {
-        $language = $this->getOptions()->get('ect.language', 'pt_BR');
+        $language = $this->getOptions()->get('language', 'pt_BR');
 
         $params = [
-            'usuario' => $this->getOptions()->get('ect.user'),
-            'senha' => $this->getOptions()->get('ect.password'),
+            'usuario' => $this->getOptions()->get('user'),
+            'senha' => $this->getOptions()->get('password'),
             'tipo' => 'L',
             'resultado' => 'T',
             'lingua' => ('EN' === $language) ? 102 : 101,
             'objetos' => $list,
         ];
 
-        $response = $this->getTransport()->buscaeventoslista($params);
+        $this->log('info', 'Fetch History', $params);
+        $transport = $this->getTransport();
+        $response = $transport->buscaeventoslista($params);
+        $data = $this->convertResponseToArray($response);
+        $this->log('info', 'Response', $data);
 
-        return new HistoryCollection($this->convertResponseToArray($response));
+        return new HistoryCollection($data);
     }
 
     protected function factoryTransport(): TransportInterface
     {
         $transport = new Transport();
-        $transport->setOptions([
-            'wsdl' => 'https://webservice.correios.com.br/service/rastro/Rastro.wsdl',
-            'soap_version' => SOAP_1_1,
-        ]);
+        $this->log('info', 'Transpor Options', $this->getTransportOptions());
+        $transport->setOptions($this->getTransportOptions());
 
         return $transport;
     }

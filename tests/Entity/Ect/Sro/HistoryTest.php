@@ -35,7 +35,7 @@ class HistoryTest extends TestCaseAbstract
      */
     public function testFactoryElement(History $history)
     {
-        $this->assertSame(5, $history->count());
+        $this->assertSame(6, $history->count());
     }
 
     /**

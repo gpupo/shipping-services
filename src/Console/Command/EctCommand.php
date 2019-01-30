@@ -43,13 +43,15 @@ final class EctCommand extends AbstractCommand
         $filename = $input->getArgument('filename');
         $data = $this->resourceDecodeJsonFile($filename);
         $objetos = $data['list'];
-        $config = $this->getProjectData();
-        $client = new EctClient($config);
+        $client = $this->getFactory()->getClient();
         $historyCollection = $client->fetchHistoryCollection($objetos);
 
         foreach ($historyCollection as $h) {
             $this->displayTableResults($output, [$h->toLog()]);
-            $this->displayTableResults($output, $h->getEvento()->toLog());
+
+            if ('' === $h->getErro()) {
+                $this->displayTableResults($output, $h->getEvento()->toLog());
+            }
         }
     }
 }

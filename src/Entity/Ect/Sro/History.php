@@ -42,6 +42,7 @@ final class History extends EntityAbstract implements EntityInterface
         return  [
             'numero' => 'string',
             'sigla' => 'string',
+            'erro' => 'string',
             'nome' => 'string',
             'categoria' => 'string',
             'evento' => 'object',
@@ -54,7 +55,8 @@ final class History extends EntityAbstract implements EntityInterface
             'numero',
             'sigla',
             'nome',
-            'catedoria',
+            'categoria',
+            'erro',
         ]);
         $analizer = $this->factoryAnalizer();
 

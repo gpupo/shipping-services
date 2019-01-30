@@ -8,3 +8,4 @@ Resources/doc/*
 *.lock
 *.cache
 phpunit.xml
+/.env.local

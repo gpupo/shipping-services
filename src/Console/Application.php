@@ -18,16 +18,20 @@ declare(strict_types=1);
 namespace Gpupo\ShippingServices\Console;
 
 use Gpupo\CommonSdk\Console\AbstractApplication;
+use Psr\Log\LoggerInterface;
+use Psr\SimpleCache\CacheInterface;
+use Gpupo\CommonSdk\FactoryInterface;
+use Gpupo\ShippingServices\Factory;
+
 
 /**
  * @codeCoverageIgnore
  */
 final class Application extends AbstractApplication
 {
-    protected $commonParameters = [
-        [
-            'key' => 'registerPath',
-            'default' => false,
-        ],
-    ];
+    public function factorySdk(array $options, LoggerInterface $logger = null, CacheInterface $cache = null): FactoryInterface
+    {
+        return new Factory($options, $logger, $cache);
+    }
+
 }

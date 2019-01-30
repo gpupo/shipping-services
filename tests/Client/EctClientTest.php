@@ -51,6 +51,21 @@ class EctClientTest extends TestCaseAbstract
     }
 
     /**
+     * @dataProvider dataProviderEctClient
+     */
+    public function testFetchHistoryCollectionNotFound(EctClient $object)
+    {
+        $ect = $this->proxy($object);
+        $transport = new TransportMockup();
+        $transport->response = $this->getResourceJson('fixtures/Ect/Sro/not-found.response.json');
+        $ect->setTransport($transport);
+
+        $collection = $ect->fetchHistoryCollection([]);
+        $this->assertInstanceOf(HistoryCollection::class, $collection);
+        $this->assertSame('Objeto não encontrado na base de dados dos Correios.', $collection->first()->getErro());
+    }
+
+    /**
      * @testdox ``factoryTransport()``
      * @cover ::factoryTransport
      * @dataProvider dataProviderEctClient

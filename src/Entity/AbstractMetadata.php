@@ -22,5 +22,6 @@ use Gpupo\CommonSdk\Traits\FinderTrait;
 
 abstract class AbstractMetadata extends MetadataContainerAbstract
 {
+
     use FinderTrait;
 }
