@@ -9,7 +9,6 @@ Acesso a informações de pacotes remetidos no Brasil
 
 ## Requisitos para uso
 
-
 - PHP >= *7.3*
 - [Composer Dependency Manager](http://getcomposer.org)
 - [PHP Curl extension](http://php.net/manual/en/intro.curl.php)
@@ -27,8 +26,9 @@ desenvolvimento.
 A documentação mais importante está nos testes unitários. Se você não consegue ler os testes unitários, eu recomendo que não utilize esta biblioteca.
 
 
-
 ## Direitos autorais e de licença
+
+This project is licensed under the terms of the MIT license.
 
 Este componente está sob a [licença MIT](https://github.com/gpupo/common-sdk/blob/master/LICENSE)
 
@@ -52,18 +52,6 @@ Proibido:
 
 - Responsabilidade Assegurada
 
-
-## Agradecimentos
-
-* A todos os que [contribuiram com patchs](https://github.com/gpupo/shipping-services/contributors);
-* Aos que [fizeram sugestões importantes](https://github.com/gpupo/shipping-services/issues);
-* Aos desenvolvedores que criaram as [bibliotecas utilizadas neste componente](https://github.com/gpupo/shipping-services/blob/master/Resources/doc/libraries-list.md).
-
- _- [Gilmar Pupo](https://opensource.gpupo.com/)_
-
-
----
-
 ## Instalação
 
 Adicione o pacote ``shipping-services`` ao seu projeto utilizando [composer](http://getcomposer.org):
@@ -82,7 +70,6 @@ $collection = $service->fetchHistoryCollection([
 	"DU264805409BR",
 	"DU264805390BR",
 ]);
-
 
 
 ```
