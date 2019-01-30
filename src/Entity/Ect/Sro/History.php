@@ -37,7 +37,7 @@ final class History extends EntityAbstract implements EntityInterface
     /**
      * @codeCoverageIgnore
      */
-    public function getSchema():array
+    public function getSchema(): array
     {
         return  [
             'numero' => 'string',
@@ -48,7 +48,7 @@ final class History extends EntityAbstract implements EntityInterface
         ];
     }
 
-    public function toLog():array
+    public function toLog(): array
     {
         $array = $this->partitionByArrayKey([
             'numero',

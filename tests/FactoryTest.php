@@ -17,9 +17,9 @@ declare(strict_types=1);
 
 namespace Gpupo\ShippingServices\Tests;
 
+use Gpupo\CommonSdk\Tests\FactoryTestAbstract;
 use Gpupo\ShippingServices\Client\ClientInterface;
 use Gpupo\ShippingServices\Factory;
-use Gpupo\CommonSdk\Tests\FactoryTestAbstract;
 
 /**
  * @coversNothing

@@ -17,8 +17,8 @@ declare(strict_types=1);
 
 namespace Gpupo\ShippingServices\Tests\Entity\Ect\Sro;
 
-use Gpupo\ShippingServices\Entity\Ect\Sro\History;
 use Gpupo\CommonSdk\Tests\Traits\EntityTrait;
+use Gpupo\ShippingServices\Entity\Ect\Sro\History;
 use Gpupo\ShippingServices\Tests\TestCaseAbstract;
 
 /**

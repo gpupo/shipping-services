@@ -17,8 +17,8 @@ declare(strict_types=1);
 
 namespace Gpupo\ShippingServices\Tests\Entity\Ect\Sro\Evento;
 
-use Gpupo\ShippingServices\Entity\Ect\Sro\Evento\Item;
 use Gpupo\CommonSdk\Tests\Traits\EntityTrait;
+use Gpupo\ShippingServices\Entity\Ect\Sro\Evento\Item;
 use Gpupo\ShippingServices\Tests\TestCaseAbstract;
 
 /**
