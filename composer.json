@@ -27,7 +27,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Gpupo\\Tests\\ShippingServices\\": "tests"
+            "Gpupo\\ShippingServices\\Tests\\": "tests"
         }
     },
     "bin": ["bin/shipping-services"],

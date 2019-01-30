@@ -15,10 +15,10 @@ declare(strict_types=1);
  *
  */
 
-namespace Gpupo\Tests\ShippingServices\Console;
+namespace Gpupo\ShippingServices\Tests\Console;
 
 use Gpupo\ShippingServices\Console\Application;
-use Gpupo\Tests\ShippingServices\TestCaseAbstract;
+use Gpupo\ShippingServices\Tests\TestCaseAbstract;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Tester\CommandTester;

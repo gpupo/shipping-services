@@ -15,11 +15,11 @@ declare(strict_types=1);
  *
  */
 
-namespace Gpupo\Tests\ShippingServices\Entity\Ect\Sro\Evento;
+namespace Gpupo\ShippingServices\Tests\Entity\Ect\Sro\Evento;
 
 use Gpupo\ShippingServices\Entity\Ect\Sro\Evento\Destino;
 use Gpupo\CommonSdk\Tests\Traits\EntityTrait;
-use Gpupo\Tests\ShippingServices\TestCaseAbstract;
+use Gpupo\ShippingServices\Tests\TestCaseAbstract;
 
 /**
  * @coversDefaultClass \Gpupo\ShippingServices\Entity\Ect\Sro\Evento\Destino

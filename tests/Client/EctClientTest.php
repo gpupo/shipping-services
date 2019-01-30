@@ -15,13 +15,13 @@ declare(strict_types=1);
  *
  */
 
-namespace Gpupo\Tests\ShippingServices\Client;
+namespace Gpupo\ShippingServices\Tests\Client;
 
 use Gpupo\ShippingServices\Client\EctClient;
 use Gpupo\ShippingServices\Client\Transport;
 use Gpupo\ShippingServices\Client\TransportInterface;
 use Gpupo\ShippingServices\Entity\Ect\Sro\HistoryCollection;
-use Gpupo\Tests\ShippingServices\TestCaseAbstract;
+use Gpupo\ShippingServices\Tests\TestCaseAbstract;
 
 /**
  * @coversDefaultClass \Gpupo\ShippingServices\Client\Ect

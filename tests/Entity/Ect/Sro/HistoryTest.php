@@ -15,11 +15,11 @@ declare(strict_types=1);
  *
  */
 
-namespace Gpupo\Tests\ShippingServices\Entity\Ect\Sro;
+namespace Gpupo\ShippingServices\Tests\Entity\Ect\Sro;
 
 use Gpupo\ShippingServices\Entity\Ect\Sro\History;
 use Gpupo\CommonSdk\Tests\Traits\EntityTrait;
-use Gpupo\Tests\ShippingServices\TestCaseAbstract;
+use Gpupo\ShippingServices\Tests\TestCaseAbstract;
 
 /**
  * @coversDefaultClass \Gpupo\ShippingServices\Entity\Ect\Sro\History

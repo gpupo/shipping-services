@@ -15,7 +15,7 @@ declare(strict_types=1);
  *
  */
 
-namespace Gpupo\Tests\ShippingServices\Client;
+namespace Gpupo\ShippingServices\Tests\Client;
 
 use Gpupo\ShippingServices\Client\Transport;
 use Gpupo\ShippingServices\Client\TransportInterface;
