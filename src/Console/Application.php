@@ -18,11 +18,10 @@ declare(strict_types=1);
 namespace Gpupo\ShippingServices\Console;
 
 use Gpupo\CommonSdk\Console\AbstractApplication;
-use Psr\Log\LoggerInterface;
-use Psr\SimpleCache\CacheInterface;
 use Gpupo\CommonSdk\FactoryInterface;
 use Gpupo\ShippingServices\Factory;
-
+use Psr\Log\LoggerInterface;
+use Psr\SimpleCache\CacheInterface;
 
 /**
  * @codeCoverageIgnore
@@ -33,5 +32,4 @@ final class Application extends AbstractApplication
     {
         return new Factory($options, $logger, $cache);
     }
-
 }

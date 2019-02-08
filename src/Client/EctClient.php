@@ -23,14 +23,6 @@ class EctClient extends AbstractSoap implements ClientInterface
 {
     const ENDPOINT = 'https://webservice.correios.com.br/service/rastro/Rastro.wsdl';
 
-    private function getTransportOptions(): array
-    {
-        return [
-            'wsdl' => $this::ENDPOINT,
-            'soap_version' => SOAP_1_1,
-        ];
-    }
-
     public function fetchHistoryCollection(array $list): HistoryCollection
     {
         $language = $this->getOptions()->get('language', 'pt_BR');
@@ -48,6 +40,7 @@ class EctClient extends AbstractSoap implements ClientInterface
         $transport = $this->getTransport();
         $response = $transport->buscaeventoslista($params);
         $data = $this->convertResponseToArray($response);
+
         $this->log('info', 'Response', $data);
 
         return new HistoryCollection($data);
@@ -60,5 +53,13 @@ class EctClient extends AbstractSoap implements ClientInterface
         $transport->setOptions($this->getTransportOptions());
 
         return $transport;
+    }
+
+    private function getTransportOptions(): array
+    {
+        return [
+            'wsdl' => $this::ENDPOINT,
+            'soap_version' => SOAP_1_1,
+        ];
     }
 }

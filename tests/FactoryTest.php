@@ -20,6 +20,7 @@ namespace Gpupo\ShippingServices\Tests;
 use Gpupo\CommonSdk\Tests\FactoryTestAbstract;
 use Gpupo\ShippingServices\Client\ClientInterface;
 use Gpupo\ShippingServices\Factory;
+use Gpupo\ShippingServices\Entity\Ect\Sro\History;
 
 /**
  * @coversNothing
@@ -58,5 +59,8 @@ class FactoryTest extends FactoryTestAbstract
 
     public function dataProviderObjetos()
     {
+        return [
+            [History::class, 'history', []],
+        ];
     }
 }

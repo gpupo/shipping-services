@@ -18,6 +18,8 @@ declare(strict_types=1);
 namespace Gpupo\ShippingServices\Client;
 
 use Gpupo\CommonSdk\Client\BoardAbstract;
+use Psr\Http\Message\ResponseInterface;
+use Psr\Http\Message\RequestInterface;
 
 abstract class AbstractSoap extends BoardAbstract
 {
@@ -52,4 +54,13 @@ abstract class AbstractSoap extends BoardAbstract
     }
 
     abstract protected function factoryTransport();
+
+
+    /**
+     * {@inheritdoc}
+     * @todo
+     */
+    public function sendRequest(RequestInterface $request): ResponseInterface
+    {
+    }
 }

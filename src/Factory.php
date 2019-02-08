@@ -20,6 +20,7 @@ namespace Gpupo\ShippingServices;
 use Gpupo\CommonSdk\Entity\GenericManager;
 use Gpupo\CommonSdk\FactoryAbstract;
 use Gpupo\ShippingServices\Client\EctClient;
+use Gpupo\ShippingServices\Entity\Ect\Sro\History;
 
 /**
  * Construtor principal, extendido pelo Factory de MarkethubBundle.
@@ -43,6 +44,9 @@ class Factory extends FactoryAbstract
         return [
             'generic' => [
                 'manager' => GenericManager::class,
+            ],
+            'history' => [
+                'class' => History::class,
             ],
         ];
     }

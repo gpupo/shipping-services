@@ -9,3 +9,4 @@ Resources/doc/*
 *.cache
 phpunit.xml
 /.env.local
+/.phan

@@ -62,6 +62,7 @@ class EctClientTest extends TestCaseAbstract
 
         $collection = $ect->fetchHistoryCollection([]);
         $this->assertInstanceOf(HistoryCollection::class, $collection);
+        $this->assertSame('DU264805409BR', $collection->first()->getNumero());
         $this->assertSame('Objeto não encontrado na base de dados dos Correios.', $collection->first()->getErro());
     }
 
