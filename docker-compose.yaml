@@ -1,8 +1,8 @@
 version: '3.3'
 services:
     php-fpm:
-        image: gpupo/container-orchestration:symfony-dev-${TAG_VERSION}
+        image: gpupo/container-orchestration:symfony-dev-${CONTAINER_ORCHESTRATION_TAG_VERSION}
         env_file:
-            - .env        
+            - .env
         volumes:
             - $PWD/:/var/www/app

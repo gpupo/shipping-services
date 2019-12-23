@@ -21,7 +21,7 @@ use Gpupo\CommonSdk\Console\AbstractApplication;
 use Gpupo\CommonSdk\FactoryInterface;
 use Gpupo\ShippingServices\Factory;
 use Psr\Log\LoggerInterface;
-use Psr\SimpleCache\CacheInterface;
+use Symfony\Contracts\Cache\CacheInterface;
 
 /**
  * @codeCoverageIgnore
