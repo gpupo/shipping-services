@@ -18,8 +18,8 @@ declare(strict_types=1);
 namespace Gpupo\ShippingServices\Client;
 
 use Gpupo\CommonSdk\Client\BoardAbstract;
-use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\RequestInterface;
+use Psr\Http\Message\ResponseInterface;
 
 abstract class AbstractSoap extends BoardAbstract
 {
@@ -28,6 +28,15 @@ abstract class AbstractSoap extends BoardAbstract
     public function setTransport(TransportInterface $transport): void
     {
         $this->transport = $transport;
+    }
+
+    /**
+     * {@inheritdoc}
+     *
+     * @todo
+     */
+    public function sendRequest(RequestInterface $request): ResponseInterface
+    {
     }
 
     protected function getTransport(): TransportInterface
@@ -46,7 +55,7 @@ abstract class AbstractSoap extends BoardAbstract
     {
         $array = json_decode(json_encode($response), true);
 
-        if (!\is_array($array) || !array_key_exists('return', (array) $array)) {
+        if (!\is_array($array) || !\array_key_exists('return', (array) $array)) {
             throw new Exception('Response incomplete');
         }
 
@@ -54,13 +63,4 @@ abstract class AbstractSoap extends BoardAbstract
     }
 
     abstract protected function factoryTransport();
-
-
-    /**
-     * {@inheritdoc}
-     * @todo
-     */
-    public function sendRequest(RequestInterface $request): ResponseInterface
-    {
-    }
 }

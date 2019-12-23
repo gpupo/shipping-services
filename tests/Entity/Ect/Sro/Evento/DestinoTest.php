@@ -35,7 +35,7 @@ class DestinoTest extends TestCaseAbstract
      */
     public function testGetSchema(Destino $destino)
     {
-        $this->assertInternalType('array', $destino->getSchema());
+        $this->assertIsArray($destino->getSchema());
     }
 
     /**

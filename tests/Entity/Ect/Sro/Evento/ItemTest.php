@@ -35,7 +35,7 @@ class ItemTest extends TestCaseAbstract
      */
     public function testGetSchema(Item $item)
     {
-        $this->assertInternalType('array', $item->getSchema());
+        $this->assertIsArray($item->getSchema());
     }
 
     /**

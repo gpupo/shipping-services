@@ -45,7 +45,7 @@ class HistoryTest extends TestCaseAbstract
      */
     public function testGetSchema(History $history)
     {
-        $this->assertInternalType('array', $history->getSchema());
+        $this->assertIsArray($history->getSchema());
     }
 
     /**
