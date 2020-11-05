@@ -11,10 +11,10 @@
     "keywords": ["correios", "sdk", "api"],
     "license": "MIT",
     "require": {
-        "php": ">=7.4",
+        "php": ">=7.4 || ^8.0",
         "ext-soap" : "*",
         "laminas/laminas-soap": "^2.8",
-        "gpupo/common-sdk": "^5.0"
+        "gpupo/common-sdk": "^6.0"
     },
     "require-dev": {
         "gpupo/common-dev": "*"

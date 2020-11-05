@@ -4,6 +4,7 @@ os:
   - linux
 php:
   - 7.4
+  - nightly
 before_script:
   - make install
 script: composer run-script test
