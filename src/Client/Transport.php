@@ -12,6 +12,23 @@ namespace Gpupo\ShippingServices\Client;
 
 class Transport implements TransportInterface
 {
+    const XML_BUSCAEVENTOS = <<<'EOF'
+    <soapenv:Envelope 
+        xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" 
+        xmlns:res="http://resource.webservice.correios.com.br/">
+        <soapenv:Header/> 
+        <soapenv:Body>
+            <res:buscaEventosLista>
+                <usuario>%s</usuario>
+                <senha>%s</senha>
+                <tipo>%s</tipo>
+                <resultado>%s</resultado>
+                <lingua>%d</lingua>%s
+            </res:buscaEventosLista> 
+        </soapenv:Body>
+    </soapenv:Envelope>
+    EOF;
+    
     protected array $options;
 
     public function setOptions(array $options): void
@@ -19,35 +36,18 @@ class Transport implements TransportInterface
         $this->options = $options;
     }
     
-    public function buscaeventoslista(array $params): string
+    public function buscaEventosListaAction(array $params): string
     {
-        $bodyRequestTemplate  = <<<'EOF'
-        <soapenv:Envelope 
-            xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" 
-            xmlns:res="http://resource.webservice.correios.com.br/">
-            <soapenv:Header/> 
-            <soapenv:Body>
-                <res:buscaEventos>
-                    <usuario>%s</usuario>
-                    <senha>%s</senha>
-                    <tipo>%s</tipo>
-                    <resultado>%s</resultado>
-                    <lingua>%d</lingua>%s
-                </res:buscaEventos> 
-            </soapenv:Body>
-        </soapenv:Envelope>
-        EOF;
-
         $objetosString = '';
         foreach($params['objetos'] as $objeto) {
             $objetosString .= sprintf("\n<objetos>%s</objetos>", $objeto);
         }
         
-        $xml_post_string = sprintf($bodyRequestTemplate, $params['usuario'], $params['senha'], $params['tipo'], $params['resultado'], $params['lingua'], $objetosString);  
+        $xml_post_string = sprintf(self::XML_BUSCAEVENTOS, $params['usuario'], $params['senha'], $params['tipo'], $params['resultado'], $params['lingua'], $objetosString);  
 
         $curl = curl_init();
 
-        curl_setopt_array($curl, array(
+        curl_setopt_array($curl, [
           CURLOPT_URL => $this->options['wsdl'],
           CURLOPT_RETURNTRANSFER => true,
           CURLOPT_ENCODING => '',
@@ -57,12 +57,12 @@ class Transport implements TransportInterface
           CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
           CURLOPT_CUSTOMREQUEST => 'POST',
           CURLOPT_POSTFIELDS =>$xml_post_string,
-          CURLOPT_HTTPHEADER => array(
+          CURLOPT_HTTPHEADER => [
             'Host: webservice.correios.com.br:80',
-            'SOAPAction: buscaEventos',
+            'SOAPAction: buscaEventosLista',
             'Content-Type: text/xml; charset=UTF-8',
-          ),
-        ));
+          ],
+        ]);
         
         $response = curl_exec($curl);
         curl_close($curl);

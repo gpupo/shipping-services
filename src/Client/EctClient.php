@@ -31,11 +31,9 @@ class EctClient extends AbstractSoap implements ClientInterface
 
         $this->log('info', 'Fetch History', $params);
         $transport = $this->getTransport();
-        $response = $transport->buscaeventoslista($params);
+        $response = $transport->buscaEventosListaAction($params);
         $data = $this->convertResponseToArray($response);
 
-        dump($data);
-        
         $this->log('info', 'Response', $data);
 
         return new HistoryCollection($data);
