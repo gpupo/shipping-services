@@ -29,7 +29,9 @@ class Transport implements TransportInterface
     </soapenv:Envelope>
     EOF;
     
-    protected array $options;
+    protected array $options = [
+        'wsdl'  => '',
+    ];
 
     public function setOptions(array $options): void
     {
