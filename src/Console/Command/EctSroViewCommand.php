@@ -44,5 +44,7 @@ final class EctSroViewCommand extends AbstractCommand
                 $this->displayTableResults($output, $h->getEvento()->toLog());
             }
         }
+
+        return 0;
     }
 }

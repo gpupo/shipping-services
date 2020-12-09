@@ -15,22 +15,18 @@ use Gpupo\ShippingServices\Entity\AbstractMetadata;
 
 final class HistoryCollection extends AbstractMetadata implements CollectionInterface
 {
-    public function __construct($data = null)
+    public function __construct(?array $data)
     {
         $this->raw = $data;
         $this->factoryMetadata($data);
         $list = $this->dataPiece($this->getKey(), $data);
 
-        // if (2 > $data['qtd']) {
-        //     $this->add($this->factoryEntity($list));
-        // } elseif (!empty($list)) {
-        //     foreach ($list as $entityData) {
-        //         $this->add($this->factoryEntity($entityData));
-        //     }
-        // }
-
-        foreach ($list as $entityData) {
-            $this->add($this->factoryEntity($entityData));
+        if (1 >= (int) $data['qtd']) {
+            $this->add($this->factoryEntity($list));
+        } else {
+            foreach ($list as $entityData) {
+                $this->add($this->factoryEntity($entityData));
+            }
         }
     }
 
@@ -44,6 +40,10 @@ final class HistoryCollection extends AbstractMetadata implements CollectionInte
 
     protected function factoryEntity(array $data)
     {
+        if (array_key_exists('tipo', $data['evento'])) {
+            $data['evento'] = [$data['evento']];
+        }
+        
         return new History($data);
     }
 }

@@ -45,5 +45,7 @@ final class EctSroHistoryCommand extends AbstractCommand
                 $this->displayTableResults($output, $h->getEvento()->toLog());
             }
         }
+
+        return 0;
     }
 }
