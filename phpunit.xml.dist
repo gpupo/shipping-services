@@ -1,42 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<phpunit backupGlobals="false"
-    backupStaticAttributes="false"
-    colors="true"
-    convertErrorsToExceptions="true"
-    convertNoticesToExceptions="true"
-    convertWarningsToExceptions="true"
-    processIsolation="false"
-    stopOnFailure="false"
-    stopOnWarning="false"
-    bootstrap="config/bootstrap.php"
->
-    <testsuites>
-        <testsuite name="Main Test Suite">
-            <directory>tests</directory>
-        </testsuite>
-    </testsuites>
-
-    <filter>
-        <whitelist>
-            <directory>src/</directory>
-            <exclude>
-              <directory>src/Console/</directory>
-              <directory>*.config.php</directory>
-              <directory>*.map.php</directory>
-              <directory>*.template.php</directory>
-            </exclude>
-        </whitelist>
-    </filter>
-
-    <!-- Customize your parameters ! -->
-    <php>
-        <const name="CLIENT_ID" value=""/>
-        <const name="ACCESS_TOKEN" value=""/>
-        <const name="VERBOSE" value=""/>
-        <const name="REGISTER_PATH" value=""/>
-        <ini name="error_reporting" value="-1" />
-        <env name="APP_ENV" value="test" />
-        <env name="SHELL_VERBOSITY" value="-1" />
-    </php>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" backupGlobals="false" backupStaticAttributes="false" colors="true" convertErrorsToExceptions="true" convertNoticesToExceptions="true" convertWarningsToExceptions="true" processIsolation="false" stopOnFailure="false" stopOnWarning="false" bootstrap="config/bootstrap.php" xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.3/phpunit.xsd">
+  <coverage>
+    <include>
+      <directory>src/</directory>
+    </include>
+    <exclude>
+      <directory>src/Console/</directory>
+      <directory>*.config.php</directory>
+      <directory>*.map.php</directory>
+      <directory>*.template.php</directory>
+    </exclude>
+  </coverage>
+  <testsuites>
+    <testsuite name="Main Test Suite">
+      <directory>tests</directory>
+    </testsuite>
+  </testsuites>
+  <!-- Customize your parameters ! -->
+  <php>
+    <const name="CLIENT_ID" value=""/>
+    <const name="ACCESS_TOKEN" value=""/>
+    <const name="VERBOSE" value=""/>
+    <const name="REGISTER_PATH" value=""/>
+    <ini name="error_reporting" value="-1"/>
+    <env name="APP_ENV" value="test"/>
+    <env name="SHELL_VERBOSITY" value="-1"/>
+  </php>
 </phpunit>
