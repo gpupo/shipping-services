@@ -69,6 +69,6 @@ class Transport implements TransportInterface
         $response = curl_exec($curl);
         curl_close($curl);
 
-        return $response ;
+        return (string) $response;
     }
 }
