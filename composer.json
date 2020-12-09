@@ -13,7 +13,6 @@
     "require": {
         "php": "^8.0",
         "ext-soap" : "*",
-        "laminas/laminas-soap": "^2.8 || ^3.0 || dev-master",
         "gpupo/common-sdk": "^6.3 || dev-master"
     },
     "require-dev": {

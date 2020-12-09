@@ -10,8 +10,6 @@ declare(strict_types=1);
 
 namespace Gpupo\ShippingServices\Client;
 
-use Laminas\Soap\Client;
-
-class Transport extends Client implements TransportInterface
+class Transport implements TransportInterface
 {
 }
