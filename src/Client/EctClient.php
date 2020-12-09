@@ -14,7 +14,7 @@ use Gpupo\ShippingServices\Entity\Ect\Sro\HistoryCollection;
 
 class EctClient extends AbstractSoap implements ClientInterface
 {
-    const ENDPOINT = 'https://webservice.correios.com.br/service/rastro/Rastro.wsdl';
+    const ENDPOINT = 'http://webservice.correios.com.br:80/service/rastro';
 
     public function fetchHistoryCollection(array $list): HistoryCollection
     {
@@ -34,6 +34,8 @@ class EctClient extends AbstractSoap implements ClientInterface
         $response = $transport->buscaeventoslista($params);
         $data = $this->convertResponseToArray($response);
 
+        dump($data);
+        
         $this->log('info', 'Response', $data);
 
         return new HistoryCollection($data);

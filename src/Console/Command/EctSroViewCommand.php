@@ -17,7 +17,7 @@ use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
-final class EctCommand extends AbstractCommand
+final class EctSroViewCommand extends AbstractCommand
 {
     use ResourcesTrait;
     use TableTrait;
@@ -25,18 +25,17 @@ final class EctCommand extends AbstractCommand
     protected function configure()
     {
         $this
-            ->setName('ect:sro:history')
-            ->setDescription('Historico de um ou mais objetos')
-            ->addArgument('filename', InputArgument::REQUIRED, 'A file with a SRO list');
+            ->setName('ect:sro:view')
+            ->setDescription('Historico do objeto')
+            ->addArgument('sroNumber', InputArgument::REQUIRED, 'Código de rastreamento');
     }
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        $filename = $input->getArgument('filename');
-        $data = $this->resourceDecodeJsonFile($filename);
-        $objetos = $data['list'];
+        $sroNumber = $input->getArgument('sroNumber');
+
         $client = $this->getFactory()->getClient();
-        $historyCollection = $client->fetchHistoryCollection($objetos);
+        $historyCollection = $client->fetchHistoryCollection([$sroNumber]);
 
         foreach ($historyCollection as $h) {
             $this->displayTableResults($output, [$h->toLog()]);
