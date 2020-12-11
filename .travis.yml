@@ -13,3 +13,6 @@ before_script:
 script: composer run-script test
 notifications:
   email: false
+branches:
+  only:
+  - main

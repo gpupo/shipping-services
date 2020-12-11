@@ -9,7 +9,7 @@ Acesso a informações de pacotes remetidos no Brasil
 
 ## Requisitos para uso
 
-- PHP *>=7.4*
+- PHP *>=8.0*
 - [Composer Dependency Manager](http://getcomposer.org)
 - [PHP Curl extension](http://php.net/manual/en/intro.curl.php)
 - PHP Soap extension
