@@ -29,7 +29,7 @@ class ApplicationTest extends TestCaseAbstract
         $app = new Application();
 
         $app->appendCommand('foo:bar', 'Test')
-            ->setCode(function (InputInterface $input, OutputInterface $output) use ($app) {
+            ->setCode(function (InputInterface $input, OutputInterface $output) {
                 $output->writeln('Hello World');
             });
 

@@ -40,10 +40,10 @@ final class HistoryCollection extends AbstractMetadata implements CollectionInte
 
     protected function factoryEntity(array $data)
     {
-        if (array_key_exists('tipo', $data['evento'])) {
+        if (\array_key_exists('tipo', $data['evento'])) {
             $data['evento'] = [$data['evento']];
         }
-        
+
         return new History($data);
     }
 }

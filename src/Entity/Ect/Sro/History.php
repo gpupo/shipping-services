@@ -32,7 +32,7 @@ final class History extends EntityAbstract implements EntityInterface
      */
     public function getSchema(): array
     {
-        return  [
+        return [
             'numero' => 'string',
             'sigla' => 'string',
             'erro' => 'string',

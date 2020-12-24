@@ -32,7 +32,7 @@ final class Destino extends EntityAbstract implements EntityInterface
      */
     public function getSchema(): array
     {
-        return  [
+        return [
             'local' => 'string',
             'codigo' => 'string',
             'cidade' => 'string',

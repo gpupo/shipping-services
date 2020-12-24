@@ -46,13 +46,13 @@ abstract class AbstractSoap extends BoardAbstract
      */
     protected function convertResponseToArray($response): array
     {
-        $xml = preg_replace("/(<\/?)(\w+):([^>]*>)/", "$1$2$3", $response);
+        $xml = preg_replace('/(<\\/?)(\\w+):([^>]*>)/', '$1$2$3', $response);
         $parser = simplexml_load_string($xml);
         $array = json_decode(json_encode($parser), true);
 
         if (!\is_array($array) || !\array_key_exists('soapenvBody', (array) $array)) {
             throw new Exception('Response incomplete');
-          }
+        }
 
         $data = current($array['soapenvBody']);
 

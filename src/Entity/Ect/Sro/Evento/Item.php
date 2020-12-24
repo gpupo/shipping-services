@@ -46,7 +46,7 @@ final class Item extends EntityAbstract implements EntityInterface
      */
     public function getSchema(): array
     {
-        return  [
+        return [
             'tipo' => 'string',
             'status' => 'string',
             'data' => 'string',

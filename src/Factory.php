@@ -29,7 +29,7 @@ class Factory extends FactoryAbstract
 
     public function getNamespace()
     {
-        return  '\\'.__NAMESPACE__.'\Entity\\';
+        return '\\'.__NAMESPACE__.'\Entity\\';
     }
 
     protected function getSchema(): array
